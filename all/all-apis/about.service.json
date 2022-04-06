@@ -65,16 +65,10 @@
       "methodName": "GetAbout",
       "serviceName": "MembersAboutService",
       "tag": "About",
-      "permissions":       [
-                {
-          "name": "Manage Members and Contacts - all permissions",
-          "description": "Request permission to read, create and modify the site's Wix Contacts and Members data, including labels, extended fields and form submissions. This permission scope contains all of the Contacts, Members and CRM permissions."
-        },
-                {
-          "name": "Read Members and Contacts - all read permissions",
-          "description": "Request permission to read the site's Wix Contacts and Members data, including form submissions. This permission scope contains all of the read Contacts, Members and CRM permissions."
-        }
-      ],
+      "permissions": [      {
+        "name": "Read Members and Contacts - all read permissions",
+        "description": "Request permission to read the site's Wix Contacts and Members data, including form submissions. This permission scope contains all of the read Contacts, Members and CRM permissions."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -184,16 +178,10 @@
       "methodName": "QueryAbouts",
       "serviceName": "MembersAboutService",
       "tag": "About",
-      "permissions":       [
-                {
-          "name": "Manage Members and Contacts - all permissions",
-          "description": "Request permission to read, create and modify the site's Wix Contacts and Members data, including labels, extended fields and form submissions. This permission scope contains all of the Contacts, Members and CRM permissions."
-        },
-                {
-          "name": "Read Members and Contacts - all read permissions",
-          "description": "Request permission to read the site's Wix Contacts and Members data, including form submissions. This permission scope contains all of the read Contacts, Members and CRM permissions."
-        }
-      ],
+      "permissions": [      {
+        "name": "Read Members and Contacts - all read permissions",
+        "description": "Request permission to read the site's Wix Contacts and Members data, including form submissions. This permission scope contains all of the read Contacts, Members and CRM permissions."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
