@@ -25,16 +25,10 @@
       "methodName": "GetActivityCounters",
       "serviceName": "ActivityCounters",
       "tag": "ActivityCounters",
-      "permissions":       [
-                {
-          "name": "Manage Activity Counters",
-          "description": "Request permission to manage the site's member activity counters."
-        },
-                {
-          "name": "Read Activity Counters",
-          "description": "Request permission to read the site's member activity counters."
-        }
-      ],
+      "permissions": [      {
+        "name": "Read Activity Counters",
+        "description": "Request permission to read the site's member activity counters."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -82,16 +76,10 @@
       "methodName": "QueryActivityCounters",
       "serviceName": "ActivityCounters",
       "tag": "ActivityCounters",
-      "permissions":       [
-                {
-          "name": "Manage Activity Counters",
-          "description": "Request permission to manage the site's member activity counters."
-        },
-                {
-          "name": "Read Activity Counters",
-          "description": "Request permission to read the site's member activity counters."
-        }
-      ],
+      "permissions": [      {
+        "name": "Read Activity Counters",
+        "description": "Request permission to read the site's member activity counters."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -222,16 +210,10 @@
     },
     "topic": "domain_events_wix.members.v1.activity_counter",
     "tag": "ActivityCounters",
-    "permissions":     [
-            {
-        "name": "Manage Activity Counters",
-        "description": "Request permission to manage the site's member activity counters."
-      },
-            {
-        "name": "Read Activity Counters",
-        "description": "Request permission to read the site's member activity counters."
-      }
-    ],
+    "permissions": [    {
+      "name": "Read Activity Counters",
+      "description": "Request permission to read the site's member activity counters."
+    }],
     "customLabels": [{"id": "maturity-beta"}],
     "eventType": "wix.members.v1.activity_counter_updated",
     "extra": {"isDomainEvent": true}
@@ -287,6 +269,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -303,9 +290,9 @@
         "examples": []
       },
       "members": [      {
-        "name": "currentEntity",
+        "name": "currentEntityAsJson",
         "type": "All APIs.Activity Counters._com_wixpress_members_activitycounters_ActivityCounter",
-        "doc": "Event body"
+        "doc": "Event body as a stringified JSON"
       }],
       "enum": null,
       "extra": {},
@@ -372,7 +359,7 @@
                 {
           "name": "count",
           "type": "integer",
-          "doc": " Current count of activity.\n"
+          "doc": " Count of activity.\n"
         }
       ],
       "enum": null,
@@ -438,87 +425,6 @@
       "enum": null,
       "extra": {},
       "labels": []
-    },
-        {
-      "name": "_com_wixpress_html_cache_invalidate_InvalidateCache_App",
-      "displayName": "App Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "appDefId",
-          "type": "string",
-          "doc": ""
-        },
-                {
-          "name": "instanceId",
-          "type": "string",
-          "doc": ""
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_com_wixpress_html_cache_invalidate_InvalidateCache",
-      "displayName": "Invalidate Cache Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "getBy",
-          "type": "All APIs.Activity Counters._com_wixpress_html_cache_invalidate_InvalidateCache_GetBy",
-          "doc": ""
-        },
-                {
-          "name": "reason",
-          "type": "string",
-          "doc": "tell us why you're invalidating the cache. You don't need to add your app name\n"
-        },
-                {
-          "name": "localDc",
-          "type": "boolean",
-          "doc": ""
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_com_wixpress_html_cache_invalidate_InvalidateCache_GetBy",
-      "displayName": "Get By Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "metaSiteId",
-          "type": "string",
-          "doc": ""
-        },
-                {
-          "name": "app",
-          "type": "All APIs.Activity Counters._com_wixpress_html_cache_invalidate_InvalidateCache_App",
-          "doc": ""
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": [],
-      "oneOf": true
     },
         {
       "name": "_google_protobuf_Value",
@@ -650,6 +556,49 @@
         "name": "activityCounter",
         "type": "All APIs.Activity Counters._com_wixpress_members_activitycounters_ActivityCounter",
         "doc": " Updated activity counter.\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_members_activitycounters_IncrementActivityCountersRequest",
+      "displayName": "Increment Activity Counters Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "memberId",
+          "type": "string",
+          "doc": ""
+        },
+                {
+          "name": "counter",
+          "type": "All APIs.Activity Counters._com_wixpress_members_activitycounters_Counter",
+          "doc": " Site member ID whose counter will be increment.\n Counter for this site member and app.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_members_activitycounters_IncrementActivityCountersResponse",
+      "displayName": "Increment Activity Counters Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "activityCounter",
+        "type": "All APIs.Activity Counters._com_wixpress_members_activitycounters_ActivityCounter",
+        "doc": " Increment activity counter.\n"
       }],
       "enum": null,
       "extra": {},
