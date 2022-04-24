@@ -121,16 +121,10 @@
       "methodName": "GetFolderBySite",
       "serviceName": "SiteFoldersServiceV2",
       "tag": "Folders",
-      "permissions":       [
-                {
-          "name": "Manage Folders",
-          "description": "Request permission to read, create and manage the account's site folder info."
-        },
-                {
-          "name": "Read Folder Data",
-          "description": "Request permission to read the account's site folder info."
-        }
-      ],
+      "permissions": [      {
+        "name": "Read Folder Data",
+        "description": "Request permission to read the account's site folder info."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -298,16 +292,10 @@
       "methodName": "QueryFolders",
       "serviceName": "SiteFoldersServiceV2",
       "tag": "Folders",
-      "permissions":       [
-                {
-          "name": "Manage Folders",
-          "description": "Request permission to read, create and manage the account's site folder info."
-        },
-                {
-          "name": "Read Folder Data",
-          "description": "Request permission to read the account's site folder info."
-        }
-      ],
+      "permissions": [      {
+        "name": "Read Folder Data",
+        "description": "Request permission to read the account's site folder info."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
