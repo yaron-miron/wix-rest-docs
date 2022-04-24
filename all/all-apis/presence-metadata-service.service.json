@@ -104,5 +104,5 @@
       "labels": []
     }
   ],
-  "extra": {"artifactId": "serverless.presence-api-metadata"}
+  "extra": {}
 }
