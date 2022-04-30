@@ -822,5 +822,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.cloud.autocms.tasks.autocms-task-service"}
 }
