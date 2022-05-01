@@ -58,7 +58,7 @@
     "name": "Open Widget Webhook",
     "docs":     {
       "summary": "Trigger when UoU open chat widget\n",
-      "src": "https://github.com/wix-private/inbox/tree/master/chat-widget-platform/chat-widget-platform-ap/src/main/proto/chat-widget-service.proto"
+      "src": "https://github.com/wix-private/chat-monorepo/tree/master/packages/chat-widget-platform-api/src/main/proto/chat-widget-service.proto"
     },
     "topic": "domain_events_wix.chat.v1.widget",
     "tag": "Chat Widget",
