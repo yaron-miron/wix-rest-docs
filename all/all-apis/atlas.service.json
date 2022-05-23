@@ -159,61 +159,6 @@
       "customLabels": [{"id": "maturity-beta"}]
     },
         {
-      "name": "Reverse Lookup",
-      "methodName": "ReverseGeocoding",
-      "serviceName": "LocationServiceV2",
-      "tag": "Geolocation V2",
-      "permissions": [],
-      "events": [],
-      "labels": [],
-      "nameParams": [],
-      "requiredFields":       [
-        "addressLocation",
-        "addressLocation.latitude",
-        "addressLocation.longitude"
-      ],
-      "params":       [
-                {
-          "in": "QUERY",
-          "name": "addressLocation.latitude",
-          "type": "number",
-          "doc": "",
-          "required": true
-        },
-                {
-          "in": "QUERY",
-          "name": "addressLocation.longitude",
-          "type": "number",
-          "doc": "",
-          "required": true
-        }
-      ],
-      "ret":       {
-        "type":         {
-          "name": "ReverseGeocoding",
-          "statusCode": "200",
-          "typeParams": ["All APIs.Atlas._com_wixpress_vi_atlas_service_v2_ReverseGeocodingResponse"]
-        },
-        "doc": ""
-      },
-      "locations": [],
-      "docs":       {
-        "summary": "\nA Search request takes 'latitude' and 'longitude' values as an input and returns a list of 'Address' objects.\n \n",
-        "description": [],
-        "request": "GET",
-        "url": "https://bo.wix.com/wix-atlas-service-web/v2/location/reverse",
-        "links": [],
-        "examples": [],
-        "extra": {}
-      },
-      "extra":       {
-        "hasRest": true,
-        "rpcRequestName": "ReverseGeocodingRequest",
-        "rpcResponseName": "ReverseGeocodingResponse"
-      },
-      "customLabels": [{"id": "maturity-beta"}]
-    },
-        {
       "name": "Search",
       "methodName": "Search",
       "serviceName": "LocationServiceV2",
