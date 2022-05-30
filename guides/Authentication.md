@@ -88,7 +88,7 @@ Exchange the temporary authorization code for an access token using the [OAuth >
 
 ```  
 curl -X POST \
-  https://www.wix.com/oauth/access \
+  https://www.wixapis.com/oauth/access \
   -H 'Content-Type: application/json' \
   -d '{
     "grant_type": "authorization_code",
@@ -117,11 +117,10 @@ Wix will respond to your request in step 4 with a JSON response containing an ac
 
 ![how does your consent appear](./../media/how-does-your-consent.png)
 
-Now that you have access and refresh tokens, you must close the consent window with the following script:
+Now that you have access and refresh tokens, you must close the consent window by redirecting the user to the following URL with the user's access token after the equals sign (`=`):
 
 ```
-curl -X GET \
-  'https://www.wix.com/installer/close-window?access_token=<ACCESS_TOKEN>' \
+https://www.wix.com/installer/close-window?access_token=<ACCESS_TOKEN>
 ```
 
 ## Step 6: App Requests Protected Data
