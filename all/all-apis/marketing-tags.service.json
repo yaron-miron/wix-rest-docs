@@ -17,6 +17,10 @@
   }],
   "relatedGuides":   [
         {
+      "path": "../guides/marketing-tags/docs/delete.md",
+      "name": "Delete a tag"
+    },
+        {
       "path": "../guides/marketing-tags/docs/Flow.md",
       "name": "Example Flow"
     },
@@ -33,7 +37,7 @@
       "tag": "Marketing Tag",
       "permissions": [      {
         "name": "Manage Marketing Tags",
-        "description": "Request permission to read, create and update site's marketing tags."
+        "description": "Read, create and update a site's marketing tags."
       }],
       "events": [],
       "labels": [],
@@ -62,7 +66,7 @@
         "links": [],
         "examples": [        {
           "title": "Delete Marketing Tag",
-          "body": ["curl -X DELETE \\\n  'https://www.wixapis.com/marketing/v1/tags' \\\n  -H 'Content-Type: application/json' \\\n  -H 'Authorization: <AUTH>' \\\n   --data-raw '{\n                  \"type\": \"GOOGLE_ANALYTICS\"\n                }'"],
+          "body": ["curl -X DELETE \\\n  'https://www.wixapis.com/marketing/v2/tags?tag_type=<TAG_TYPE>' \\\n  -H 'Content-Type: application/json' \\\n  -H 'Authorization: <AUTH>' \\"],
           "response": ["{} "],
           "type": "curl",
           "extra": {}
@@ -77,20 +81,58 @@
       "customLabels": [{"id": "maturity-beta"}]
     },
         {
+      "name": "Delete Marketing Tag V 2",
+      "methodName": "DeleteMarketingTagV2",
+      "serviceName": "MarketingTagsService",
+      "tag": "Marketing Tag",
+      "permissions": [      {
+        "name": "Manage Marketing Tags",
+        "description": "Read, create and update a site's marketing tags."
+      }],
+      "events": [],
+      "labels": [],
+      "nameParams": [],
+      "params": [      {
+        "in": "BODY",
+        "name": "tagType",
+        "type": "All APIs.Marketing Tags._com_wixpress_marketing_tags_api_v1_MarketingTag_Type",
+        "doc": " Marketing tag to delete.\n",
+        "required": false
+      }],
+      "ret":       {
+        "type":         {
+          "name": "DeleteMarketingTagV2",
+          "statusCode": "200",
+          "typeParams": ["All APIs.Marketing Tags._com_wixpress_marketing_tags_api_v1_DeleteMarketingTagV2Response"]
+        },
+        "doc": ""
+      },
+      "locations": [],
+      "docs":       {
+        "summary": " \n",
+        "description": [],
+        "request": "DELETE",
+        "url": "https://www.wixapis.com/marketing/v2/tags",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "extra":       {
+        "hasRest": true,
+        "rpcRequestName": "DeleteMarketingTagV2Request",
+        "rpcResponseName": "DeleteMarketingTagV2Response"
+      },
+      "customLabels": [{"id": "maturity-alpha"}]
+    },
+        {
       "name": "List Marketing Tags",
       "methodName": "ListMarketingTags",
       "serviceName": "MarketingTagsService",
       "tag": "Marketing Tag",
-      "permissions":       [
-                {
-          "name": "Manage Marketing Tags",
-          "description": "Request permission to read, create and update site's marketing tags."
-        },
-                {
-          "name": "Read Marketing Tags",
-          "description": "Request permission to read site's marketing tags."
-        }
-      ],
+      "permissions": [      {
+        "name": "Read Marketing Tags",
+        "description": "Request permission to read site's marketing tags."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -139,7 +181,7 @@
       "tag": "Marketing Tag",
       "permissions": [      {
         "name": "Manage Marketing Tags",
-        "description": "Request permission to read, create and update site's marketing tags."
+        "description": "Read, create and update a site's marketing tags."
       }],
       "events": [],
       "labels": [],
@@ -197,16 +239,10 @@
       },
       "topic": "domain_events_wix.marketing.v1.tag",
       "tag": "Marketing Tag",
-      "permissions":       [
-                {
-          "name": "Manage Marketing Tags",
-          "description": "Request permission to read, create and update site's marketing tags."
-        },
-                {
-          "name": "Read Marketing Tags",
-          "description": "Request permission to read site's marketing tags."
-        }
-      ],
+      "permissions": [      {
+        "name": "Read Marketing Tags",
+        "description": "Request permission to read site's marketing tags."
+      }],
       "customLabels": [{"id": "maturity-beta"}],
       "eventType": "wix.marketing.v1.tag_created",
       "extra": {"isDomainEvent": true}
@@ -220,16 +256,10 @@
       },
       "topic": "domain_events_wix.marketing.v1.tag",
       "tag": "Marketing Tag",
-      "permissions":       [
-                {
-          "name": "Manage Marketing Tags",
-          "description": "Request permission to read, create and update site's marketing tags."
-        },
-                {
-          "name": "Read Marketing Tags",
-          "description": "Request permission to read site's marketing tags."
-        }
-      ],
+      "permissions": [      {
+        "name": "Read Marketing Tags",
+        "description": "Request permission to read site's marketing tags."
+      }],
       "customLabels": [{"id": "maturity-beta"}],
       "eventType": "wix.marketing.v1.tag_updated",
       "extra": {"isDomainEvent": true}
@@ -243,17 +273,11 @@
       },
       "topic": "domain_events_wix.marketing.v1.tag",
       "tag": "Marketing Tag",
-      "permissions":       [
-                {
-          "name": "Manage Marketing Tags",
-          "description": "Request permission to read, create and update site's marketing tags."
-        },
-                {
-          "name": "Read Marketing Tags",
-          "description": "Request permission to read site's marketing tags."
-        }
-      ],
-      "customLabels": [{"id": "maturity-beta"}],
+      "permissions": [      {
+        "name": "Read Marketing Tags",
+        "description": "Request permission to read site's marketing tags."
+      }],
+      "customLabels": [{"id": "maturity-alpha"}],
       "eventType": "wix.marketing.v1.tag_deleted",
       "extra": {"isDomainEvent": true}
     }
@@ -309,6 +333,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -382,6 +411,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -397,18 +431,11 @@
         "links": [],
         "examples": []
       },
-      "members":       [
-                {
-          "name": "currentEntity",
-          "type": "All APIs.Marketing Tags._com_wixpress_marketing_tags_api_v1_MarketingTag",
-          "doc": "Event body"
-        },
-                {
-          "name": "previousEntity",
-          "type": "All APIs.Marketing Tags._com_wixpress_marketing_tags_api_v1_MarketingTag",
-          "doc": "Previous event body, (when relevant)."
-        }
-      ],
+      "members": [      {
+        "name": "currentEntity",
+        "type": "All APIs.Marketing Tags._com_wixpress_marketing_tags_api_v1_MarketingTag",
+        "doc": "Event body"
+      }],
       "enum": null,
       "extra": {},
       "labels": []
@@ -462,6 +489,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -821,11 +853,43 @@
       "labels": []
     },
         {
+      "name": "_com_wixpress_marketing_tags_api_v1_DeleteMarketingTagV2Request",
+      "displayName": "Delete Marketing Tag V 2 Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "tagType",
+        "type": "All APIs.Marketing Tags._com_wixpress_marketing_tags_api_v1_MarketingTag_Type",
+        "doc": " Marketing tag to delete.\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_marketing_tags_api_v1_DeleteMarketingTagV2Response",
+      "displayName": "Delete Marketing Tag V 2 Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_marketing_tags_api_v1_MarketingTag_Type",
       "displayName": "Type Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> UNKNOWN -  Illegal default value, exception will be thrown if used       \n <\/code><\/li><li><code> GOOGLE_ADS <\/code><\/li><li><code> GOOGLE_ANALYTICS <\/code><\/li><li><code> YANDEX_METRICA <\/code><\/li><li><code> FACEBOOK_PIXEL <\/code><\/li><li><code> GOOGLE_TAG_MANAGER <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> UNKNOWN -  Illegal default value, exception will be thrown if used\n <\/code><\/li><li><code> GOOGLE_ADS <\/code><\/li><li><code> GOOGLE_ANALYTICS <\/code><\/li><li><code> YANDEX_METRICA <\/code><\/li><li><code> FACEBOOK_PIXEL <\/code><\/li><li><code> GOOGLE_TAG_MANAGER <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -842,5 +906,5 @@
       "labels": []
     }
   ],
-  "extra": {"artifactId": "com.wixpress.wix-html-live-site-data-webapp"}
+  "extra": {}
 }
