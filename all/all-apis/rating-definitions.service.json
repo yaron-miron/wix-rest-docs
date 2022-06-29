@@ -868,5 +868,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.critique.ratings.rating-definitions"}
 }
