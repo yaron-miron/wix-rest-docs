@@ -598,6 +598,36 @@
           "name": "invisibleRecaptchaToken",
           "type": "string",
           "doc": ""
+        },
+                {
+          "name": "emailVerification",
+          "type": "All APIs.Member Authentication._wix_members_api_v1_EmailVerification",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_members_api_v1_EmailVerification",
+      "displayName": "Email Verification Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "verificationId",
+          "type": "string",
+          "doc": " Id of the verification process\n"
+        },
+                {
+          "name": "otp",
+          "type": "string",
+          "doc": " 6-digit code to verify (between 100000 and 999999)\n"
         }
       ],
       "enum": null,
@@ -663,6 +693,11 @@
           "name": "invisibleRecaptchaToken",
           "type": "string",
           "doc": "invisible recaptcha token\n"
+        },
+                {
+          "name": "emailVerification",
+          "type": "All APIs.Member Authentication._wix_members_api_v1_EmailVerification",
+          "doc": ""
         }
       ],
       "enum": null,
