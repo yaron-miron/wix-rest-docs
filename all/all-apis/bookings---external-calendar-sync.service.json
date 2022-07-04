@@ -884,5 +884,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.bookings.external-calendar-server"}
 }
