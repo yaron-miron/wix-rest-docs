@@ -83,7 +83,9 @@
         "task.payload.user.phone",
         "task.payload.ticket.queueId",
         "task.payload.ticket.lineId",
-        "task.payload.ticket.subject"
+        "task.payload.ticket.subject",
+        "task.payload.ticket.customFields.customFieldName",
+        "task.payload.ticket.customFields.customFieldValue"
       ],
       "params": [      {
         "in": "BODY",
@@ -383,6 +385,31 @@
       "labels": []
     },
         {
+      "name": "_com_wix_cc_scheduler_api_scheduler_v1_CallbackTicketDetails_CustomField",
+      "displayName": "Custom Field Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "customFieldName",
+          "type": "string",
+          "doc": " CustomField's name\n"
+        },
+                {
+          "name": "customFieldValue",
+          "type": "string",
+          "doc": " CustomField's value\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wix_cc_scheduler_api_scheduler_v1_CallbackTicketDetails",
       "displayName": "Callback Ticket Details Object",
       "locations": [],
@@ -429,6 +456,14 @@
             "typeParams": ["string"]
           },
           "doc": " Ticket's labelIds\n NOTE: if the labels are not exist on answers side, they will be filtered out, and wont be stored with payload\n"
+        },
+                {
+          "name": "customFields",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.CustomerCare Scheduler API._com_wix_cc_scheduler_api_scheduler_v1_CallbackTicketDetails_CustomField"]
+          },
+          "doc": " Ticket's custom_fields list\n NOTE: these fields should be previously registered on the answers side:\n e.g https://wix.wixanswers.com/app/helpdesk/custom-fields/ticket\n"
         }
       ],
       "enum": null,
