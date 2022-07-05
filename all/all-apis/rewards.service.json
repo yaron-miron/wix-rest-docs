@@ -115,8 +115,8 @@
       "serviceName": "LoyaltyRewards",
       "tag": "Rewards",
       "permissions": [      {
-        "name": "Devcenter Manage Loyalty",
-        "description": "can manage loyalty programs"
+        "name": "Read Loyalty",
+        "description": "Request permission to read the site's installed Wix Loyalty Program, including program and accounts."
       }],
       "events": [],
       "labels": [],
@@ -160,8 +160,8 @@
       "serviceName": "LoyaltyRewards",
       "tag": "Rewards",
       "permissions": [      {
-        "name": "Devcenter Manage Loyalty",
-        "description": "can manage loyalty programs"
+        "name": "Read Loyalty",
+        "description": "Request permission to read the site's installed Wix Loyalty Program, including program and accounts."
       }],
       "events": [],
       "labels": [],
@@ -270,8 +270,8 @@
       "topic": "domain_events_wix.loyalty.v1.reward",
       "tag": "Rewards",
       "permissions": [      {
-        "name": "Devcenter Manage Loyalty",
-        "description": "can manage loyalty programs"
+        "name": "Read Loyalty",
+        "description": "Request permission to read the site's installed Wix Loyalty Program, including program and accounts."
       }],
       "customLabels": [{"id": "maturity-beta"}],
       "eventType": "wix.loyalty.v1.reward_deleted",
@@ -284,8 +284,8 @@
       "topic": "domain_events_wix.loyalty.v1.reward",
       "tag": "Rewards",
       "permissions": [      {
-        "name": "Devcenter Manage Loyalty",
-        "description": "can manage loyalty programs"
+        "name": "Read Loyalty",
+        "description": "Request permission to read the site's installed Wix Loyalty Program, including program and accounts."
       }],
       "customLabels": [{"id": "maturity-beta"}],
       "eventType": "wix.loyalty.v1.reward_updated",
@@ -298,8 +298,8 @@
       "topic": "domain_events_wix.loyalty.v1.reward",
       "tag": "Rewards",
       "permissions": [      {
-        "name": "Devcenter Manage Loyalty",
-        "description": "can manage loyalty programs"
+        "name": "Read Loyalty",
+        "description": "Request permission to read the site's installed Wix Loyalty Program, including program and accounts."
       }],
       "customLabels": [{"id": "maturity-beta"}],
       "eventType": "wix.loyalty.v1.reward_created",
@@ -590,17 +590,17 @@
                 {
           "name": "totalSuccesses",
           "type": "integer",
-          "doc": " For how many items the requested action was successful \n"
+          "doc": " Number of items that were successfully processed.\n"
         },
                 {
           "name": "totalFailures",
           "type": "integer",
-          "doc": " For how many items the requested action was not successful \n"
+          "doc": " Number of items that couldn't be processed.\n"
         },
                 {
           "name": "undetailedFailures",
           "type": "integer",
-          "doc": " total number of failures without details because detailed-failure-threshold exceeded\n"
+          "doc": " Number of failures without details because detailed failure threshold was exceeded.\n"
         }
       ],
       "enum": null,
@@ -620,22 +620,22 @@
                 {
           "name": "id",
           "type": "string",
-          "doc": " Item id. Should always be provided, unless it's impossible (e.g when failing to create an item)\n"
+          "doc": " Item ID. Should always be available, unless it's impossible (for example, when failing to create an item).\n"
         },
                 {
           "name": "originalIndex",
           "type": "integer",
-          "doc": " The index of the item within the request array to allow the caller to correlate the request and response items\n"
+          "doc": " Index of the item within the request array. Allows for correlation between request and response items.\n"
         },
                 {
           "name": "success",
           "type": "boolean",
-          "doc": " Whether the action requested was successful for this item. When this value is false, error should be populated\n"
+          "doc": " Whether the requested action was successful for this item. When `false`, the `error` field is populated.\n"
         },
                 {
           "name": "error",
           "type": "All APIs.Rewards._wix_api_ApplicationError",
-          "doc": " In case of failure, details about the error\n"
+          "doc": " Details about the error in case of failure.\n"
         }
       ],
       "enum": null,
@@ -711,24 +711,6 @@
       "labels": []
     },
         {
-      "name": "changedNamespacesMapEntry",
-      "displayName": "changed Namespaces Map Entry Object",
-      "locations": [],
-      "docs":       {
-        "summary": "Set of key-value pairs. Changes per namespaces\n",
-        "links": [],
-        "examples": []
-      },
-      "members": [      {
-        "name": "key:value",
-        "type": "All APIs.Rewards._wix_common_domainevents_ChangedNamespace",
-        "doc": "`key` of type string, `value` of type object"
-      }],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
       "name": "_wix_common_domainevents_ExtendedFieldsUpdatedEvent",
       "displayName": "Extended Fields Updated Event Object",
       "locations": [],
@@ -737,46 +719,11 @@
         "links": [],
         "examples": []
       },
-      "members":       [
-                {
-          "name": "currentEntityAsJson",
-          "type": "string",
-          "doc": ""
-        },
-                {
-          "name": "changedNamespaces",
-          "type": "All APIs.Rewards.changedNamespacesMapEntry",
-          "doc": "Set of key-value pairs. Changes per namespaces\n"
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_wix_common_domainevents_ChangedNamespace",
-      "displayName": "Changed Namespace Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "fields",
-          "type":           {
-            "name": "array",
-            "typeParams": ["string"]
-          },
-          "doc": " List of changed field paths\n"
-        },
-                {
-          "name": "hasMoreChanges",
-          "type": "boolean",
-          "doc": " Indicates that more fields changed, this indicator goes along with _has_more_data.\n These other fields are not visible to you in current_entity_as_json\n"
-        }
-      ],
+      "members": [      {
+        "name": "currentEntityAsJson",
+        "type": "string",
+        "doc": ""
+      }],
       "enum": null,
       "extra": {},
       "labels": []
@@ -1024,6 +971,14 @@
           "type": "string",
           "doc": " Date and time the reward was last updated.\n",
           "readOnly": true
+        },
+                {
+          "name": "tierIds",
+          "type":           {
+            "name": "array",
+            "typeParams": ["string"]
+          },
+          "doc": ""
         }
       ],
       "enum": null,
