@@ -588,12 +588,12 @@
                 {
           "name": "catalogItemId",
           "type": "string",
-          "doc": ""
+          "doc": " Dummy comment\n"
         },
                 {
           "name": "catalogAppId",
           "type": "string",
-          "doc": ""
+          "doc": " Dummy comment\n"
         }
       ],
       "enum": null,
@@ -936,7 +936,7 @@
         "examples": []
       },
       "members": [      {
-        "name": "id",
+        "name": "bundleId",
         "type": "string",
         "doc": " Id of the Bundle to retrieve\n"
       }],
@@ -975,12 +975,12 @@
                 {
           "name": "bundle",
           "type": "All APIs.Bundles._com_wix_ecom_bundles_v1_Bundle",
-          "doc": ""
+          "doc": " Dummy comment\n"
         },
                 {
           "name": "fieldMask",
           "type": "All APIs.Bundles._google_protobuf_FieldMask",
-          "doc": ""
+          "doc": " Dummy comment\n"
         }
       ],
       "enum": null,
@@ -1015,7 +1015,7 @@
         "examples": []
       },
       "members": [      {
-        "name": "id",
+        "name": "bundleId",
         "type": "string",
         "doc": " Id of the Bundle to delete\n"
       }],
