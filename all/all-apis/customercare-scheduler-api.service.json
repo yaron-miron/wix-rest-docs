@@ -890,7 +890,7 @@
                 {
           "name": "userId",
           "type": "string",
-          "doc": " User's ID\n"
+          "doc": " Wix User's ID\n"
         },
                 {
           "name": "language",
@@ -901,6 +901,11 @@
           "name": "phone",
           "type": "string",
           "doc": " User's phone number with an international dialling code\n e.g: \"+679 xxxxxxx\" is phone number with country code of Fiji\n"
+        },
+                {
+          "name": "ipAddress",
+          "type": "string",
+          "doc": " User's IP address\n it will be used on Answers to properly retrieve the geo-location of the user\n (visible in the technical information panel inside a ticket)\n"
         }
       ],
       "enum": null,
