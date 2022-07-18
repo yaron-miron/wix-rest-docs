@@ -920,6 +920,21 @@
           "doc": " total\n"
         },
                 {
+          "name": "totalAmount",
+          "type": "All APIs.Wix Payments Balances._wix_common_Money",
+          "doc": " total amount\n"
+        },
+                {
+          "name": "totalFees",
+          "type": "All APIs.Wix Payments Balances._wix_common_Money",
+          "doc": " total fees\n"
+        },
+                {
+          "name": "totalNet",
+          "type": "All APIs.Wix Payments Balances._wix_common_Money",
+          "doc": " total net\n"
+        },
+                {
           "name": "items",
           "type":           {
             "name": "array",
