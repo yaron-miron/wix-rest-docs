@@ -1,6 +1,6 @@
 {
   "name": "Events - Policies",
-  "client_id": "https://github.com/wix-private/events/tree/master/wix-events-platform-api/events-policies-v1/proto#public",
+  "client_id": "https://github.com/wix-private/events/tree/master/wix-events-platform-api/events-policies-v1/src/main/proto#public",
   "memberOf": "All APIs",
   "category": "business-service",
   "mixes": [],
