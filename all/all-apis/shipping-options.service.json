@@ -1058,6 +1058,11 @@
           "name": "fallbackDefinitionMandatory",
           "type": "boolean",
           "doc": " If the provider fallback definition is mandatory\n"
+        },
+                {
+          "name": "isHardcoded",
+          "type": "boolean",
+          "doc": ""
         }
       ],
       "enum": null,
