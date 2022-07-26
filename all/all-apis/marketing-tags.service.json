@@ -109,7 +109,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": " \n",
+        "summary": " Deletes a marketing tag\n \n",
         "description": [],
         "request": "DELETE",
         "url": "https://www.wixapis.com/marketing/v2/tags",
