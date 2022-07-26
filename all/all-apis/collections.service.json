@@ -1028,12 +1028,12 @@
                 {
           "name": "appDefId",
           "type": "string",
-          "doc": ""
+          "doc": " The AppDefId\n"
         },
                 {
           "name": "instanceId",
           "type": "string",
-          "doc": ""
+          "doc": " The instance Id\n"
         }
       ],
       "enum": null,
@@ -1058,12 +1058,12 @@
                 {
           "name": "reason",
           "type": "string",
-          "doc": "tell us why you're invalidating the cache. You don't need to add your app name\n"
+          "doc": "tell us why you're invalidating the cache. You don't need to add your app name\n The cache invalidation reason\n"
         },
                 {
           "name": "localDc",
           "type": "boolean",
-          "doc": ""
+          "doc": " Is local DS\n"
         }
       ],
       "enum": null,
@@ -1083,12 +1083,12 @@
                 {
           "name": "metaSiteId",
           "type": "string",
-          "doc": ""
+          "doc": " Invalidate by msId\n"
         },
                 {
           "name": "app",
           "type": "All APIs.Collections._com_wixpress_html_cache_invalidate_InvalidateCache_App",
-          "doc": ""
+          "doc": " Invalidate by App\n"
         }
       ],
       "enum": null,
