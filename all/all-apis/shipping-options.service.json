@@ -1063,6 +1063,11 @@
           "name": "isHardcoded",
           "type": "boolean",
           "doc": ""
+        },
+                {
+          "name": "thumbnailUrl",
+          "type": "string",
+          "doc": " Thumbnail image for Carrier\n"
         }
       ],
       "enum": null,
