@@ -644,7 +644,7 @@
                 {
           "name": "quality",
           "type": "integer",
-          "doc": " Image compression level. Minimum 30, maximum 100.\n"
+          "doc": " Image compression level. \nMin: `30`\nMax: `100`\n"
         },
                 {
           "name": "unsharpMasking",
@@ -669,7 +669,7 @@
                 {
           "name": "amount",
           "type": "number",
-          "doc": " Unsharp masking amount. Controls the sharpening strength. Minimum 0, maximum 5.\n"
+          "doc": " Unsharp masking amount. Controls the sharpening strength. \nMin: `0`\nMax: `5`\n"
         },
                 {
           "name": "radius",
@@ -679,7 +679,7 @@
                 {
           "name": "threshold",
           "type": "number",
-          "doc": " Unsharp masking threshold. Controls how different neighboring pixels must be for shapening to apply. Minimum 0, maximum 1.\n"
+          "doc": " Unsharp masking threshold. Controls how different neighboring pixels must be for shapening to apply. \nMin: `0`\nMax: `1`\n"
         }
       ],
       "enum": null,
