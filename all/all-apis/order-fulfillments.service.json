@@ -84,7 +84,7 @@
         "rpcRequestName": "ListFulfillmentsForMultipleOrdersRequest",
         "rpcResponseName": "ListFulfillmentsForMultipleOrdersResponse"
       },
-      "customLabels": [{"id": "maturity-beta"}]
+      "customLabels": [{"id": "maturity-alpha"}]
     },
         {
       "name": "List Fulfillments For Single Order",
@@ -141,7 +141,7 @@
         "rpcRequestName": "ListFulfillmentsForSingleOrderRequest",
         "rpcResponseName": "ListFulfillmentsForSingleOrderResponse"
       },
-      "customLabels": [{"id": "maturity-beta"}]
+      "customLabels": [{"id": "maturity-alpha"}]
     }
   ],
   "events": [  {
@@ -163,7 +163,7 @@
         "description": "Request permission to read the site's Wix Stores order info."
       }
     ],
-    "customLabels": [{"id": "maturity-beta"}],
+    "customLabels": [{"id": "maturity-alpha"}],
     "eventType": "wix.ecom.v1.fulfillments_updated",
     "extra": {"isDomainEvent": true}
   }],
