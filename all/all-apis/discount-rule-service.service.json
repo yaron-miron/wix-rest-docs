@@ -19,323 +19,51 @@
     "path": "../guides/discount-rule-service/docs/README.md",
     "name": "Introduction"
   }],
-  "operations":   [
-        {
-      "name": "Create Discount Rule",
-      "methodName": "CreateDiscountRule",
-      "serviceName": "DiscountRuleService",
-      "tag": "Discount Rule",
-      "permissions": [],
-      "events": [],
-      "labels": [],
-      "nameParams": [],
-      "requiredFields":       [
-        "discountRule",
-        "discountRule.name",
-        "discountRule.discounts"
-      ],
-      "params": [      {
-        "in": "BODY",
-        "name": "discountRule",
-        "type": "All APIs.Discount Rule Service._com_wix_ecom_discounts_DiscountRule",
-        "doc": " Discount rule info.\n",
-        "required": true
-      }],
-      "ret":       {
-        "type":         {
-          "name": "CreateDiscountRule",
-          "statusCode": "200",
-          "typeParams": ["All APIs.Discount Rule Service._com_wix_ecom_discounts_CreateDiscountRuleResponse"]
-        },
-        "doc": ""
+  "operations": [  {
+    "name": "Get Applied Discounts",
+    "methodName": "GetAppliedDiscounts",
+    "serviceName": "DiscountRuleService",
+    "tag": "Discount Rule",
+    "permissions": [],
+    "events": [],
+    "labels": [],
+    "nameParams": [],
+    "params": [    {
+      "in": "BODY",
+      "name": "lineItems",
+      "type":       {
+        "name": "array",
+        "typeParams": ["All APIs.Discount Rule Service._com_wix_ecom_discounts_LineItem"]
       },
-      "locations": [],
-      "docs":       {
-        "summary": "\nCreates a new discount rule.\n \n",
-        "description": [],
-        "request": "POST",
-        "url": "https://www.wixapis.com/discount-rules-service/v1/discount-rules",
-        "links": [],
-        "examples": [],
-        "extra": {}
+      "doc": " Line items for which to check for discount rules.\n",
+      "required": false
+    }],
+    "ret":     {
+      "type":       {
+        "name": "GetAppliedDiscounts",
+        "statusCode": "200",
+        "typeParams": ["All APIs.Discount Rule Service._com_wix_ecom_discounts_GetAppliedDiscountsResponse"]
       },
-      "extra":       {
-        "hasRest": true,
-        "rpcRequestName": "CreateDiscountRuleRequest",
-        "rpcResponseName": "CreateDiscountRuleResponse"
-      },
-      "customLabels": [{"id": "maturity-alpha"}]
+      "doc": ""
     },
-        {
-      "name": "Delete Discount Rule",
-      "methodName": "DeleteDiscountRule",
-      "serviceName": "DiscountRuleService",
-      "tag": "Discount Rule",
-      "permissions": [],
-      "events": [],
-      "labels": [],
-      "nameParams": [],
-      "requiredFields": ["discountRuleId"],
-      "params": [      {
-        "in": "PATH",
-        "name": "discountRuleId",
-        "type": "string",
-        "doc": " ID of the discount rule to delete.\n",
-        "required": true
-      }],
-      "ret":       {
-        "type":         {
-          "name": "DeleteDiscountRule",
-          "statusCode": "200",
-          "typeParams": ["All APIs.Discount Rule Service._com_wix_ecom_discounts_DeleteDiscountRuleResponse"]
-        },
-        "doc": ""
-      },
-      "locations": [],
-      "docs":       {
-        "summary": "\nDeletes a discount rule.\n \n",
-        "description": [],
-        "request": "DELETE",
-        "url": "https://www.wixapis.com/discount-rules-service/v1/discount-rules/{discountRuleId}",
-        "links": [],
-        "examples": [],
-        "extra": {}
-      },
-      "extra":       {
-        "hasRest": true,
-        "rpcRequestName": "DeleteDiscountRuleRequest",
-        "rpcResponseName": "DeleteDiscountRuleResponse"
-      },
-      "customLabels": [{"id": "maturity-alpha"}]
+    "locations": [],
+    "docs":     {
+      "summary": "\nRetrieve all discounts that can be applied to the given line items.\n \n",
+      "description": [],
+      "request": "POST",
+      "url": "https://www.wixapis.com/discount-rules-service/v1/discount-rules/applied-discounts",
+      "links": [],
+      "examples": [],
+      "extra": {}
     },
-        {
-      "name": "Get Applied Discounts",
-      "methodName": "GetAppliedDiscounts",
-      "serviceName": "DiscountRuleService",
-      "tag": "Discount Rule",
-      "permissions": [],
-      "events": [],
-      "labels": [],
-      "nameParams": [],
-      "params": [      {
-        "in": "BODY",
-        "name": "lineItems",
-        "type":         {
-          "name": "array",
-          "typeParams": ["All APIs.Discount Rule Service._com_wix_ecom_discounts_LineItem"]
-        },
-        "doc": " Line items for which to check for discount rules.\n",
-        "required": false
-      }],
-      "ret":       {
-        "type":         {
-          "name": "GetAppliedDiscounts",
-          "statusCode": "200",
-          "typeParams": ["All APIs.Discount Rule Service._com_wix_ecom_discounts_GetAppliedDiscountsResponse"]
-        },
-        "doc": ""
-      },
-      "locations": [],
-      "docs":       {
-        "summary": "\nRetrieve all discounts that can be applied to the given line items.\n \n",
-        "description": [],
-        "request": "POST",
-        "url": "https://www.wixapis.com/discount-rules-service/v1/discount-rules/applied-discounts",
-        "links": [],
-        "examples": [],
-        "extra": {}
-      },
-      "extra":       {
-        "hasRest": true,
-        "rpcRequestName": "GetAppliedDiscountsRequest",
-        "rpcResponseName": "GetAppliedDiscountsResponse"
-      },
-      "customLabels": [{"id": "maturity-alpha"}]
+    "extra":     {
+      "hasRest": true,
+      "rpcRequestName": "GetAppliedDiscountsRequest",
+      "rpcResponseName": "GetAppliedDiscountsResponse"
     },
-        {
-      "name": "Get Discount Rule",
-      "methodName": "GetDiscountRule",
-      "serviceName": "DiscountRuleService",
-      "tag": "Discount Rule",
-      "permissions": [],
-      "events": [],
-      "labels": [],
-      "nameParams": [],
-      "requiredFields": ["discountRuleId"],
-      "params": [      {
-        "in": "PATH",
-        "name": "discountRuleId",
-        "type": "string",
-        "doc": " ID of the discount rule to retrieve.\n",
-        "required": true
-      }],
-      "ret":       {
-        "type":         {
-          "name": "GetDiscountRule",
-          "statusCode": "200",
-          "typeParams": ["All APIs.Discount Rule Service._com_wix_ecom_discounts_GetDiscountRuleResponse"]
-        },
-        "doc": ""
-      },
-      "locations": [],
-      "docs":       {
-        "summary": "\nRetrieves a discount rule.\n \n",
-        "description": [],
-        "request": "GET",
-        "url": "https://www.wixapis.com/discount-rules-service/v1/discount-rules/{discountRuleId}",
-        "links": [],
-        "examples": [],
-        "extra": {}
-      },
-      "extra":       {
-        "hasRest": true,
-        "rpcRequestName": "GetDiscountRuleRequest",
-        "rpcResponseName": "GetDiscountRuleResponse"
-      },
-      "customLabels": [{"id": "maturity-alpha"}]
-    },
-        {
-      "name": "Query Discount Rules",
-      "methodName": "QueryDiscountRules",
-      "serviceName": "DiscountRuleService",
-      "tag": "Discount Rule",
-      "permissions": [],
-      "events": [],
-      "labels": [],
-      "nameParams": [],
-      "requiredFields": ["query"],
-      "params": [      {
-        "in": "BODY",
-        "name": "query",
-        "type": "All APIs.Discount Rule Service._com_wix_ecommerce_commons_api_PlatformQuery",
-        "doc": " Query options.\n",
-        "required": true
-      }],
-      "ret":       {
-        "type":         {
-          "name": "QueryDiscountRules",
-          "statusCode": "200",
-          "typeParams": ["All APIs.Discount Rule Service._com_wix_ecom_discounts_QueryDiscountRulesResponse"]
-        },
-        "doc": ""
-      },
-      "locations": [],
-      "docs":       {
-        "summary": "\nQuery discount rules using [WQL (Wix Query Language)](https://dev.wix.com/api/rest/getting-started/api-query-language).\nTotal entries (`pagingMetadata.total`) will be returned only for the first page.\n\n> **Note:** `discountRule.status` can't be used for querying.\n \n",
-        "description": [],
-        "request": "POST",
-        "url": "https://www.wixapis.com/discount-rules-service/v1/discount-rules/query",
-        "links": [],
-        "examples": [],
-        "extra": {}
-      },
-      "extra":       {
-        "hasRest": true,
-        "rpcRequestName": "QueryDiscountRulesRequest",
-        "rpcResponseName": "QueryDiscountRulesResponse"
-      },
-      "customLabels": [{"id": "maturity-alpha"}]
-    },
-        {
-      "name": "Update Discount Rule",
-      "methodName": "UpdateDiscountRule",
-      "serviceName": "DiscountRuleService",
-      "tag": "Discount Rule",
-      "permissions": [],
-      "events": [],
-      "labels": [],
-      "nameParams": [],
-      "requiredFields":       [
-        "discountRule",
-        "discountRule.id",
-        "discountRule.revision"
-      ],
-      "params":       [
-                {
-          "in": "PATH",
-          "name": "discountRule.id",
-          "type": "string",
-          "doc": " Discount rule ID.\n",
-          "required": true
-        },
-                {
-          "in": "BODY",
-          "name": "discountRule",
-          "type": "All APIs.Discount Rule Service._com_wix_ecom_discounts_DiscountRule",
-          "doc": " Discount rule info.\n",
-          "required": true
-        }
-      ],
-      "ret":       {
-        "type":         {
-          "name": "UpdateDiscountRule",
-          "statusCode": "200",
-          "typeParams": ["All APIs.Discount Rule Service._com_wix_ecom_discounts_UpdateDiscountRuleResponse"]
-        },
-        "doc": ""
-      },
-      "locations": [],
-      "docs":       {
-        "summary": "\nUpdates a discount rule.\n\nEach time the discount rule is updated, `revision` increments by 1.\nThe existing `revision` must be included when updating the discount rule.\nThis ensures you're working with the latest discount rule information, and it prevents unintended overwrites.\n \n",
-        "description": [],
-        "request": "PATCH",
-        "url": "https://www.wixapis.com/discount-rules-service/v1/discount-rules/{discountRule.id}",
-        "links": [],
-        "examples": [],
-        "extra": {}
-      },
-      "extra":       {
-        "hasRest": true,
-        "rpcRequestName": "UpdateDiscountRuleRequest",
-        "rpcResponseName": "UpdateDiscountRuleResponse"
-      },
-      "customLabels": [{"id": "maturity-alpha"}]
-    }
-  ],
-  "events":   [
-        {
-      "type": "_com_wix_ecom_discounts_DiscountRuleCreatedDomainEvent",
-      "name": "Discount Rule Created Webhook",
-      "docs":       {
-        "summary": "",
-        "src": "https://github.com/wix-private/ecom/tree/master/server/wix-ecommerce-server/wix-ecommerce-platform-discounts-services/discount-rules-service/proto/com/wix/ecom/discounts/discount_rule_service.proto"
-      },
-      "topic": "domain_events_wix.ecom.discounts.v1.discount_rule",
-      "tag": "Discount Rule",
-      "permissions": [],
-      "customLabels": [{"id": "maturity-alpha"}],
-      "eventType": "wix.ecom.discounts.v1.discount_rule_created",
-      "extra": {"isDomainEvent": true}
-    },
-        {
-      "type": "_com_wix_ecom_discounts_DiscountRuleDeletedDomainEvent",
-      "name": "Discount Rule Deleted Webhook",
-      "docs":       {
-        "summary": "",
-        "src": "https://github.com/wix-private/ecom/tree/master/server/wix-ecommerce-server/wix-ecommerce-platform-discounts-services/discount-rules-service/proto/com/wix/ecom/discounts/discount_rule_service.proto"
-      },
-      "topic": "domain_events_wix.ecom.discounts.v1.discount_rule",
-      "tag": "Discount Rule",
-      "permissions": [],
-      "customLabels": [{"id": "maturity-alpha"}],
-      "eventType": "wix.ecom.discounts.v1.discount_rule_deleted",
-      "extra": {"isDomainEvent": true}
-    },
-        {
-      "type": "_com_wix_ecom_discounts_DiscountRuleUpdatedDomainEvent",
-      "name": "Discount Rule Updated Webhook",
-      "docs":       {
-        "summary": "",
-        "src": "https://github.com/wix-private/ecom/tree/master/server/wix-ecommerce-server/wix-ecommerce-platform-discounts-services/discount-rules-service/proto/com/wix/ecom/discounts/discount_rule_service.proto"
-      },
-      "topic": "domain_events_wix.ecom.discounts.v1.discount_rule",
-      "tag": "Discount Rule",
-      "permissions": [],
-      "customLabels": [{"id": "maturity-alpha"}],
-      "eventType": "wix.ecom.discounts.v1.discount_rule_updated",
-      "extra": {"isDomainEvent": true}
-    }
-  ],
+    "customLabels": [{"id": "maturity-alpha"}]
+  }],
+  "events": [],
   "callbacks": [],
   "messages":   [
         {
@@ -403,9 +131,9 @@
         "examples": []
       },
       "members": [      {
-        "name": "entity",
+        "name": "entityAsJson",
         "type": "All APIs.Discount Rule Service._com_wix_ecom_discounts_DiscountRule",
-        "doc": "Event body"
+        "doc": "Event body as a stringified JSON"
       }],
       "enum": null,
       "extra": {},
@@ -545,9 +273,9 @@
         "examples": []
       },
       "members": [      {
-        "name": "currentEntity",
+        "name": "currentEntityAsJson",
         "type": "All APIs.Discount Rule Service._com_wix_ecom_discounts_DiscountRule",
-        "doc": "Event body"
+        "doc": "Event body as a stringified JSON"
       }],
       "enum": null,
       "extra": {},
