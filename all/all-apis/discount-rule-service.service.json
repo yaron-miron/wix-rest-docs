@@ -24,7 +24,10 @@
     "methodName": "GetAppliedDiscounts",
     "serviceName": "DiscountRuleService",
     "tag": "Discount Rule",
-    "permissions": [],
+    "permissions": [    {
+      "name": "Read Stores - all read permissions",
+      "description": "Request permission to read the site's Wix Stores data, including products and orders. This permission scope contains all of the read Stores permissions."
+    }],
     "events": [],
     "labels": [],
     "nameParams": [],
