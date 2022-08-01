@@ -1,6 +1,7 @@
 SortOrder: 3
 # About the API
 
+
 The Domain Connect API allow you to:
 
 - connect a domain.
