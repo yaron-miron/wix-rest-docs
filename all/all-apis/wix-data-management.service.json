@@ -1,0 +1,698 @@
+{
+  "name": "Wix Data Management",
+  "client_id": "https://github.com/wix-private/cloud/tree/master/dstore/api/src/main/proto#public",
+  "memberOf": "All APIs",
+  "category": "core",
+  "mixes": [],
+  "labels": [],
+  "docs":   {
+    "summary": "Wix Data management services are services available to site owner to perform management / operations actions on the database.",
+    "description": []
+  },
+  "properties": [],
+  "tags":   [
+        {
+      "name": "Storage Settings",
+      "entity": null
+    },
+        {
+      "name": "Backup Service",
+      "entity": null
+    }
+  ],
+  "relatedGuides":   [
+        {
+      "path": "../guides/wix-data-management/wixpress/dstore/docs/UseCases.md",
+      "name": "Use Cases",
+      "tag": "Backup Service"
+    },
+        {
+      "path": "../guides/wix-data-management/wixpress/dstore/docs/Intro.md",
+      "name": "Introduction",
+      "tag": "Backup Service"
+    }
+  ],
+  "operations":   [
+        {
+      "name": "Get Sandbox Mode",
+      "methodName": "GetSandboxMode",
+      "serviceName": "StorageSettingsService",
+      "tag": "Storage Settings",
+      "permissions": [],
+      "events": [],
+      "labels": [],
+      "nameParams": [],
+      "params": [],
+      "ret":       {
+        "type":         {
+          "name": "GetSandboxMode",
+          "statusCode": "200",
+          "typeParams": ["All APIs.Wix Data Management._com_wixpress_dstore_api_storage_settings_GetSandboxModeResponse"]
+        },
+        "doc": ""
+      },
+      "locations": [],
+      "docs":       {
+        "summary": " GetSandboxMode returns current state of sandbox mode setting.\n Requires wix-code.admin permission in user flows.\n \n",
+        "description": [],
+        "request": "GET",
+        "url": "https://www.wixapis.com/wix-data/v1/storage-settings/sandbox-mode",
+        "links": [],
+        "examples": [        {
+          "title": "Get Sandbox Mode",
+          "body": ["curl -X GET https://www.wix.com/_api/data/api/v1/storage-settings/sandbox-mode  \\\n    -H 'Content-Type: application/json;charset=UTF-8' \\\n    -H 'Authorization: <AUTH>' \\\n\n"],
+          "response": ["{} "],
+          "type": "curl",
+          "extra": {}
+        }],
+        "extra": {}
+      },
+      "extra":       {
+        "hasRest": true,
+        "rpcRequestName": "GetSandboxModeRequest",
+        "rpcResponseName": "GetSandboxModeResponse"
+      },
+      "customLabels": []
+    },
+        {
+      "name": "Set Sandbox Mode",
+      "methodName": "SetSandboxMode",
+      "serviceName": "StorageSettingsService",
+      "tag": "Storage Settings",
+      "permissions": [],
+      "events": [],
+      "labels": [],
+      "nameParams": [],
+      "params": [      {
+        "in": "BODY",
+        "name": "disabled",
+        "type": "boolean",
+        "doc": " Whether sandbox is disabled.\n",
+        "required": false
+      }],
+      "ret":       {
+        "type":         {
+          "name": "SetSandboxMode",
+          "statusCode": "200",
+          "typeParams": ["All APIs.Wix Data Management._com_wixpress_dstore_api_storage_settings_SetSandboxModeResponse"]
+        },
+        "doc": ""
+      },
+      "locations": [],
+      "docs":       {
+        "summary": " SetSandboxMode updates state of sandbox mode setting.\n Requires wix-code.admin permission in user flows.\n \n",
+        "description": [],
+        "request": "POST",
+        "url": "https://www.wixapis.com/wix-data/v1/storage-settings/sandbox-mode",
+        "links": [],
+        "examples": [        {
+          "title": "Set Sandbox Mode",
+          "body": ["curl -X POST https://www.wix.com/_api/data/api/v1/storage-settings/sandbox-mode  \\\n    -H 'Content-Type: application/json;charset=UTF-8' \\\n    -H 'Authorization: <AUTH>' \\\n\n"],
+          "response": ["{} "],
+          "type": "curl",
+          "extra": {}
+        }],
+        "extra": {}
+      },
+      "extra":       {
+        "hasRest": true,
+        "rpcRequestName": "SetSandboxModeRequest",
+        "rpcResponseName": "SetSandboxModeResponse"
+      },
+      "customLabels": []
+    }
+  ],
+  "events": [],
+  "callbacks": [],
+  "messages":   [
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_Backup",
+      "displayName": "Backup Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": " Backup ID.\n"
+        },
+                {
+          "name": "requested",
+          "type": "string",
+          "doc": " Time at which backup was requested, gets populated immediately.\n"
+        },
+                {
+          "name": "started",
+          "type": "string",
+          "doc": " Time at which backup was started to be taken, empty until backup task is\n started in the background.\n"
+        },
+                {
+          "name": "finished",
+          "type": "string",
+          "doc": " Time at which backup was finished to be taken, empty until backup task is\n completed in the background.\n"
+        },
+                {
+          "name": "deleted",
+          "type": "string",
+          "doc": " Time at which backup was deleted.\n"
+        },
+                {
+          "name": "size",
+          "type": "string",
+          "doc": " Backup size in bytes.\n"
+        },
+                {
+          "name": "status",
+          "type": "All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Backup_Status",
+          "doc": " Backup status.\n"
+        },
+                {
+          "name": "type",
+          "type": "All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Backup_Type",
+          "doc": " Type of backup, based on how it was triggered.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_Restoration",
+      "displayName": "Restoration Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": " Restoration ID\n"
+        },
+                {
+          "name": "requested",
+          "type": "string",
+          "doc": " Time at which restoration was requested, gets populated immediately.\n"
+        },
+                {
+          "name": "started",
+          "type": "string",
+          "doc": " Time at which restoration was started, stays empty until restoration task is\n started in the background.\n"
+        },
+                {
+          "name": "finished",
+          "type": "string",
+          "doc": " Completion time of the background task, stays empty until restoration task is\n finished in the background.\n"
+        },
+                {
+          "name": "backup",
+          "type": "All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Backup",
+          "doc": " Backup used in this restoration.\n"
+        },
+                {
+          "name": "status",
+          "type": "All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Restoration_Status",
+          "doc": " Status of restoration.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_Paging",
+      "displayName": "Paging Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "limit",
+          "type": "integer",
+          "doc": " Number of items to load.\n"
+        },
+                {
+          "name": "offset",
+          "type": "integer",
+          "doc": " Number of items to skip in the current sort order.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_PagingMetadataV2",
+      "displayName": "Paging Metadata V 2 Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "count",
+          "type": "integer",
+          "doc": " Number of items returned in the response.\n"
+        },
+                {
+          "name": "offset",
+          "type": "integer",
+          "doc": " Offset that was requested.\n"
+        },
+                {
+          "name": "total",
+          "type": "integer",
+          "doc": " Total number of items that match the query. Returned if offset paging is used and the `tooManyToCount` flag is not set.\n"
+        },
+                {
+          "name": "tooManyToCount",
+          "type": "boolean",
+          "doc": " Flag that indicates the server failed to calculate the `total` field.\n"
+        },
+                {
+          "name": "cursors",
+          "type": "All APIs.Wix Data Management._wix_common_Cursors",
+          "doc": " Cursors to navigate through the result pages using `next` and `prev`. Returned if cursor paging is used.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_Cursors",
+      "displayName": "Cursors Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "next",
+          "type": "string",
+          "doc": " Cursor pointing to next page in the list of results.\n"
+        },
+                {
+          "name": "prev",
+          "type": "string",
+          "doc": " Cursor pointing to previous page in the list of results.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_CreateBackupRequest",
+      "displayName": "Create Backup Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_CreateBackupResponse",
+      "displayName": "Create Backup Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "backup",
+        "type": "All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Backup",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_RestoreBackupRequest",
+      "displayName": "Restore Backup Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "backupId",
+        "type": "string",
+        "doc": " ID of backup to be restored.\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_RestoreBackupResponse",
+      "displayName": "Restore Backup Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "restoration",
+        "type": "All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Restoration",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_ListBackupsRequest",
+      "displayName": "List Backups Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "status",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Backup_Status"]
+          },
+          "doc": " List of statuses to filter by. If empty - no filtering will be applied.\n"
+        },
+                {
+          "name": "type",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Backup_Type"]
+          },
+          "doc": " List of types to filter by. If empty - no filtering will be applied.\n"
+        },
+                {
+          "name": "paging",
+          "type": "All APIs.Wix Data Management._wix_common_Paging",
+          "doc": " Offset and limit of items to retrieve.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_ListBackupsResponse",
+      "displayName": "List Backups Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "backups",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Backup"]
+          },
+          "doc": " Retrieved backups. Sorted by requested date (newest first).\n"
+        },
+                {
+          "name": "pagingMetadata",
+          "type": "All APIs.Wix Data Management._wix_common_PagingMetadataV2",
+          "doc": " Paging information\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_ListRestorationsRequest",
+      "displayName": "List Restorations Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "status",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Restoration_Status"]
+          },
+          "doc": " List of statuses to filter by. If empty - no filtering will be applied.\n"
+        },
+                {
+          "name": "paging",
+          "type": "All APIs.Wix Data Management._wix_common_Paging",
+          "doc": " Offset and limit of items to retrieve.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_ListRestorationsResponse",
+      "displayName": "List Restorations Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "restorations",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Wix Data Management._com_wixpress_dstore_api_backup_v2_Restoration"]
+          },
+          "doc": " Retrieved restorations. Sorted by requested date (newest first).\n"
+        },
+                {
+          "name": "pagingMetadata",
+          "type": "All APIs.Wix Data Management._wix_common_PagingMetadataV2",
+          "doc": " Paging information\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_DeleteBackupRequest",
+      "displayName": "Delete Backup Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "backupId",
+        "type": "string",
+        "doc": " ID of backup to be deleted.\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_DeleteBackupResponse",
+      "displayName": "Delete Backup Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_CancelBackupRequest",
+      "displayName": "Cancel Backup Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "backupId",
+        "type": "string",
+        "doc": " ID of backup to be cancelled.\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_CancelBackupResponse",
+      "displayName": "Cancel Backup Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_storage_settings_GetSandboxModeRequest",
+      "displayName": "Get Sandbox Mode Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_storage_settings_SetSandboxModeResponse",
+      "displayName": "Set Sandbox Mode Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_storage_settings_GetSandboxModeResponse",
+      "displayName": "Get Sandbox Mode Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "disabled",
+          "type": "boolean",
+          "doc": " Whether sandbox is disabled.\n"
+        },
+                {
+          "name": "deletingAfter",
+          "type": "integer",
+          "doc": " Time left until sandbox data is deleted (in milliseconds).\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_storage_settings_SetSandboxModeRequest",
+      "displayName": "Set Sandbox Mode Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "disabled",
+        "type": "boolean",
+        "doc": " Whether sandbox is disabled.\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_Backup_Status",
+      "displayName": "Status Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> PENDING -  Backup creation is in progress.\n <\/code><\/li><li><code> READY -  Backup has been created successfully and is ready for usage.\n <\/code><\/li><li><code> FAILED -  Backup creation has failed.\n <\/code><\/li><li><code> DELETED -  Backup has been deleted.\n <\/code><\/li><li><code> CANCELED -  Backup has been canceled.\n <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "PENDING",
+        "READY",
+        "FAILED",
+        "DELETED",
+        "CANCELED"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_Backup_Type",
+      "displayName": "Type Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> ON_DEMAND -  Backup taken on demand.\n <\/code><\/li><li><code> AUTO -  Automatically triggered backup (taken repeatedly on a regular interval).\n <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "ON_DEMAND",
+        "AUTO"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_dstore_api_backup_v2_Restoration_Status",
+      "displayName": "Status Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> PENDING -  Restoration from a backup is in progress.\n <\/code><\/li><li><code> COMPLETED -  Restoration from a backup has been successful.\n <\/code><\/li><li><code> FAILED -  Restoration from a backup has failed.\n <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "PENDING",
+        "COMPLETED",
+        "FAILED"
+      ],
+      "extra": {},
+      "labels": []
+    }
+  ],
+  "extra": {"artifactId": "com.wixpress.dstore-server"}
+}
