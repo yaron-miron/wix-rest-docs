@@ -139,7 +139,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": " Retrieves a reward.\n \n",
+        "summary": " Retrieves a reward.\n This API will return Reward with deprecated fields for backward compatibility\n \n",
         "description": [],
         "request": "GET",
         "url": "https://www.wixapis.com/loyalty-rewards/v1/rewards/{id}",
@@ -192,7 +192,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": " Retrieves rewards, given the provided filters.\n\n> **Notes:**\n> * Only `active` rewards are retrieved.\n> * Includes also rewards that cannot be redeemed because no customer has earned enough points yet.\n \n",
+        "summary": " Retrieves rewards, given the provided filters.\n\n> This API will return Reward with deprecated fields for backward compatibility\n> **Notes:**\n> * Only `active` rewards are retrieved.\n> * Includes also rewards that cannot be redeemed because no customer has earned enough points yet.\n \n",
         "description": [],
         "request": "GET",
         "url": "https://www.wixapis.com/loyalty-rewards/v1/rewards",
@@ -246,7 +246,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": " Updates a reward.\n \n",
+        "summary": " Updates a reward.\n This API will return Reward with deprecated fields for backward compatibility\n Base Tier is taken either from deprecated fields, or config (if deprecated fields are not passed)\n \n",
         "description": [],
         "request": "PUT",
         "url": "https://www.wixapis.com/loyalty-rewards/v1/rewards/{reward.id}",
@@ -938,7 +938,7 @@
                 {
           "name": "requiredPoints",
           "type": "integer",
-          "doc": " Amount of points required to receive the reward.\n"
+          "doc": " Amount of points required to receive the reward.\n    string target_wix_app_id = 4 [(wix.api.format) = GUID]; // app that will use this reward\n"
         },
                 {
           "name": "active",
@@ -971,14 +971,6 @@
           "type": "string",
           "doc": " Date and time the reward was last updated.\n",
           "readOnly": true
-        },
-                {
-          "name": "tierIds",
-          "type":           {
-            "name": "array",
-            "typeParams": ["string"]
-          },
-          "doc": ""
         }
       ],
       "enum": null,
@@ -1020,11 +1012,21 @@
         "links": [],
         "examples": []
       },
-      "members": [      {
-        "name": "amount",
-        "type": "string",
-        "doc": " Discount amount when redeeming the reward. Must be a positive value.\n"
-      }],
+      "members":       [
+                {
+          "name": "amount",
+          "type": "string",
+          "doc": " Discount amount when redeeming the reward. Must be a positive value.\n"
+        },
+                {
+          "name": "configs",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Rewards._com_wixpress_loyalty_reward_DiscountAmountConfig"]
+          },
+          "doc": "TODO add [(wix.api.minSize) = 1, (wix.api.maxSize) = 20];\n"
+        }
+      ],
       "enum": null,
       "extra": {},
       "labels": []
@@ -1048,6 +1050,71 @@
           "name": "deleted",
           "type": "boolean",
           "doc": "",
+          "readOnly": true
+        },
+                {
+          "name": "configs",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Rewards._com_wixpress_loyalty_reward_CouponConfig"]
+          },
+          "doc": "TODO add [(wix.api.minSize) = 1, (wix.api.maxSize) = 20];\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_reward_DiscountAmountConfig",
+      "displayName": "Discount Amount Config Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "requiredPoints",
+          "type": "integer",
+          "doc": " Amount of points required to receive the reward.\n"
+        },
+                {
+          "name": "amount",
+          "type": "string",
+          "doc": " Discount amount when redeeming the reward. Must be a positive value.\n"
+        },
+                {
+          "name": "tierId",
+          "type": "string",
+          "doc": "Tier ID, or None if base Tier\n",
+          "readOnly": true
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_reward_CouponConfig",
+      "displayName": "Coupon Config Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "requiredPoints",
+          "type": "integer",
+          "doc": " Amount of points required to receive the reward.\n"
+        },
+                {
+          "name": "tierId",
+          "type": "string",
+          "doc": "Tier ID, or None if base Tier\n",
           "readOnly": true
         }
       ],
@@ -1210,14 +1277,21 @@
         "links": [],
         "examples": []
       },
-      "members": [      {
-        "name": "metaSiteIds",
-        "type":         {
-          "name": "array",
-          "typeParams": ["string"]
+      "members":       [
+                {
+          "name": "metaSiteIds",
+          "type":           {
+            "name": "array",
+            "typeParams": ["string"]
+          },
+          "doc": ""
         },
-        "doc": ""
-      }],
+                {
+          "name": "tierId",
+          "type": "string",
+          "doc": ""
+        }
+      ],
       "enum": null,
       "extra": {},
       "labels": []
