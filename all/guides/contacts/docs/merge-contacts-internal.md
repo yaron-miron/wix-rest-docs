@@ -36,6 +36,8 @@ If your vertical keeps track of the site's contact IDs,
 you should listen to [Merged Contact Domain Event][contact-merged-event]
 (type = `Action`, slug = `merged`).
 
+In case you are using SDL please read [here](https://github.com/wix-private/server-infra/tree/master/iptf/simple-data-layer#contact-merged-events) for built-in support in this feature. 
+
 The following code snippet illustrates a possible approach:
 
 ```scala
