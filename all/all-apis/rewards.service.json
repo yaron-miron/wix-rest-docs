@@ -1277,21 +1277,14 @@
         "links": [],
         "examples": []
       },
-      "members":       [
-                {
-          "name": "metaSiteIds",
-          "type":           {
-            "name": "array",
-            "typeParams": ["string"]
-          },
-          "doc": ""
+      "members": [      {
+        "name": "metaSiteIds",
+        "type":         {
+          "name": "array",
+          "typeParams": ["string"]
         },
-                {
-          "name": "tierId",
-          "type": "string",
-          "doc": ""
-        }
-      ],
+        "doc": ""
+      }],
       "enum": null,
       "extra": {},
       "labels": []
