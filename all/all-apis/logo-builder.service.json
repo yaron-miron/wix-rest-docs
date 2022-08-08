@@ -688,6 +688,11 @@
           "name": "type",
           "type": "All APIs.Logo Builder._com_wixpress_exposure_logobuilder_logo_api_ImageType",
           "doc": " type of the image file.\n"
+        },
+                {
+          "name": "overlay",
+          "type": "All APIs.Logo Builder._com_wixpress_exposure_logobuilder_logo_api_Color",
+          "doc": " Layer of color above the image\n"
         }
       ],
       "enum": null,
@@ -703,11 +708,18 @@
         "links": [],
         "examples": []
       },
-      "members": [      {
-        "name": "solidOrPaletteRef",
-        "type": "All APIs.Logo Builder._com_wixpress_exposure_logobuilder_logo_api_Color_SolidOrPaletteRef",
-        "doc": ""
-      }],
+      "members":       [
+                {
+          "name": "solidOrPaletteRef",
+          "type": "All APIs.Logo Builder._com_wixpress_exposure_logobuilder_logo_api_Color_SolidOrPaletteRef",
+          "doc": ""
+        },
+                {
+          "name": "pattern",
+          "type": "All APIs.Logo Builder._com_wixpress_exposure_logobuilder_logo_api_Pattern",
+          "doc": ""
+        }
+      ],
       "enum": null,
       "extra": {},
       "labels": []
@@ -990,6 +1002,51 @@
       "extra": {},
       "labels": [],
       "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_exposure_logobuilder_logo_api_Pattern",
+      "displayName": "Pattern Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "element",
+          "type": "All APIs.Logo Builder._com_wixpress_exposure_logobuilder_logo_api_Element",
+          "doc": " The element that will be repeated in this pattern.\n"
+        },
+                {
+          "name": "width",
+          "type": "number",
+          "doc": " The width (in percentage) of each pattern repeatition.\n"
+        },
+                {
+          "name": "height",
+          "type": "number",
+          "doc": " The height (in percentage) of each pattern repeatition.\n"
+        },
+                {
+          "name": "offsetX",
+          "type": "number",
+          "doc": " The x-offset (in percentage) of where the pattern begins.\n"
+        },
+                {
+          "name": "offsetY",
+          "type": "number",
+          "doc": " The y-offset (in percentage) of where the pattern begins.\n"
+        },
+                {
+          "name": "gap",
+          "type": "number",
+          "doc": " Gap between each pattern repetition.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
     },
         {
       "name": "_com_wixpress_exposure_brandmaker_brand_BrandColors",
