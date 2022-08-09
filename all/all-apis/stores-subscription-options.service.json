@@ -31,7 +31,10 @@
       "methodName": "AllowOneTimePurchases",
       "serviceName": "SubscriptionOptionsWriteApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Products",
+        "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -92,7 +95,10 @@
       "methodName": "AssignSubscriptionOptionsToProduct",
       "serviceName": "SubscriptionOptionsWriteApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Products",
+        "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -153,7 +159,10 @@
       "methodName": "BulkCreateSubscriptionOptions",
       "serviceName": "SubscriptionOptionsWriteApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Products",
+        "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -209,7 +218,10 @@
       "methodName": "BulkDeleteSubscriptionOptions",
       "serviceName": "SubscriptionOptionsWriteApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Products",
+        "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -261,7 +273,10 @@
       "methodName": "BulkUpdateSubscriptionOptions",
       "serviceName": "SubscriptionOptionsWriteApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Products",
+        "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -316,7 +331,10 @@
       "methodName": "CreateSubscriptionOption",
       "serviceName": "SubscriptionOptionsWriteApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Products",
+        "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -378,7 +396,10 @@
       "methodName": "DeleteSubscriptionOption",
       "serviceName": "SubscriptionOptionsWriteApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Products",
+        "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -427,7 +448,16 @@
       "methodName": "GetProductIdsForSubscriptionOption",
       "serviceName": "SubscriptionOptionsReadApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Products",
+          "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+        },
+                {
+          "name": "Read Products",
+          "description": "Request permission to read the site's Wix Stores product and inventory info."
+        }
+      ],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -499,7 +529,16 @@
       "methodName": "GetOneTimePurchasesStatus",
       "serviceName": "SubscriptionOptionsReadApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Products",
+          "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+        },
+                {
+          "name": "Read Products",
+          "description": "Request permission to read the site's Wix Stores product and inventory info."
+        }
+      ],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -548,7 +587,16 @@
       "methodName": "GetSubscriptionOption",
       "serviceName": "SubscriptionOptionsReadApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Products",
+          "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+        },
+                {
+          "name": "Read Products",
+          "description": "Request permission to read the site's Wix Stores product and inventory info."
+        }
+      ],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -597,7 +645,16 @@
       "methodName": "GetSubscriptionOptionsForProduct",
       "serviceName": "SubscriptionOptionsReadApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Products",
+          "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+        },
+                {
+          "name": "Read Products",
+          "description": "Request permission to read the site's Wix Stores product and inventory info."
+        }
+      ],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -655,7 +712,16 @@
       "methodName": "ListSubscriptionOptions",
       "serviceName": "SubscriptionOptionsReadApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Products",
+          "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+        },
+                {
+          "name": "Read Products",
+          "description": "Request permission to read the site's Wix Stores product and inventory info."
+        }
+      ],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -707,7 +773,10 @@
       "methodName": "UpdateSubscriptionOption",
       "serviceName": "SubscriptionOptionsWriteApi",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Products",
+        "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -774,7 +843,16 @@
       },
       "topic": "wixStores-subscription-option-created",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Products",
+          "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+        },
+                {
+          "name": "Read Products",
+          "description": "Request permission to read the site's Wix Stores product and inventory info."
+        }
+      ],
       "customLabels": [{"id": "maturity-beta"}]
     },
         {
@@ -786,7 +864,16 @@
       },
       "topic": "wixStores-subscription-option-changed",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Products",
+          "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+        },
+                {
+          "name": "Read Products",
+          "description": "Request permission to read the site's Wix Stores product and inventory info."
+        }
+      ],
       "customLabels": [{"id": "maturity-beta"}]
     },
         {
@@ -798,7 +885,16 @@
       },
       "topic": "wixStores-subscription-option-deleted",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Products",
+          "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+        },
+                {
+          "name": "Read Products",
+          "description": "Request permission to read the site's Wix Stores product and inventory info."
+        }
+      ],
       "customLabels": [{"id": "maturity-beta"}]
     },
         {
@@ -810,7 +906,16 @@
       },
       "topic": "wixStores-subscription-options-assignment-changed-for-product",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Products",
+          "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+        },
+                {
+          "name": "Read Products",
+          "description": "Request permission to read the site's Wix Stores product and inventory info."
+        }
+      ],
       "customLabels": [{"id": "maturity-beta"}]
     },
         {
@@ -822,7 +927,16 @@
       },
       "topic": "wixStores-subscription-options-product-one-time-purchase-changed",
       "tag": "SubscriptionOption",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Products",
+          "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+        },
+                {
+          "name": "Read Products",
+          "description": "Request permission to read the site's Wix Stores product and inventory info."
+        }
+      ],
       "customLabels": [{"id": "maturity-beta"}]
     }
   ],
