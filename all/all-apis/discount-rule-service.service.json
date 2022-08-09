@@ -618,7 +618,12 @@
       "docs":       {
         "summary": "",
         "links": [],
-        "examples": []
+        "examples": [        {
+          "title": "",
+          "body": ["{\n  \"id\" : \"15bac455-10d0-4478-8358-e06f697f6180\",\n  \"revision\" : \"8\",\n  \"created_date\" : \"2022-08-07T08:12:22.347Z\",\n  \"updated_date\" : \"2022-08-09T07:45:44.044Z\",\n  \"active\" : true,\n  \"name\" : \"My Amazing 10% Discount\",\n  \"trigger\" : {\n    \"and\" : {\n      \"triggers\" : [ {\n        \"subtotal_range\" : {\n          \"scopes\" : [ {\n            \"id\" : \"specific_215238eb-22a5-4c36-9e7b-e7c08025e04e\",\n            \"type\" : \"CATALOG_ITEM\",\n            \"catalog_item_filter\" : {\n              \"catalog_app_id\" : \"215238eb-22a5-4c36-9e7b-e7c08025e04e\",\n              \"catalog_item_ids\" : [ \"f150b16a-79ef-ef81-50f9-22e2df631822\", \"187a07f6-b670-0650-c891-d60aeb797ee0\" ]\n            }\n          } ],\n          \"from\" : \"100\",\n          \"to\" : null\n        },\n        \"trigger_type\" : \"SUBTOTAL_RANGE\"\n      }, {\n        \"item_quantity_range\" : {\n          \"scopes\" : [ {\n            \"id\" : \"specific_215238eb-22a5-4c36-9e7b-e7c08025e04e\",\n            \"type\" : \"CATALOG_ITEM\",\n            \"catalog_item_filter\" : {\n              \"catalog_app_id\" : \"215238eb-22a5-4c36-9e7b-e7c08025e04e\",\n              \"catalog_item_ids\" : [ \"f150b16a-79ef-ef81-50f9-22e2df631822\", \"187a07f6-b670-0650-c891-d60aeb797ee0\" ]\n            }\n          } ],\n          \"from\" : 5,\n          \"to\" : null\n        },\n        \"trigger_type\" : \"ITEM_QUANTITY_RANGE\"\n      } ]\n    },\n    \"trigger_type\" : \"AND\"\n  },\n  \"active_time_info\" : {\n    \"start\" : \"2022-08-07T08:11:00Z\",\n    \"end\" : \"2022-08-11T07:43:00Z\"\n  },\n  \"discounts\" : {\n    \"values\" : [ {\n      \"target_type\" : \"SPECIFIC_ITEMS\",\n      \"specific_items_info\" : {\n        \"scopes\" : [ {\n          \"id\" : \"specific_215238eb-22a5-4c36-9e7b-e7c08025e04e\",\n          \"type\" : \"CATALOG_ITEM\",\n          \"catalog_item_filter\" : {\n            \"catalog_app_id\" : \"215238eb-22a5-4c36-9e7b-e7c08025e04e\",\n            \"catalog_item_ids\" : [ \"f150b16a-79ef-ef81-50f9-22e2df631822\", \"187a07f6-b670-0650-c891-d60aeb797ee0\" ]\n          }\n        } ]\n      },\n      \"percentage\" : 10,\n      \"discount_type\" : \"PERCENTAGE\"\n    } ]\n  },\n  \"status\" : \"LIVE\",\n  \"usage_count\" : 6,\n  \"offer\" : \"10% off\\nCANVAS BACKPACK and 1 more\"\n} "],
+          "type": "json",
+          "extra": {}
+        }]
       },
       "members":       [
                 {
