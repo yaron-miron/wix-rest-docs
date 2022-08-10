@@ -4768,7 +4768,7 @@
       "displayName": "Field Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> CREATED_DATE <\/code><\/li><li><code> VIEW_COUNT <\/code><\/li><li><code> LIKE_COUNT <\/code><\/li><li><code> COMMENT_COUNT <\/code><\/li><li><code> NAME <\/code><\/li><li><code> MEMBER_TAG_COUNT <\/code><\/li><li><code> ALBUM_INFO_TAG_COUNT <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> CREATED_DATE <\/code><\/li><li><code> VIEW_COUNT <\/code><\/li><li><code> LIKE_COUNT <\/code><\/li><li><code> COMMENT_COUNT <\/code><\/li><li><code> NAME <\/code><\/li><li><code> MEMBER_TAG_COUNT <\/code><\/li><li><code> ALBUM_INFO_TAG_COUNT <\/code><\/li><li><code> ORDER_NUMBERS <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -4781,7 +4781,8 @@
         "COMMENT_COUNT",
         "NAME",
         "MEMBER_TAG_COUNT",
-        "ALBUM_INFO_TAG_COUNT"
+        "ALBUM_INFO_TAG_COUNT",
+        "ORDER_NUMBERS"
       ],
       "extra": {},
       "labels": []
