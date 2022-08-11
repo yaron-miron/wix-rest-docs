@@ -91,7 +91,7 @@
         "examples": [        {
           "title": "",
           "body": ["curl -X GET https://www.wixapis.com/forum/v1/categories/5cacd5fe04976c0015f35362\n    -H 'Content-Type: application/json;charset=UTF-8'\n    -H 'Authorization: <ACCESS_TOKEN>'"],
-          "response": ["{\"category\": {\n  \"id\": \"5cacd5fe04976c0015f35362\",\n  \"parentId\": \"001005fe04976c0015f35362\",\n  \"name\": \"Discussion corner\",\n  \"headerTitle\": \"Discussion corner\",\n  \"description\": \"Share stories, ideas, pictures and more!\",\n  \"headerType\": \"IMAGE\",\n  \"headerImage\":   {\n    \"id\": \"image.jpg\",\n    \"url\": \"https://static.wixstatic.com/media/image.jpg\",\n    \"height\": 760,\n    \"width\": 2100\n  },\n  \"rank\": 0,\n  \"postCount\": 2,\n  \"postViewCount\": 17,\n  \"slug\": \"discussion-corner\",\n  \"noMemberPosting\": true,\n  \"categoryAccess\": \"PUBLIC\",\n  \"createdDate\": \"2019-04-09T17:27:26.171Z\",\n  \"updatedDate\": \"2019-04-09T17:27:26.171Z\",\n  \"postTypes\":   [\n    \"DISCUSSION\",\n    \"QUESTION\"\n  ],\n  \"commentInteraction\": \"REACTION\",\n  \"url\":   {\n    \"base\": \"https://wix.com\",\n    \"path\": \"/forum/discussion-corner\"\n  }\n}} "],
+          "response": ["{\"category\": {\n  \"id\": \"5cacd5fe04976c0015f35362\",\n  \"parentId\": \"001005fe04976c0015f35362\",\n  \"name\": \"Discussion corner\",\n  \"headerTitle\": \"Discussion corner\",\n  \"description\": \"Share stories, ideas, pictures and more!\",\n  \"headerType\": \"IMAGE\",\n  \"headerImage\":   {\n    \"id\": \"image.jpg\",\n    \"url\": \"https://static.wixstatic.com/media/image.jpg\",\n    \"height\": 760,\n    \"width\": 2100\n  },\n  \"rank\": 0,\n  \"postCount\": 2,\n  \"postViewCount\": 17,\n  \"slug\": \"discussion-corner\",\n  \"noMemberPosting\": true,\n  \"categoryAccess\": \"PUBLIC\",\n  \"createdDate\": \"2019-04-09T17:27:26.171Z\",\n  \"updatedDate\": \"2019-04-09T17:27:26.171Z\",\n  \"postTypes\":   [\n    \"DISCUSSION\",\n    \"QUESTION\"\n  ],\n  \"postInteraction\": \"MULTIPLE_REACTIONS\",\n  \"mainPostReactionIcon\":   {\n    \"iconType\": \"LOVE\",\n    \"code\": \":love:\"\n  },\n  \"additionalPostReactions\": [  {\n    \"iconType\": \"THUMBS_UP\",\n    \"code\": \":thumbs_up:\"\n  }],\n  \"commentInteraction\": \"REACTION\",\n  \"mainCommentReactionIcon\":   {\n    \"iconType\": \"THUMBS_UP\",\n    \"code\": \":thumbs_up:\"\n  },\n  \"additionalCommentReactions\": [  {\n    \"iconType\": \"THUMBS_UP\",\n    \"code\": \":thumbs_up:\"\n  }],\n  \"url\":   {\n    \"base\": \"https://wix.com\",\n    \"path\": \"/forum/discussion-corner\"\n  }\n}} "],
           "type": "curl",
           "extra": {}
         }],
@@ -154,7 +154,7 @@
         "examples": [        {
           "title": "",
           "body": ["curl -X GET https://www.wixapis.com/forum/v1/categories/slugs/discussion-corner\n    -H 'Content-Type: application/json;charset=UTF-8'\n    -H 'Authorization: <ACCESS_TOKEN>'"],
-          "response": ["{\"category\": {\n  \"id\": \"5cacd5fe04976c0015f35362\",\n  \"parentId\": \"001005fe04976c0015f35362\",\n  \"name\": \"Discussion corner\",\n  \"headerTitle\": \"Discussion corner\",\n  \"description\": \"Share stories, ideas, pictures and more!\",\n  \"headerType\": \"IMAGE\",\n  \"headerImage\":   {\n    \"id\": \"image.jpg\",\n    \"url\": \"https://static.wixstatic.com/media/image.jpg\",\n    \"height\": 760,\n    \"width\": 2100\n  },\n  \"rank\": 0,\n  \"postCount\": 2,\n  \"postViewCount\": 17,\n  \"slug\": \"discussion-corner\",\n  \"noMemberPosting\": true,\n  \"categoryAccess\": \"PUBLIC\",\n  \"createdDate\": \"2019-04-09T17:27:26.171Z\",\n  \"updatedDate\": \"2019-04-09T17:27:26.171Z\",\n  \"postTypes\":   [\n    \"DISCUSSION\",\n    \"QUESTION\"\n  ],\n  \"commentInteraction\": \"REACTION\",\n  \"url\":   {\n    \"base\": \"https://wix.com\",\n    \"path\": \"/forum/discussion-corner\"\n  }\n}} "],
+          "response": ["{\"category\": {\n  \"id\": \"5cacd5fe04976c0015f35362\",\n  \"parentId\": \"001005fe04976c0015f35362\",\n  \"name\": \"Discussion corner\",\n  \"headerTitle\": \"Discussion corner\",\n  \"description\": \"Share stories, ideas, pictures and more!\",\n  \"headerType\": \"IMAGE\",\n  \"headerImage\":   {\n    \"id\": \"image.jpg\",\n    \"url\": \"https://static.wixstatic.com/media/image.jpg\",\n    \"height\": 760,\n    \"width\": 2100\n  },\n  \"rank\": 0,\n  \"postCount\": 2,\n  \"postViewCount\": 17,\n  \"slug\": \"discussion-corner\",\n  \"noMemberPosting\": true,\n  \"categoryAccess\": \"PUBLIC\",\n  \"createdDate\": \"2019-04-09T17:27:26.171Z\",\n  \"updatedDate\": \"2019-04-09T17:27:26.171Z\",\n  \"postTypes\":   [\n    \"DISCUSSION\",\n    \"QUESTION\"\n  ],\n  \"postInteraction\": \"MULTIPLE_REACTIONS\",\n  \"mainPostReactionIcon\":   {\n    \"iconType\": \"LOVE\",\n    \"code\": \":love:\"\n  },\n  \"additionalPostReactions\": [  {\n    \"iconType\": \"THUMBS_UP\",\n    \"code\": \":thumbs_up:\"\n  }],\n  \"commentInteraction\": \"REACTION\",\n  \"mainCommentReactionIcon\":   {\n    \"iconType\": \"THUMBS_UP\",\n    \"code\": \":thumbs_up:\"\n  },\n  \"additionalCommentReactions\": [  {\n    \"iconType\": \"THUMBS_UP\",\n    \"code\": \":thumbs_up:\"\n  }],\n  \"url\":   {\n    \"base\": \"https://wix.com\",\n    \"path\": \"/forum/discussion-corner\"\n  }\n}} "],
           "type": "curl",
           "extra": {}
         }],
@@ -359,7 +359,7 @@
         "examples": [        {
           "title": "",
           "body": ["curl -X POST https://www.wixapis.com/forum/v1/categories/query\n    -H 'Content-Type: application/json;charset=UTF-8'\n    -H 'Authorization: <ACCESS_TOKEN>'\n    -d '{\n          \"paging\": {\n              \"offset\": 0,\n              \"limit\": 1\n          },\n          \"filter\": {\n              \"rank\": {\n                  \"$eq\": 0\n              }\n          },\n          \"sort\": [\n              {\n                  \"fieldName\": \"rank\",\n                  \"order\": \"ASC\"\n              }\n          ]\n      }'"],
-          "response": ["{\n  \"categories\": [  {\n    \"id\": \"5cacd5fe04976c0015f35362\",\n    \"parentId\": \"001005fe04976c0015f35362\",\n    \"name\": \"Discussion corner\",\n    \"headerTitle\": \"Discussion corner\",\n    \"description\": \"Share stories, ideas, pictures and more!\",\n    \"headerType\": \"IMAGE\",\n    \"headerImage\":     {\n      \"id\": \"image.jpg\",\n      \"url\": \"https://static.wixstatic.com/media/image.jpg\",\n      \"height\": 760,\n      \"width\": 2100\n    },\n    \"rank\": 0,\n    \"postCount\": 2,\n    \"postViewCount\": 17,\n    \"slug\": \"discussion-corner\",\n    \"noMemberPosting\": true,\n    \"categoryAccess\": \"PUBLIC\",\n    \"createdDate\": \"2019-04-09T17:27:26.171Z\",\n    \"updatedDate\": \"2019-04-09T17:27:26.171Z\",\n    \"postTypes\":     [\n      \"DISCUSSION\",\n      \"QUESTION\"\n    ],\n    \"commentInteraction\": \"REACTION\",\n    \"url\":     {\n      \"base\": \"https://wix.com\",\n      \"path\": \"/forum/discussion-corner\"\n    }\n  }],\n  \"metaData\":   {\n    \"count\": 1,\n    \"offset\": 0,\n    \"total\": 1\n  }\n} "],
+          "response": ["{\n  \"categories\": [  {\n    \"id\": \"5cacd5fe04976c0015f35362\",\n    \"parentId\": \"001005fe04976c0015f35362\",\n    \"name\": \"Discussion corner\",\n    \"headerTitle\": \"Discussion corner\",\n    \"description\": \"Share stories, ideas, pictures and more!\",\n    \"headerType\": \"IMAGE\",\n    \"headerImage\":     {\n      \"id\": \"image.jpg\",\n      \"url\": \"https://static.wixstatic.com/media/image.jpg\",\n      \"height\": 760,\n      \"width\": 2100\n    },\n    \"rank\": 0,\n    \"postCount\": 2,\n    \"postViewCount\": 17,\n    \"slug\": \"discussion-corner\",\n    \"noMemberPosting\": true,\n    \"categoryAccess\": \"PUBLIC\",\n    \"createdDate\": \"2019-04-09T17:27:26.171Z\",\n    \"updatedDate\": \"2019-04-09T17:27:26.171Z\",\n    \"postTypes\":     [\n      \"DISCUSSION\",\n      \"QUESTION\"\n    ],\n    \"postInteraction\": \"MULTIPLE_REACTIONS\",\n    \"mainPostReactionIcon\":     {\n      \"iconType\": \"LOVE\",\n      \"code\": \":love:\"\n    },\n    \"additionalPostReactions\": [    {\n      \"iconType\": \"THUMBS_UP\",\n      \"code\": \":thumbs_up:\"\n    }],\n    \"commentInteraction\": \"REACTION\",\n    \"mainCommentReactionIcon\":     {\n      \"iconType\": \"THUMBS_UP\",\n      \"code\": \":thumbs_up:\"\n    },\n    \"additionalCommentReactions\": [    {\n      \"iconType\": \"THUMBS_UP\",\n      \"code\": \":thumbs_up:\"\n    }],\n    \"url\":     {\n      \"base\": \"https://wix.com\",\n      \"path\": \"/forum/discussion-corner\"\n    }\n  }],\n  \"metaData\":   {\n    \"count\": 1,\n    \"offset\": 0,\n    \"total\": 1\n  }\n} "],
           "type": "curl",
           "extra": {}
         }],
@@ -703,7 +703,7 @@
         "links": [],
         "examples": [        {
           "title": "",
-          "body": ["{\n  \"id\" : \"0ec75a41-ae29-4e5e-8063-46f5a5d925d9\",\n  \"entityFqdn\" : \"wix.forum.category\",\n  \"slug\" : \"created\",\n  \"entityId\" : \"5cacd5fe04976c0015f35362\",\n  \"createdEvent\" : {\n    \"entityAsJson\" : {\n      \"id\" : \"5cacd5fe04976c0015f35362\",\n      \"parentId\" : \"001005fe04976c0015f35362\",\n      \"name\" : \"Discussion corner\",\n      \"headerTitle\" : \"Discussion corner\",\n      \"description\" : \"Share stories, ideas, pictures and more!\",\n      \"headerType\" : \"IMAGE\",\n      \"headerImage\" : {\n        \"id\" : \"image.jpg\",\n        \"url\" : \"https://static.wixstatic.com/media/image.jpg\",\n        \"height\" : 760,\n        \"width\" : 2100\n      },\n      \"rank\" : 0,\n      \"postCount\" : 2,\n      \"postViewCount\" : 17,\n      \"slug\" : \"discussion-corner\",\n      \"noMemberPosting\" : true,\n      \"categoryAccess\" : \"PUBLIC\",\n      \"createdDate\" : \"2019-04-09T17:27:26.171Z\",\n      \"updatedDate\" : \"2019-04-09T17:27:26.171Z\",\n      \"postTypes\" : [ \"DISCUSSION\", \"QUESTION\" ],\n      \"commentInteraction\" : \"REACTION\",\n      \"url\" : {\n        \"base\" : \"https://wix.com\",\n        \"path\" : \"/forum/discussion-corner\"\n      }\n    }\n  },\n  \"eventTime\" : \"2021-08-30T08:44:20.629071Z\",\n  \"triggeredByAnonymizeRequest\" : false\n} "],
+          "body": ["{\n  \"id\" : \"0ec75a41-ae29-4e5e-8063-46f5a5d925d9\",\n  \"entityFqdn\" : \"wix.forum.category\",\n  \"slug\" : \"created\",\n  \"entityId\" : \"5cacd5fe04976c0015f35362\",\n  \"createdEvent\" : {\n    \"entityAsJson\" : {\n      \"id\" : \"5cacd5fe04976c0015f35362\",\n      \"parentId\" : \"001005fe04976c0015f35362\",\n      \"name\" : \"Discussion corner\",\n      \"headerTitle\" : \"Discussion corner\",\n      \"description\" : \"Share stories, ideas, pictures and more!\",\n      \"headerType\" : \"IMAGE\",\n      \"headerImage\" : {\n        \"id\" : \"image.jpg\",\n        \"url\" : \"https://static.wixstatic.com/media/image.jpg\",\n        \"height\" : 760,\n        \"width\" : 2100\n      },\n      \"rank\" : 0,\n      \"postCount\" : 2,\n      \"postViewCount\" : 17,\n      \"slug\" : \"discussion-corner\",\n      \"noMemberPosting\" : true,\n      \"categoryAccess\" : \"PUBLIC\",\n      \"createdDate\" : \"2019-04-09T17:27:26.171Z\",\n      \"updatedDate\" : \"2019-04-09T17:27:26.171Z\",\n      \"postTypes\" : [ \"DISCUSSION\", \"QUESTION\" ],\n      \"postInteraction\" : \"MULTIPLE_REACTIONS\",\n      \"mainPostReactionIcon\" : {\n        \"iconType\" : \"LOVE\",\n        \"code\" : \":love:\"\n      },\n      \"additionalPostReactions\" : [ {\n        \"iconType\" : \"THUMBS_UP\",\n        \"code\" : \":thumbs_up:\"\n      } ],\n      \"commentInteraction\" : \"REACTION\",\n      \"mainCommentReactionIcon\" : {\n        \"iconType\" : \"THUMBS_UP\",\n        \"code\" : \":thumbs_up:\"\n      },\n      \"additionalCommentReactions\" : [ {\n        \"iconType\" : \"THUMBS_UP\",\n        \"code\" : \":thumbs_up:\"\n      } ],\n      \"url\" : {\n        \"base\" : \"https://wix.com\",\n        \"path\" : \"/forum/discussion-corner\"\n      }\n    }\n  },\n  \"eventTime\" : \"2021-08-30T08:44:20.629071Z\",\n  \"triggeredByAnonymizeRequest\" : false\n} "],
           "type": "json",
           "extra": {}
         }]
@@ -781,7 +781,7 @@
         "links": [],
         "examples": [        {
           "title": "",
-          "body": ["{\n  \"id\" : \"0ec75a41-ae29-4e5e-8063-46f5a5d925d9\",\n  \"entityFqdn\" : \"wix.forum.category\",\n  \"slug\" : \"updated\",\n  \"entityId\" : \"5cacd5fe04976c0015f35362\",\n  \"updatedEvent\" : {\n    \"currentEntityAsJson\" : {\n      \"id\" : \"5cacd5fe04976c0015f35362\",\n      \"parentId\" : \"001005fe04976c0015f35362\",\n      \"name\" : \"Discussion corner\",\n      \"headerTitle\" : \"Discussion corner\",\n      \"description\" : \"Share stories, ideas, pictures and more!\",\n      \"headerType\" : \"IMAGE\",\n      \"headerImage\" : {\n        \"id\" : \"image.jpg\",\n        \"url\" : \"https://static.wixstatic.com/media/image.jpg\",\n        \"height\" : 760,\n        \"width\" : 2100\n      },\n      \"rank\" : 0,\n      \"postCount\" : 2,\n      \"postViewCount\" : 17,\n      \"slug\" : \"discussion-corner\",\n      \"noMemberPosting\" : true,\n      \"categoryAccess\" : \"PUBLIC\",\n      \"createdDate\" : \"2019-04-09T17:27:26.171Z\",\n      \"updatedDate\" : \"2019-04-09T17:27:26.171Z\",\n      \"postTypes\" : [ \"DISCUSSION\", \"QUESTION\" ],\n      \"commentInteraction\" : \"REACTION\",\n      \"url\" : {\n        \"base\" : \"https://wix.com\",\n        \"path\" : \"/forum/discussion-corner\"\n      }\n    }\n  },\n  \"eventTime\" : \"2021-08-30T08:44:20.629071Z\",\n  \"triggeredByAnonymizeRequest\" : false\n} "],
+          "body": ["{\n  \"id\" : \"0ec75a41-ae29-4e5e-8063-46f5a5d925d9\",\n  \"entityFqdn\" : \"wix.forum.category\",\n  \"slug\" : \"updated\",\n  \"entityId\" : \"5cacd5fe04976c0015f35362\",\n  \"updatedEvent\" : {\n    \"currentEntityAsJson\" : {\n      \"id\" : \"5cacd5fe04976c0015f35362\",\n      \"parentId\" : \"001005fe04976c0015f35362\",\n      \"name\" : \"Discussion corner\",\n      \"headerTitle\" : \"Discussion corner\",\n      \"description\" : \"Share stories, ideas, pictures and more!\",\n      \"headerType\" : \"IMAGE\",\n      \"headerImage\" : {\n        \"id\" : \"image.jpg\",\n        \"url\" : \"https://static.wixstatic.com/media/image.jpg\",\n        \"height\" : 760,\n        \"width\" : 2100\n      },\n      \"rank\" : 0,\n      \"postCount\" : 2,\n      \"postViewCount\" : 17,\n      \"slug\" : \"discussion-corner\",\n      \"noMemberPosting\" : true,\n      \"categoryAccess\" : \"PUBLIC\",\n      \"createdDate\" : \"2019-04-09T17:27:26.171Z\",\n      \"updatedDate\" : \"2019-04-09T17:27:26.171Z\",\n      \"postTypes\" : [ \"DISCUSSION\", \"QUESTION\" ],\n      \"postInteraction\" : \"MULTIPLE_REACTIONS\",\n      \"mainPostReactionIcon\" : {\n        \"iconType\" : \"LOVE\",\n        \"code\" : \":love:\"\n      },\n      \"additionalPostReactions\" : [ {\n        \"iconType\" : \"THUMBS_UP\",\n        \"code\" : \":thumbs_up:\"\n      } ],\n      \"commentInteraction\" : \"REACTION\",\n      \"mainCommentReactionIcon\" : {\n        \"iconType\" : \"THUMBS_UP\",\n        \"code\" : \":thumbs_up:\"\n      },\n      \"additionalCommentReactions\" : [ {\n        \"iconType\" : \"THUMBS_UP\",\n        \"code\" : \":thumbs_up:\"\n      } ],\n      \"url\" : {\n        \"base\" : \"https://wix.com\",\n        \"path\" : \"/forum/discussion-corner\"\n      }\n    }\n  },\n  \"eventTime\" : \"2021-08-30T08:44:20.629071Z\",\n  \"triggeredByAnonymizeRequest\" : false\n} "],
           "type": "json",
           "extra": {}
         }]
@@ -2817,7 +2817,7 @@
         "links": [],
         "examples": [        {
           "title": "",
-          "body": ["{\n  \"id\" : \"5cacd5fe04976c0015f35362\",\n  \"parentId\" : \"001005fe04976c0015f35362\",\n  \"name\" : \"Discussion corner\",\n  \"headerTitle\" : \"Discussion corner\",\n  \"description\" : \"Share stories, ideas, pictures and more!\",\n  \"headerType\" : \"IMAGE\",\n  \"headerImage\" : {\n    \"id\" : \"image.jpg\",\n    \"url\" : \"https://static.wixstatic.com/media/image.jpg\",\n    \"height\" : 760,\n    \"width\" : 2100\n  },\n  \"rank\" : 0,\n  \"postCount\" : 2,\n  \"postViewCount\" : 17,\n  \"slug\" : \"discussion-corner\",\n  \"noMemberPosting\" : true,\n  \"categoryAccess\" : \"PUBLIC\",\n  \"createdDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"updatedDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"postTypes\" : [ \"DISCUSSION\", \"QUESTION\" ],\n  \"commentInteraction\" : \"REACTION\",\n  \"url\" : {\n    \"base\" : \"https://wix.com\",\n    \"path\" : \"/forum/discussion-corner\"\n  }\n} "],
+          "body": ["{\n  \"id\" : \"5cacd5fe04976c0015f35362\",\n  \"parentId\" : \"001005fe04976c0015f35362\",\n  \"name\" : \"Discussion corner\",\n  \"headerTitle\" : \"Discussion corner\",\n  \"description\" : \"Share stories, ideas, pictures and more!\",\n  \"headerType\" : \"IMAGE\",\n  \"headerImage\" : {\n    \"id\" : \"image.jpg\",\n    \"url\" : \"https://static.wixstatic.com/media/image.jpg\",\n    \"height\" : 760,\n    \"width\" : 2100\n  },\n  \"rank\" : 0,\n  \"postCount\" : 2,\n  \"postViewCount\" : 17,\n  \"slug\" : \"discussion-corner\",\n  \"noMemberPosting\" : true,\n  \"categoryAccess\" : \"PUBLIC\",\n  \"createdDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"updatedDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"postTypes\" : [ \"DISCUSSION\", \"QUESTION\" ],\n  \"postInteraction\" : \"MULTIPLE_REACTIONS\",\n  \"mainPostReactionIcon\" : {\n    \"iconType\" : \"LOVE\",\n    \"code\" : \":love:\"\n  },\n  \"additionalPostReactions\" : [ {\n    \"iconType\" : \"THUMBS_UP\",\n    \"code\" : \":thumbs_up:\"\n  } ],\n  \"commentInteraction\" : \"REACTION\",\n  \"mainCommentReactionIcon\" : {\n    \"iconType\" : \"THUMBS_UP\",\n    \"code\" : \":thumbs_up:\"\n  },\n  \"additionalCommentReactions\" : [ {\n    \"iconType\" : \"THUMBS_UP\",\n    \"code\" : \":thumbs_up:\"\n  } ],\n  \"url\" : {\n    \"base\" : \"https://wix.com\",\n    \"path\" : \"/forum/discussion-corner\"\n  }\n} "],
           "type": "json",
           "extra": {}
         }]
@@ -2932,7 +2932,7 @@
                 {
           "name": "commentInteraction",
           "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Comment_Interaction",
-          "doc": " Defines what interactions may be applied on the comment under the posts created in this category, vote or like.\n",
+          "doc": " Defines what interactions may be applied on the comment under the posts created in this category, vote, like or multiple reactions.\n",
           "readOnly": true
         }
       ],
@@ -3066,7 +3066,7 @@
                 {
           "name": "commentInteraction",
           "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Comment_Interaction",
-          "doc": " Defines what interactions may be applied on the comment under the post, vote or like.\n",
+          "doc": " Defines what interactions may be applied on the comment under the post, vote, like or emotion.\n",
           "readOnly": true
         }
       ],
@@ -3224,6 +3224,50 @@
       "enum": null,
       "extra": {},
       "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forum_api_ReactionIcon",
+      "displayName": "Reaction Icon Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "icons",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_ReactionIcon_icons",
+          "doc": ""
+        },
+                {
+          "name": "code",
+          "type": "string",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forum_api_ReactionIcon_icons",
+      "displayName": "icons Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "type",
+        "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_IconType_Type",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
     },
         {
       "name": "_com_wixpress_npm_communities_forum_api_events_PostAction_Moved",
@@ -4422,7 +4466,7 @@
         "links": [],
         "examples": [        {
           "title": "",
-          "body": ["{\n  \"id\" : \"5cacd5fe04976c0015f35362\",\n  \"parentId\" : \"001005fe04976c0015f35362\",\n  \"name\" : \"Discussion corner\",\n  \"headerTitle\" : \"Discussion corner\",\n  \"description\" : \"Share stories, ideas, pictures and more!\",\n  \"headerType\" : \"IMAGE\",\n  \"headerImage\" : {\n    \"id\" : \"image.jpg\",\n    \"url\" : \"https://static.wixstatic.com/media/image.jpg\",\n    \"height\" : 760,\n    \"width\" : 2100\n  },\n  \"rank\" : 0,\n  \"postCount\" : 2,\n  \"postViewCount\" : 17,\n  \"slug\" : \"discussion-corner\",\n  \"noMemberPosting\" : true,\n  \"categoryAccess\" : \"PUBLIC\",\n  \"createdDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"updatedDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"postTypes\" : [ \"DISCUSSION\", \"QUESTION\" ],\n  \"commentInteraction\" : \"REACTION\",\n  \"url\" : {\n    \"base\" : \"https://wix.com\",\n    \"path\" : \"/forum/discussion-corner\"\n  }\n} "],
+          "body": ["{\n  \"id\" : \"5cacd5fe04976c0015f35362\",\n  \"parentId\" : \"001005fe04976c0015f35362\",\n  \"name\" : \"Discussion corner\",\n  \"headerTitle\" : \"Discussion corner\",\n  \"description\" : \"Share stories, ideas, pictures and more!\",\n  \"headerType\" : \"IMAGE\",\n  \"headerImage\" : {\n    \"id\" : \"image.jpg\",\n    \"url\" : \"https://static.wixstatic.com/media/image.jpg\",\n    \"height\" : 760,\n    \"width\" : 2100\n  },\n  \"rank\" : 0,\n  \"postCount\" : 2,\n  \"postViewCount\" : 17,\n  \"slug\" : \"discussion-corner\",\n  \"noMemberPosting\" : true,\n  \"categoryAccess\" : \"PUBLIC\",\n  \"createdDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"updatedDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"postTypes\" : [ \"DISCUSSION\", \"QUESTION\" ],\n  \"postInteraction\" : \"MULTIPLE_REACTIONS\",\n  \"mainPostReactionIcon\" : {\n    \"iconType\" : \"LOVE\",\n    \"code\" : \":love:\"\n  },\n  \"additionalPostReactions\" : [ {\n    \"iconType\" : \"THUMBS_UP\",\n    \"code\" : \":thumbs_up:\"\n  } ],\n  \"commentInteraction\" : \"REACTION\",\n  \"mainCommentReactionIcon\" : {\n    \"iconType\" : \"THUMBS_UP\",\n    \"code\" : \":thumbs_up:\"\n  },\n  \"additionalCommentReactions\" : [ {\n    \"iconType\" : \"THUMBS_UP\",\n    \"code\" : \":thumbs_up:\"\n  } ],\n  \"url\" : {\n    \"base\" : \"https://wix.com\",\n    \"path\" : \"/forum/discussion-corner\"\n  }\n} "],
           "type": "json",
           "extra": {}
         }]
@@ -5361,6 +5405,50 @@
       "labels": []
     },
         {
+      "name": "_com_wixpress_npm_communities_forumapi_ReactionIcon",
+      "displayName": "Reaction Icon Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "icons",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_ReactionIcon_icons",
+          "doc": ""
+        },
+                {
+          "name": "code",
+          "type": "string",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forumapi_ReactionIcon_icons",
+      "displayName": "icons Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "type",
+        "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_IconType_Type",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
+    },
+        {
       "name": "_com_wixpress_npm_communities_forumapi_Category",
       "displayName": "Category Object",
       "locations": [],
@@ -5369,7 +5457,7 @@
         "links": [],
         "examples": [        {
           "title": "",
-          "body": ["{\n  \"id\" : \"5cacd5fe04976c0015f35362\",\n  \"parentId\" : \"001005fe04976c0015f35362\",\n  \"name\" : \"Discussion corner\",\n  \"headerTitle\" : \"Discussion corner\",\n  \"description\" : \"Share stories, ideas, pictures and more!\",\n  \"headerType\" : \"IMAGE\",\n  \"headerImage\" : {\n    \"id\" : \"image.jpg\",\n    \"url\" : \"https://static.wixstatic.com/media/image.jpg\",\n    \"height\" : 760,\n    \"width\" : 2100\n  },\n  \"rank\" : 0,\n  \"postCount\" : 2,\n  \"postViewCount\" : 17,\n  \"slug\" : \"discussion-corner\",\n  \"noMemberPosting\" : true,\n  \"categoryAccess\" : \"PUBLIC\",\n  \"createdDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"updatedDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"postTypes\" : [ \"DISCUSSION\", \"QUESTION\" ],\n  \"commentInteraction\" : \"REACTION\",\n  \"url\" : {\n    \"base\" : \"https://wix.com\",\n    \"path\" : \"/forum/discussion-corner\"\n  }\n} "],
+          "body": ["{\n  \"id\" : \"5cacd5fe04976c0015f35362\",\n  \"parentId\" : \"001005fe04976c0015f35362\",\n  \"name\" : \"Discussion corner\",\n  \"headerTitle\" : \"Discussion corner\",\n  \"description\" : \"Share stories, ideas, pictures and more!\",\n  \"headerType\" : \"IMAGE\",\n  \"headerImage\" : {\n    \"id\" : \"image.jpg\",\n    \"url\" : \"https://static.wixstatic.com/media/image.jpg\",\n    \"height\" : 760,\n    \"width\" : 2100\n  },\n  \"rank\" : 0,\n  \"postCount\" : 2,\n  \"postViewCount\" : 17,\n  \"slug\" : \"discussion-corner\",\n  \"noMemberPosting\" : true,\n  \"categoryAccess\" : \"PUBLIC\",\n  \"createdDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"updatedDate\" : \"2019-04-09T17:27:26.171Z\",\n  \"postTypes\" : [ \"DISCUSSION\", \"QUESTION\" ],\n  \"postInteraction\" : \"MULTIPLE_REACTIONS\",\n  \"mainPostReactionIcon\" : {\n    \"iconType\" : \"LOVE\",\n    \"code\" : \":love:\"\n  },\n  \"additionalPostReactions\" : [ {\n    \"iconType\" : \"THUMBS_UP\",\n    \"code\" : \":thumbs_up:\"\n  } ],\n  \"commentInteraction\" : \"REACTION\",\n  \"mainCommentReactionIcon\" : {\n    \"iconType\" : \"THUMBS_UP\",\n    \"code\" : \":thumbs_up:\"\n  },\n  \"additionalCommentReactions\" : [ {\n    \"iconType\" : \"THUMBS_UP\",\n    \"code\" : \":thumbs_up:\"\n  } ],\n  \"url\" : {\n    \"base\" : \"https://wix.com\",\n    \"path\" : \"/forum/discussion-corner\"\n  }\n} "],
           "type": "json",
           "extra": {}
         }]
@@ -5522,6 +5610,37 @@
                 {
           "name": "commentMark",
           "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_CommentMark",
+          "doc": ""
+        },
+                {
+          "name": "postInteraction",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_post_PostInteraction",
+          "doc": ""
+        },
+                {
+          "name": "mainPostReactionIcon",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_ReactionIcon",
+          "doc": ""
+        },
+                {
+          "name": "additionalPostReactions",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_ReactionIcon"]
+          },
+          "doc": ""
+        },
+                {
+          "name": "mainCommentReactionIcon",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_ReactionIcon",
+          "doc": ""
+        },
+                {
+          "name": "additionalCommentReactions",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_ReactionIcon"]
+          },
           "doc": ""
         }
       ],
@@ -5927,11 +6046,11 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_npm_communities_forum_api_Comment_Interaction",
+      "name": "_com_wixpress_npm_communities_forum_api_Post_Interaction",
       "displayName": "Interaction Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> VOTE <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> MULTIPLE_REACTIONS <\/code><\/li><li><code> NONE <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -5939,7 +6058,28 @@
       "enum":       [
         "UNKNOWN",
         "REACTION",
-        "VOTE"
+        "MULTIPLE_REACTIONS",
+        "NONE"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forum_api_Comment_Interaction",
+      "displayName": "Interaction Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> VOTE <\/code><\/li><li><code> MULTIPLE_REACTIONS <\/code><\/li><li><code> NONE <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "UNKNOWN",
+        "REACTION",
+        "VOTE",
+        "MULTIPLE_REACTIONS",
+        "NONE"
       ],
       "extra": {},
       "labels": []
@@ -5959,6 +6099,31 @@
         "PUBLIC",
         "MEMBERS_ONLY",
         "PRIVATE"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forum_api_IconType_Type",
+      "displayName": "Type Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> LOVE <\/code><\/li><li><code> THUMBS_UP <\/code><\/li><li><code> CLAP <\/code><\/li><li><code> HAHA <\/code><\/li><li><code> SMILE <\/code><\/li><li><code> WOW <\/code><\/li><li><code> THINKING <\/code><\/li><li><code> SAD <\/code><\/li><li><code> THUMBS_DOWN <\/code><\/li><li><code> ANGRY <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "LOVE",
+        "THUMBS_UP",
+        "CLAP",
+        "HAHA",
+        "SMILE",
+        "WOW",
+        "THINKING",
+        "SAD",
+        "THUMBS_DOWN",
+        "ANGRY"
       ],
       "extra": {},
       "labels": []
@@ -6155,11 +6320,11 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_npm_communities_forumapi_CommentingType",
-      "displayName": "Commenting Type Object",
+      "name": "_com_wixpress_npm_communities_forumapi_post_PostInteraction",
+      "displayName": "Post Interaction Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> VOTE <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> MULTIPLE_REACTIONS <\/code><\/li><li><code> NONE <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -6167,7 +6332,53 @@
       "enum":       [
         "UNKNOWN",
         "REACTION",
-        "VOTE"
+        "MULTIPLE_REACTIONS",
+        "NONE"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forumapi_CommentingType",
+      "displayName": "Commenting Type Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> VOTE <\/code><\/li><li><code> MULTIPLE_REACTIONS <\/code><\/li><li><code> NONE <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "UNKNOWN",
+        "REACTION",
+        "VOTE",
+        "MULTIPLE_REACTIONS",
+        "NONE"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forumapi_IconType_Type",
+      "displayName": "Type Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> LOVE <\/code><\/li><li><code> THUMBS_UP <\/code><\/li><li><code> CLAP <\/code><\/li><li><code> HAHA <\/code><\/li><li><code> SMILE <\/code><\/li><li><code> WOW <\/code><\/li><li><code> THINKING <\/code><\/li><li><code> SAD <\/code><\/li><li><code> THUMBS_DOWN <\/code><\/li><li><code> ANGRY <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "LOVE",
+        "THUMBS_UP",
+        "CLAP",
+        "HAHA",
+        "SMILE",
+        "WOW",
+        "THINKING",
+        "SAD",
+        "THUMBS_DOWN",
+        "ANGRY"
       ],
       "extra": {},
       "labels": []
