@@ -5281,6 +5281,77 @@
       "labels": []
     },
         {
+      "name": "_com_wixpress_npm_communities_forum_api_UnpinPostRequest",
+      "displayName": "Unpin Post Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "postId",
+        "type": "string",
+        "doc": " Post ID\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forum_api_UnpinPostResponse",
+      "displayName": "Unpin Post Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forum_api_PinPostRequest",
+      "displayName": "Pin Post Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "postId",
+          "type": "string",
+          "doc": " Post ID\n"
+        },
+                {
+          "name": "expiresInMinutes",
+          "type": "integer",
+          "doc": " The amount of minutes after which the pin will be removed (unpinned)\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forum_api_PinPostResponse",
+      "displayName": "Pin Post Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_npm_communities_forum_api_UpvoteCommentRequest",
       "displayName": "Upvote Comment Request Object",
       "locations": [],
