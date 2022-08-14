@@ -6418,6 +6418,121 @@
       "labels": []
     },
         {
+      "name": "_com_wixpress_appservice_api_upstream_com_wixpress_items_selection_spi_v1_ItemsSelectionProviderConfig_ContentData",
+      "displayName": "Content Data Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "iconKey",
+          "type": "string",
+          "doc": " WSR icon nickname, full list: https://www.wix-style-react.com/storybook/?path=/story/foundations-foundations--icons\n"
+        },
+                {
+          "name": "providerName",
+          "type": "string",
+          "doc": " Provider name\n"
+        },
+                {
+          "name": "title",
+          "type": "string",
+          "doc": " Picker title\n"
+        },
+                {
+          "name": "button",
+          "type": "string",
+          "doc": " Picker CTA button\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_appservice_api_upstream_com_wixpress_items_selection_spi_v1_ItemsSelectionProviderConfig_SearchParams",
+      "displayName": "Search Params Object",
+      "locations": [],
+      "docs":       {
+        "summary": "\nExample:\nProviderA - Steps provider listing steps from all workflows\nEntity:\n{\nid: GUID,\ntitle: string,\nworkflow_id: GUID\n}\n\nThe search params info will be defined as follow:\n{\ntext_search_key: \"name\",\nfilter: {\nkey: \"workflow_id\",\nrelationship: \"PARENT\"\n}\n}\n",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "textSearchKey",
+          "type": "string",
+          "doc": " Free text field key\n"
+        },
+                {
+          "name": "filter",
+          "type": "All APIs.App Installation._com_wixpress_appservice_api_upstream_com_wixpress_items_selection_spi_v1_ItemsSelectionProviderConfig_SearchFilter",
+          "doc": " Secondary filter\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_appservice_api_upstream_com_wixpress_items_selection_spi_v1_ItemsSelectionProviderConfig_SearchFilter",
+      "displayName": "Search Filter Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "key",
+          "type": "string",
+          "doc": " Field key\n"
+        },
+                {
+          "name": "relationship",
+          "type": "All APIs.App Installation._com_wixpress_appservice_api_upstream_com_wixpress_items_selection_spi_v1_ItemsSelectionProviderConfig_SearchFilter_RelationshipType",
+          "doc": " Relationship type of the given filter key\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_appservice_api_upstream_com_wixpress_items_selection_spi_v1_ItemsSelectionProviderConfig",
+      "displayName": "Items Selection Provider Config Object",
+      "locations": [],
+      "docs":       {
+        "summary": " Items Selection Static Config (Configured from Dev-Center Integration Component)\n",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "deploymentUri",
+          "type": "string",
+          "doc": " URI where the SPI Implementer is deployed\n"
+        },
+                {
+          "name": "searchParams",
+          "type": "All APIs.App Installation._com_wixpress_appservice_api_upstream_com_wixpress_items_selection_spi_v1_ItemsSelectionProviderConfig_SearchParams",
+          "doc": " Search params used to connect between provider's fields and supported filters by SPI\n"
+        },
+                {
+          "name": "contentData",
+          "type": "All APIs.App Installation._com_wixpress_appservice_api_upstream_com_wixpress_items_selection_spi_v1_ItemsSelectionProviderConfig_ContentData",
+          "doc": " Picker text data, not connected to translations and used AS-IS\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "requiredConfigMapEntry",
       "displayName": "required Config Map Entry Object",
       "locations": [],
@@ -9114,11 +9229,28 @@
       "labels": []
     },
         {
+      "name": "_com_wixpress_appservice_api_upstream_com_wixpress_items_selection_spi_v1_ItemsSelectionProviderConfig_SearchFilter_RelationshipType",
+      "displayName": "Relationship Type Object",
+      "locations": [],
+      "docs":       {
+        "summary": " Possible relationship types\n \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> PARENT <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "UNKNOWN",
+        "PARENT"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_appservice_api_ComponentType",
       "displayName": "Component Type Object",
       "locations": [],
       "docs":       {
-        "summary": " Component type\n \n Possible values are: <li><code> NONE <\/code><\/li><li><code> STUDIO <\/code><\/li><li><code> PLATFORM <\/code><\/li><li><code> WORKER <\/code><\/li><li><code> DASHBOARD <\/code><\/li><li><code> WIDGET <\/code><\/li><li><code> PAGE <\/code><\/li><li><code> DASHBOARD_PLATFORM <\/code><\/li><li><code> STUDIO_WIDGET <\/code><\/li><li><code> EMBEDDED_SCRIPT <\/code><\/li><li><code> EXTENSION <\/code><\/li><li><code> SNIPPET_SOLUTION <\/code><\/li><li><code> DATA_COMPONENT <\/code><\/li><li><code> WEB <\/code><\/li><li><code> DC_CONFIG <\/code><\/li><li><code> WIDGET_OUT_OF_IFRAME <\/code><\/li><li><code> PAGE_OUT_OF_IFRAME <\/code><\/li><li><code> STATIC_FILE <\/code><\/li><li><code> APP_CONFIG <\/code><\/li><li><code> MULTIPLE_DASHBOARDS <\/code><\/li><li><code> PAYMENTS_GATEWAY <\/code><\/li><li><code> CODE_PACKAGE <\/code><\/li><li><code> AUTOMATION_TRIGGER <\/code><\/li><li><code> INVOICES_ACTIONS <\/code><\/li><li><code> DASHBOARD_APPLICATION <\/code><\/li><li><code> CONTACT_LABELS <\/code><\/li><li><code> WIDGET_PLUGIN <\/code><\/li><li><code> CROSS_SELL <\/code><\/li><li><code> LOCAL_DELIVERY <\/code><\/li><li><code> PAYMENT_PROVIDER <\/code><\/li><li><code> ECOM_MEMBERSHIPS <\/code><\/li><li><code> ECOM_LINE_ITEMS_ENRICHER <\/code><\/li><li><code> ECOM_SHIPPING_RATES <\/code><\/li><li><code> SHIPPING_LABEL_CARRIER <\/code><\/li><li><code> RESTAURANTS_POS <\/code><\/li><li><code> FICTIONAL_SHIPPING_PROVIDER <\/code><\/li><li><code> ALERT_ENRICHER <\/code><\/li><li><code> DATA_EXTENSIONS <\/code><\/li><li><code> GENERIC_HOOKS <\/code><\/li><li><code> AUTOMATIONS_ACTION_PROVIDER <\/code><\/li><li><code> ECOM_CATALOG <\/code><\/li><li><code> BACK_OFFICE_EXTENSION_CONTAINER <\/code><\/li><li><code> BACK_OFFICE_EXTENSION <\/code><\/li><li><code> AUTOMATIONS_TRIGGER_PROVIDER <\/code><\/li><li><code> IDENTITY_PRE_REGISTRATION <\/code><\/li><li><code> PREMIUM_PRODUCTS_PATHS <\/code><\/li><li><code> ECOM_CUSTOM_SCOPE <\/code><\/li><li><code> GIFT_CARDS_PROVIDER <\/code><\/li><li><code> DEALER_EXTERNAL_FILTER_PROVIDER <\/code><\/li><li><code> ECOM_DROPSHIPPING_PROVIDER <\/code><\/li><li><code> INVOICES_PROVIDER <\/code><\/li><li><code> SEO_KEYWORDS_SUGGESTIONS <\/code><\/li><li><code> ECOM_DISCOUNTS_TRIGGER <\/code><\/li><li><code> MULTILINGUAL_CONTENT_PROVIDER <\/code><\/li><li><code> APPLICATION_AUTOMATION <\/code><\/li><li><code> BACK_OFFICE_SIDEBAR_CATEGORY <\/code><\/li><li><code> BACK_OFFICE_PAGE <\/code><\/li><li><code> ECOM_ADDITIONAL_FEES <\/code><\/li><li><code> PING_NOTIFICATION <\/code><\/li><li><code> ECOM_RECOMMENDATIONS_PROVIDER <\/code><\/li><li><code> BOOKINGS_PRICING_PROVIDER <\/code><\/li><li><code> IDENTITY_AUTHENTICATOR <\/code><\/li><li><code> IDENTITY_IDP_CONNECTOR <\/code><\/li>",
+        "summary": " Component type\n \n Possible values are: <li><code> NONE <\/code><\/li><li><code> STUDIO <\/code><\/li><li><code> PLATFORM <\/code><\/li><li><code> WORKER <\/code><\/li><li><code> DASHBOARD <\/code><\/li><li><code> WIDGET <\/code><\/li><li><code> PAGE <\/code><\/li><li><code> DASHBOARD_PLATFORM <\/code><\/li><li><code> STUDIO_WIDGET <\/code><\/li><li><code> EMBEDDED_SCRIPT <\/code><\/li><li><code> EXTENSION <\/code><\/li><li><code> SNIPPET_SOLUTION <\/code><\/li><li><code> DATA_COMPONENT <\/code><\/li><li><code> WEB <\/code><\/li><li><code> DC_CONFIG <\/code><\/li><li><code> WIDGET_OUT_OF_IFRAME <\/code><\/li><li><code> PAGE_OUT_OF_IFRAME <\/code><\/li><li><code> STATIC_FILE <\/code><\/li><li><code> APP_CONFIG <\/code><\/li><li><code> MULTIPLE_DASHBOARDS <\/code><\/li><li><code> PAYMENTS_GATEWAY <\/code><\/li><li><code> CODE_PACKAGE <\/code><\/li><li><code> AUTOMATION_TRIGGER <\/code><\/li><li><code> INVOICES_ACTIONS <\/code><\/li><li><code> DASHBOARD_APPLICATION <\/code><\/li><li><code> CONTACT_LABELS <\/code><\/li><li><code> WIDGET_PLUGIN <\/code><\/li><li><code> CROSS_SELL <\/code><\/li><li><code> LOCAL_DELIVERY <\/code><\/li><li><code> PAYMENT_PROVIDER <\/code><\/li><li><code> ECOM_MEMBERSHIPS <\/code><\/li><li><code> ECOM_LINE_ITEMS_ENRICHER <\/code><\/li><li><code> ECOM_SHIPPING_RATES <\/code><\/li><li><code> SHIPPING_LABEL_CARRIER <\/code><\/li><li><code> RESTAURANTS_POS <\/code><\/li><li><code> FICTIONAL_SHIPPING_PROVIDER <\/code><\/li><li><code> ALERT_ENRICHER <\/code><\/li><li><code> DATA_EXTENSIONS <\/code><\/li><li><code> GENERIC_HOOKS <\/code><\/li><li><code> AUTOMATIONS_ACTION_PROVIDER <\/code><\/li><li><code> ECOM_CATALOG <\/code><\/li><li><code> BACK_OFFICE_EXTENSION_CONTAINER <\/code><\/li><li><code> BACK_OFFICE_EXTENSION <\/code><\/li><li><code> AUTOMATIONS_TRIGGER_PROVIDER <\/code><\/li><li><code> IDENTITY_PRE_REGISTRATION <\/code><\/li><li><code> PREMIUM_PRODUCTS_PATHS <\/code><\/li><li><code> ECOM_CUSTOM_SCOPE <\/code><\/li><li><code> GIFT_CARDS_PROVIDER <\/code><\/li><li><code> DEALER_EXTERNAL_FILTER_PROVIDER <\/code><\/li><li><code> ECOM_DROPSHIPPING_PROVIDER <\/code><\/li><li><code> INVOICES_PROVIDER <\/code><\/li><li><code> SEO_KEYWORDS_SUGGESTIONS <\/code><\/li><li><code> ECOM_DISCOUNTS_TRIGGER <\/code><\/li><li><code> MULTILINGUAL_CONTENT_PROVIDER <\/code><\/li><li><code> APPLICATION_AUTOMATION <\/code><\/li><li><code> BACK_OFFICE_SIDEBAR_CATEGORY <\/code><\/li><li><code> BACK_OFFICE_PAGE <\/code><\/li><li><code> ECOM_ADDITIONAL_FEES <\/code><\/li><li><code> PING_NOTIFICATION <\/code><\/li><li><code> ECOM_RECOMMENDATIONS_PROVIDER <\/code><\/li><li><code> BOOKINGS_PRICING_PROVIDER <\/code><\/li><li><code> IDENTITY_AUTHENTICATOR <\/code><\/li><li><code> IDENTITY_IDP_CONNECTOR <\/code><\/li><li><code> ITEMS_SELECTION_PROVIDER <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -9186,7 +9318,8 @@
         "ECOM_RECOMMENDATIONS_PROVIDER",
         "BOOKINGS_PRICING_PROVIDER",
         "IDENTITY_AUTHENTICATOR",
-        "IDENTITY_IDP_CONNECTOR"
+        "IDENTITY_IDP_CONNECTOR",
+        "ITEMS_SELECTION_PROVIDER"
       ],
       "extra": {},
       "labels": []
