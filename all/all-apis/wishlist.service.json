@@ -15,10 +15,7 @@
     "entity": "_com_wixpress_wishlist_WishlistData",
     "src": "https://github.com/wix-private/ecom/tree/master/platform/wishlist/wishlist-api/com/wixpress/wishlist/api.proto"
   }],
-  "relatedGuides": [  {
-    "path": "../guides/wishlist/docs/intro.md",
-    "name": "Introduction"
-  }],
+  "relatedGuides": [],
   "operations":   [
         {
       "name": "Get Wishlist By Id",
@@ -78,13 +75,7 @@
         "request": "POST",
         "url": "https://wixapis.com/stores/v1/wishlists/get",
         "links": [],
-        "examples": [        {
-          "title": "",
-          "body": ["curl 'https://www.wixapis.com/stores/v1/wishlists/get' \\\n   --data-binary '{\n                    \"id\": \"79fb039e-0d36-411f-8f67-3395cc6ffa2e\",\n                    \"limit\": 100,\n                    \"offset\": 0,\n                    \"kind\": [{\"origin\": \"wixstores\", \"type\": \"product\"}]\n                  }' \\\n   -H 'Content-Type: application/json' \\\n   -H 'Authorization: <AUTH>'"],
-          "response": ["{\"wishlist\": {\n  \"id\": \"79fb039e-0d36-411f-8f67-3395cc6ffa2e\",\n  \"ownerId\": \"79fb039e-0d36-411f-8f67-3395cc6ffa2e\",\n  \"items\":   [\n        {\n      \"id\": \"7d09ab92-0a2a-f96b-3e2e-c68c74db7ec5\",\n      \"dateAdded\": \"2020-05-26T16:41:53.778Z\",\n      \"type\": \"product\",\n      \"origin\": \"wixstores\"\n    },\n        {\n      \"id\": \"c7d0485c-78ae-4b18-f56a-4ad2fea8f861\",\n      \"dateAdded\": \"2020-05-26T16:41:50.285Z\",\n      \"type\": \"product\",\n      \"origin\": \"wixstores\"\n    }\n  ],\n  \"totalCount\": 2\n}} "],
-          "type": "curl",
-          "extra": {}
-        }],
+        "examples": [],
         "extra": {}
       },
       "extra":       {
@@ -134,13 +125,7 @@
         "request": "GET",
         "url": "https://wixapis.com/stores/v1/wishlists",
         "links": [],
-        "examples": [        {
-          "title": "",
-          "body": ["curl 'https://www.wixapis.com/stores/v1/wishlists?limit=100&offset=0' \\\n   -H 'Content-Type: application/json' \\\n   -H 'Authorization: <AUTH>'"],
-          "response": ["{\"wishlists\": [\n    {\n    \"id\": \"6086c4c6-d7e3-4ccf-b732-4f3711953654\",\n    \"ownerId\": \"6086c4c6-d7e3-4ccf-b732-4f3711953654\",\n    \"items\": [],\n    \"totalCount\": 4\n  },\n    {\n    \"id\": \"79fb039e-0d36-411f-8f67-3395cc6ffa2e\",\n    \"ownerId\": \"79fb039e-0d36-411f-8f67-3395cc6ffa2e\",\n    \"items\": [],\n    \"totalCount\": 2\n  }\n]} "],
-          "type": "curl",
-          "extra": {}
-        }],
+        "examples": [],
         "extra": {}
       },
       "extra":       {
