@@ -682,157 +682,6 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_appservice_api_BackOfficeExtension",
-      "displayName": "Back Office Extension Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "extends",
-          "type": "string",
-          "doc": " The container id this extension in contained in\n"
-        },
-                {
-          "name": "title",
-          "type": "string",
-          "doc": " Extension title\n"
-        },
-                {
-          "name": "description",
-          "type": "string",
-          "doc": " Extension description\n"
-        },
-                {
-          "name": "extensionType",
-          "type": "All APIs.App Installation._com_wixpress_appservice_api_Extendable_ExtendingComponentType",
-          "doc": " The extension type\n"
-        },
-                {
-          "name": "extension",
-          "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeExtension_extension",
-          "doc": " The extension component data\n"
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_com_wixpress_appservice_api_BackOfficeExtension_extension",
-      "displayName": "extension Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "widget",
-          "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeWidget",
-          "doc": " Data for the widget extension type\n"
-        },
-                {
-          "name": "menuItem",
-          "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeMenuItem",
-          "doc": " Data for the menu item extension type\n"
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": [],
-      "oneOf": true
-    },
-        {
-      "name": "_com_wixpress_appservice_api_BackOfficeWidget",
-      "displayName": "Back Office Widget Object",
-      "locations": [],
-      "docs":       {
-        "summary": " Widget contained in an extension\n",
-        "links": [],
-        "examples": []
-      },
-      "members": [      {
-        "name": "iframeUrl",
-        "type": "string",
-        "doc": " Url of iframe\n"
-      }],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_com_wixpress_appservice_api_BackOfficeMenuItem_Action",
-      "displayName": "Action Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members": [      {
-        "name": "action",
-        "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeMenuItem_Action_action",
-        "doc": ""
-      }],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_com_wixpress_appservice_api_BackOfficeMenuItem_Action_action",
-      "displayName": "action Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members": [      {
-        "name": "openPageComponentId",
-        "type": "string",
-        "doc": " the id of the page to be opened, the context of the item clicked will be added to the url as query param\n"
-      }],
-      "enum": null,
-      "extra": {},
-      "labels": [],
-      "oneOf": true
-    },
-        {
-      "name": "_com_wixpress_appservice_api_BackOfficeMenuItem",
-      "displayName": "Back Office Menu Item Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "iconKey",
-          "type": "string",
-          "doc": " wsr icon nickname, full list: https://www.wix-style-react.com/storybook/?path=/story/foundations-foundations--icons\n use the full size key, the host will render the icon in a small/normal size\n"
-        },
-                {
-          "name": "label",
-          "type": "string",
-          "doc": " label of the action\n"
-        },
-                {
-          "name": "action",
-          "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeMenuItem_Action",
-          "doc": " when item is clicked, the action will run\n"
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
       "name": "_com_wixpress_appservice_api_DisplayProperties",
       "displayName": "Display Properties Object",
       "locations": [],
@@ -1264,6 +1113,176 @@
           "name": "exportedName",
           "type": "string",
           "doc": " Key name for the retrieval of the component\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_appservice_api_BackOfficeExtension",
+      "displayName": "Back Office Extension Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "extends",
+          "type": "string",
+          "doc": " The container id this extension in contained in\n"
+        },
+                {
+          "name": "title",
+          "type": "string",
+          "doc": " Extension title\n"
+        },
+                {
+          "name": "description",
+          "type": "string",
+          "doc": " Extension description\n"
+        },
+                {
+          "name": "extensionType",
+          "type": "All APIs.App Installation._com_wixpress_appservice_api_Extendable_ExtendingComponentType",
+          "doc": " The extension type\n"
+        },
+                {
+          "name": "extension",
+          "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeExtension_extension",
+          "doc": " The extension component data\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_appservice_api_BackOfficeExtension_extension",
+      "displayName": "extension Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "widget",
+          "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeWidget",
+          "doc": " Data for the widget extension type\n"
+        },
+                {
+          "name": "menuItem",
+          "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeMenuItem",
+          "doc": " Data for the menu item extension type\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_appservice_api_BackOfficeWidget",
+      "displayName": "Back Office Widget Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "asset",
+        "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeWidget_asset",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_appservice_api_BackOfficeWidget_asset",
+      "displayName": "asset Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "iframeUrl",
+        "type": "string",
+        "doc": " Url of iframe\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_appservice_api_BackOfficeMenuItem_Action",
+      "displayName": "Action Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "action",
+        "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeMenuItem_Action_action",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_appservice_api_BackOfficeMenuItem_Action_action",
+      "displayName": "action Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "openPageComponentId",
+        "type": "string",
+        "doc": " the id of the page to be opened, the context of the item clicked will be added to the url as query param\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_appservice_api_BackOfficeMenuItem",
+      "displayName": "Back Office Menu Item Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "iconKey",
+          "type": "string",
+          "doc": " wsr icon nickname, full list: https://www.wix-style-react.com/storybook/?path=/story/foundations-foundations--icons\n use the full size key, the host will render the icon in a small/normal size\n"
+        },
+                {
+          "name": "label",
+          "type": "string",
+          "doc": " label of the action\n"
+        },
+                {
+          "name": "action",
+          "type": "All APIs.App Installation._com_wixpress_appservice_api_BackOfficeMenuItem_Action",
+          "doc": " when item is clicked, the action will run\n"
         }
       ],
       "enum": null,
