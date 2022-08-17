@@ -6136,12 +6136,12 @@
                 {
           "name": "actionConfig",
           "type": "string",
-          "doc": " user's configuration of the input mapping the action provider defined\n for example:\n `{  \"subject\": \"Thanks for reaching out!\"\n    \"message\": \"Hi $contactName, thanks for contacting our business\" }`\"`\n  where $contactName comes from the form submitted trigger\n"
+          "doc": " input mapping expression for the action inputs\n for example:\n `{  \"subject\": \"Thanks for reaching out!\"\n    \"message\": \"Hi {{contact.name.first}}, thanks for contacting our business\"\n  }`\n  where the value for \"contact.name.first\" comes from the trigger's payload\n"
         },
                 {
           "name": "outputActionConfig",
           "type": "string",
-          "doc": " output mapping for action output\n for example in get-contact action:\n { \"author\": $ }\n This will map the entire entity of contact under `author` namespace\n"
+          "doc": " output mapping expression for the action output\n for example in get-contact action:\n `{ \"author\": \"{{$}}\" }`\n This will map the entire entity of contact under `author` namespace\n"
         },
                 {
           "name": "delay",
