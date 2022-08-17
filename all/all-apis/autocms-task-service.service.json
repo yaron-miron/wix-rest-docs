@@ -62,6 +62,78 @@
       "customLabels": [{"id": "maturity-alpha"}]
     },
         {
+      "name": "Copy Field Data",
+      "methodName": "CopyFieldData",
+      "serviceName": "TaskService",
+      "tag": "TaskService",
+      "permissions": [],
+      "events": [],
+      "labels": [],
+      "nameParams": [],
+      "requiredFields": ["collectionName"],
+      "params":       [
+                {
+          "in": "BODY",
+          "name": "collectionName",
+          "type": "string",
+          "doc": " collection to update items\n",
+          "required": true
+        },
+                {
+          "in": "BODY",
+          "name": "segment",
+          "type": "All APIs.AutoCMS Task Service._wix_cloud_autocms_tasks_v1_Segment",
+          "doc": " segment, LIVE by default\n",
+          "required": false
+        },
+                {
+          "in": "BODY",
+          "name": "appId",
+          "type": "string",
+          "doc": " AppID, required if SANDBOX\n",
+          "required": false
+        },
+                {
+          "in": "BODY",
+          "name": "sourceField",
+          "type": "string",
+          "doc": "",
+          "required": false
+        },
+                {
+          "in": "BODY",
+          "name": "targetField",
+          "type": "string",
+          "doc": "",
+          "required": false
+        }
+      ],
+      "ret":       {
+        "type":         {
+          "name": "CopyFieldData",
+          "statusCode": "200",
+          "typeParams": ["All APIs.AutoCMS Task Service._wix_cloud_autocms_tasks_v1_TaskSubmitted"]
+        },
+        "doc": ""
+      },
+      "locations": [],
+      "docs":       {
+        "summary": " Copies all data from one field to another in same collection\n \n",
+        "description": [],
+        "request": "POST",
+        "url": "https://www.wixapis.com/autocms-task-service/v1/copy-field-data",
+        "links": [],
+        "examples": [],
+        "extra": {}
+      },
+      "extra":       {
+        "hasRest": true,
+        "rpcRequestName": "CopyFieldDataRequest",
+        "rpcResponseName": "TaskSubmitted"
+      },
+      "customLabels": [{"id": "maturity-alpha"}]
+    },
+        {
       "name": "Delete By Query",
       "methodName": "DeleteByQuery",
       "serviceName": "TaskService",
@@ -442,6 +514,11 @@
           "name": "updateDraftPublish",
           "type": "All APIs.AutoCMS Task Service._wix_cloud_autocms_tasks_v1_UpdateDraftPublishConfig",
           "doc": " config in case if UPDATE_DRAFT_PUBLISH task\n"
+        },
+                {
+          "name": "copyFieldData",
+          "type": "All APIs.AutoCMS Task Service._wix_cloud_autocms_tasks_v1_CopyFieldDataRequest",
+          "doc": " original CopyFieldDataRequest config if COPY_FIELD_DATA task\n"
         }
       ],
       "enum": null,
@@ -689,6 +766,46 @@
       "oneOf": true
     },
         {
+      "name": "_wix_cloud_autocms_tasks_v1_CopyFieldDataRequest",
+      "displayName": "Copy Field Data Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "collectionName",
+          "type": "string",
+          "doc": " collection to update items\n"
+        },
+                {
+          "name": "segment",
+          "type": "All APIs.AutoCMS Task Service._wix_cloud_autocms_tasks_v1_Segment",
+          "doc": " segment, LIVE by default\n"
+        },
+                {
+          "name": "appId",
+          "type": "string",
+          "doc": " AppID, required if SANDBOX\n"
+        },
+                {
+          "name": "sourceField",
+          "type": "string",
+          "doc": ""
+        },
+                {
+          "name": "targetField",
+          "type": "string",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_wix_cloud_autocms_tasks_v1_TaskSubmitted",
       "displayName": "Task Submitted Object",
       "locations": [],
@@ -789,7 +906,7 @@
       "displayName": "Type Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> CHANGE_TYPE <\/code><\/li><li><code> DELETE_BY_QUERY <\/code><\/li><li><code> UPDATE_DRAFT_PUBLISH <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> CHANGE_TYPE <\/code><\/li><li><code> DELETE_BY_QUERY <\/code><\/li><li><code> UPDATE_DRAFT_PUBLISH <\/code><\/li><li><code> COPY_FIELD_DATA <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -797,7 +914,8 @@
       "enum":       [
         "CHANGE_TYPE",
         "DELETE_BY_QUERY",
-        "UPDATE_DRAFT_PUBLISH"
+        "UPDATE_DRAFT_PUBLISH",
+        "COPY_FIELD_DATA"
       ],
       "extra": {},
       "labels": []
