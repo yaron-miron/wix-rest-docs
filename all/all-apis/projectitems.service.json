@@ -1207,7 +1207,7 @@
                 {
           "name": "sortOrder",
           "type": "number",
-          "doc": "\nItem sort order.\nDetermines which position a media item is displayed in the gallery. \nDefault: End of the gallery items list\n"
+          "doc": "\nItem sort order.\nDetermines which position a media item is displayed in the gallery. \n\nDefault: `[Epoch](https://www.epoch101.com/) timestamp in desc order` (end of the gallery items list)\n"
         },
                 {
           "name": "title",
@@ -1337,7 +1337,7 @@
                 {
           "name": "quality",
           "type": "integer",
-          "doc": " Image compression level. \nMin: `30`\nMax: `100`\n"
+          "doc": " Image compression level. \n\nMin: `30`\nMax: `100`\n"
         },
                 {
           "name": "unsharpMasking",
@@ -1362,7 +1362,7 @@
                 {
           "name": "amount",
           "type": "number",
-          "doc": " Unsharp masking amount. Controls the sharpening strength. \nMin: `0`\nMax: `5`\n"
+          "doc": " Unsharp masking amount. Controls the sharpening strength.\n\nMin: `0`\nMax: `5`\n"
         },
                 {
           "name": "radius",
@@ -1372,7 +1372,7 @@
                 {
           "name": "threshold",
           "type": "number",
-          "doc": " Unsharp masking threshold. Controls how different neighboring pixels must be for shapening to apply. \nMin: `0`\nMax: `1`\n"
+          "doc": " Unsharp masking threshold. Controls how different neighboring pixels must be for shapening to apply.\n\nMin: `0`\nMax: `1`\n"
         }
       ],
       "enum": null,
@@ -1541,7 +1541,7 @@
                 {
           "name": "target",
           "type": "string",
-          "doc": " Whether the link opens in the same tab.\n"
+          "doc": " Whether the link opens in a new tab or window. One of:\n+ `\"_blank\"`: The link opens in a new tab or window.\n+ `\"_self\"`: The link opens in the same tab or window.\n"
         }
       ],
       "enum": null,
