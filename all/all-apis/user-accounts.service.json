@@ -558,6 +558,42 @@
       "labels": []
     },
         {
+      "name": "_com_wixpress_account_api_GetParentAccountIdRequest",
+      "displayName": "Get Parent Account Id Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "accountId",
+        "type": "string",
+        "doc": " the queried account\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_account_api_GetParentAccountIdResponse",
+      "displayName": "Get Parent Account Id Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "parentAccountId",
+        "type": "string",
+        "doc": " the queried account's parent account id\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_account_api_BackOfficeListTeamMembersRequest",
       "displayName": "Back Office List Team Members Request Object",
       "locations": [],
