@@ -2728,5 +2728,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.bookings.checkout-server"}
 }
