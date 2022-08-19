@@ -2067,5 +2067,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.portfolio.projects-service"}
 }
