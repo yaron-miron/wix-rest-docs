@@ -208,7 +208,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": " Adds points to a loyalty account.\n\nOnly a positive amount can be added using the earn points endpoint. To adjust an account's balance \nfor a negative amount, use [Adjust Points](https://dev.wix.com/api/rest/wix-loyalty-program/accounts/adjust-points).\n \n",
+        "summary": " Adds points to a loyalty account.\n\nOnly a positive amount can be added using the earn points endpoint. To adjust an account's balance\nfor a negative amount, use [Adjust Points](https://dev.wix.com/api/rest/wix-loyalty-program/accounts/adjust-points).\n \n",
         "description": [],
         "request": "POST",
         "url": "https://www.wixapis.com/loyalty-accounts/v1/accounts/{accountId}/earn-points",
@@ -1315,6 +1315,200 @@
       "oneOf": true
     },
         {
+      "name": "_wix_common_Image",
+      "displayName": "Image Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": " WixMedia image ID.\n"
+        },
+                {
+          "name": "url",
+          "type": "string",
+          "doc": " Image URL.\n"
+        },
+                {
+          "name": "height",
+          "type": "integer",
+          "doc": " Original image height.\n",
+          "readOnly": true
+        },
+                {
+          "name": "width",
+          "type": "integer",
+          "doc": " Original image width.\n",
+          "readOnly": true
+        },
+                {
+          "name": "altText",
+          "type": "string",
+          "doc": " Image alt text.\n"
+        },
+                {
+          "name": "filename",
+          "type": "string",
+          "doc": " Image filename.\n",
+          "readOnly": true
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_tier_TiersProgramSettings",
+      "displayName": "Tiers Program Settings Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "status",
+          "type": "All APIs.Accounts._com_wixpress_loyalty_tier_StatusEnum_Status",
+          "doc": ""
+        },
+                {
+          "name": "revision",
+          "type": "string",
+          "doc": ""
+        },
+                {
+          "name": "createdDate",
+          "type": "string",
+          "doc": "",
+          "readOnly": true
+        },
+                {
+          "name": "updatedDate",
+          "type": "string",
+          "doc": "",
+          "readOnly": true
+        },
+                {
+          "name": "baseTierDefinition",
+          "type": "All APIs.Accounts._com_wixpress_loyalty_tier_TierDefinition",
+          "doc": " Used to represent base tier\n"
+        },
+                {
+          "name": "period",
+          "type": "All APIs.Accounts._com_wixpress_loyalty_tier_TiersProgramSettings_period",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_tier_TiersProgramSettings_period",
+      "displayName": "period Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "rolling",
+        "type": "All APIs.Accounts._com_wixpress_loyalty_tier_Rolling",
+        "doc": "More periods will be supported in future\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_loyalty_tier_TierDefinition",
+      "displayName": "Tier Definition Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "icon",
+          "type": "All APIs.Accounts._wix_common_Image",
+          "doc": ""
+        },
+                {
+          "name": "name",
+          "type": "string",
+          "doc": ""
+        },
+                {
+          "name": "description",
+          "type": "string",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_tier_Rolling",
+      "displayName": "Rolling Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "months",
+        "type": "integer",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_tier_TiersRollingUpdate",
+      "displayName": "Tiers Rolling Update Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_tier_TiersProgramSettingsChanged",
+      "displayName": "Tiers Program Settings Changed Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "programSettings",
+        "type": "All APIs.Accounts._com_wixpress_loyalty_tier_TiersProgramSettings",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_loyalty_account_LoyaltyAccount",
       "displayName": "Loyalty Account Object",
       "locations": [],
@@ -1378,7 +1572,7 @@
                 {
           "name": "revision",
           "type": "string",
-          "doc": " Revision number, which increments by 1 each time the loyalty account is updated.\n\nTo prevent conflicting changes, the current `revision` must be passed when updating the loyalty account.  \n\nIgnored when creating an account.\n"
+          "doc": " Revision number, which increments by 1 each time the loyalty account is updated.\n\nTo prevent conflicting changes, the current `revision` must be passed when updating the loyalty account.\n\nIgnored when creating an account.\n"
         }
       ],
       "enum": null,
@@ -1505,7 +1699,7 @@
                 {
           "name": "redeemInfo",
           "type": "All APIs.Accounts._com_wixpress_loyalty_account_RedeemInfo",
-          "doc": " Additional information for redeemed points.  \n\nOnly present if `type` is `REDEEM`.\n",
+          "doc": " Additional information for redeemed points.\n\nOnly present if `type` is `REDEEM`.\n",
           "readOnly": true
         }
       ],
@@ -1611,7 +1805,7 @@
                 {
           "name": "rewardId",
           "type": "string",
-          "doc": " ID of the reward that was redeemed.  \n",
+          "doc": " ID of the reward that was redeemed.\n",
           "readOnly": true
         },
                 {
@@ -1623,7 +1817,7 @@
                 {
           "name": "referenceEntityId",
           "type": "string",
-          "doc": " ID of the specific item that was redeemed in this transaction.  \n\nEach reward that is redeemed has a unique `referenceEntityId`.\n",
+          "doc": " ID of the specific item that was redeemed in this transaction.\n\nEach reward that is redeemed has a unique `referenceEntityId`.\n",
           "readOnly": true
         }
       ],
@@ -2110,7 +2304,7 @@
                 {
           "name": "balance",
           "type": "integer",
-          "doc": " Sets the account's point balance to this amount. Must be a positive, whole number.\n\nThe net difference between this new balance and the previous balance will be reflected in the `adjusted` field of the customer's account.  \n\nMin: `1`\n\nMax: `999,999,999`\n"
+          "doc": " Sets the account's point balance to this amount. Must be a positive, whole number.\n\nThe net difference between this new balance and the previous balance will be reflected in the `adjusted` field of the customer's account.\n\nMin: `1`\n\nMax: `999,999,999`\n"
         },
                 {
           "name": "amount",
@@ -2317,6 +2511,26 @@
         "EARN",
         "REDEEM",
         "ADJUST"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_tier_StatusEnum_Status",
+      "displayName": "Status Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> DISABLED -  Tiers are disabled\n <\/code><\/li><li><code> DRAFT -  Tiers are enabled but not yet active\n <\/code><\/li><li><code> ACTIVE -  Tiers are active\n <\/code><\/li><li><code> PAUSED -  Tiers are paused\n <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "UNKNOWN",
+        "DISABLED",
+        "DRAFT",
+        "ACTIVE",
+        "PAUSED"
       ],
       "extra": {},
       "labels": []
