@@ -232,5 +232,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.print-packing-slip"}
 }
