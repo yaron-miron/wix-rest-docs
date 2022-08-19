@@ -97,14 +97,14 @@
           "in": "BODY",
           "name": "sourceField",
           "type": "string",
-          "doc": "",
+          "doc": " field to copy data from\n",
           "required": false
         },
                 {
           "in": "BODY",
           "name": "targetField",
           "type": "string",
-          "doc": "",
+          "doc": " field to copy data to\n",
           "required": false
         }
       ],
@@ -330,6 +330,13 @@
           "name": "appId",
           "type": "string",
           "doc": " AppID, required if SANDBOX\n",
+          "required": false
+        },
+                {
+          "in": "BODY",
+          "name": "filter",
+          "type": "struct",
+          "doc": " optional items to update filter, none or empty means all applicable\n",
           "required": false
         },
                 {
@@ -665,6 +672,11 @@
           "name": "lastUpdatedId",
           "type": "string",
           "doc": " last updated record ID\n"
+        },
+                {
+          "name": "filter",
+          "type": "struct",
+          "doc": " optional items to update filter, none or empty means all applicable\n"
         }
       ],
       "enum": null,
@@ -713,6 +725,11 @@
           "name": "appId",
           "type": "string",
           "doc": " AppID, required if SANDBOX\n"
+        },
+                {
+          "name": "filter",
+          "type": "struct",
+          "doc": " optional items to update filter, none or empty means all applicable\n"
         },
                 {
           "name": "operation",
@@ -793,12 +810,12 @@
                 {
           "name": "sourceField",
           "type": "string",
-          "doc": ""
+          "doc": " field to copy data from\n"
         },
                 {
           "name": "targetField",
           "type": "string",
-          "doc": ""
+          "doc": " field to copy data to\n"
         }
       ],
       "enum": null,
