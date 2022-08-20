@@ -210,5 +210,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.platform.currency-site-settings"}
 }
