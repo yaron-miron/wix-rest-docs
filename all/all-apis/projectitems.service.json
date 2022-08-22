@@ -1469,8 +1469,8 @@
           "doc": "\nVideo info - can include Wix Media or an external link from YouTube or Vimeo. Required.\n"
         },
                 {
-          "name": "duration",
-          "type": "string",
+          "name": "durationInMillis",
+          "type": "integer",
           "doc": " Video duration in milliseconds.\n"
         }
       ],
