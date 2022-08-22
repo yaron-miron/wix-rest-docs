@@ -3790,7 +3790,7 @@
       "displayName": "Subject Type Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> ACCOUNT <\/code><\/li><li><code> USER <\/code><\/li><li><code> USER_GROUP <\/code><\/li><li><code> MEMBER_GROUP <\/code><\/li><li><code> VISITOR_GROUP <\/code><\/li><li><code> EXTERNAL_APP <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> ACCOUNT <\/code><\/li><li><code> USER <\/code><\/li><li><code> USER_GROUP <\/code><\/li><li><code> MEMBER_GROUP <\/code><\/li><li><code> VISITOR_GROUP <\/code><\/li><li><code> EXTERNAL_APP <\/code><\/li><li><code> ACCOUNT_GROUP <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -3802,7 +3802,8 @@
         "USER_GROUP",
         "MEMBER_GROUP",
         "VISITOR_GROUP",
-        "EXTERNAL_APP"
+        "EXTERNAL_APP",
+        "ACCOUNT_GROUP"
       ],
       "extra": {},
       "labels": []
