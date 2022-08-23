@@ -208,6 +208,76 @@
       "enum": null,
       "extra": {},
       "labels": []
+    },
+        {
+      "name": "_com_wixpress_currency_site_settings_api_v1_SetCheckoutCurrenciesRequest",
+      "displayName": "Set Checkout Currencies Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "currencies",
+        "type":         {
+          "name": "array",
+          "typeParams": ["All APIs.Site Currency Settings._com_wixpress_currency_site_settings_api_v1_SiteCurrency"]
+        },
+        "doc": " The new checkout currency list\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_currency_site_settings_api_v1_SetCheckoutCurrenciesResponse",
+      "displayName": "Set Checkout Currencies Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_currency_site_settings_api_v1_GetCheckoutCurrenciesRequest",
+      "displayName": "Get Checkout Currencies Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_currency_site_settings_api_v1_GetCheckoutCurrenciesResponse",
+      "displayName": "Get Checkout Currencies Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "currencies",
+        "type":         {
+          "name": "array",
+          "typeParams": ["All APIs.Site Currency Settings._com_wixpress_currency_site_settings_api_v1_SiteCurrency"]
+        },
+        "doc": " Currencies supported in checkout\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
     }
   ],
   "extra": {"artifactId": "com.wixpress.platform.currency-site-settings"}
