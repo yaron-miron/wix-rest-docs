@@ -8094,5 +8094,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.billing.billing-gateway-server"}
 }
