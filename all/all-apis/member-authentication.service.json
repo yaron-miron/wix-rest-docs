@@ -1056,5 +1056,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.wix-sm-webapp"}
 }
