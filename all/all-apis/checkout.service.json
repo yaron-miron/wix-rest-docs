@@ -3159,6 +3159,11 @@
             "typeParams": ["All APIs.Checkout._com_wix_ecom_totals_calculator_v1_AdditionalFee"]
           },
           "doc": " Additional Fees\n"
+        },
+                {
+          "name": "cartId",
+          "type": "string",
+          "doc": " Cart ID that this checkout was created from. Empty if this checkout wasn't created out of a cart.\n"
         }
       ],
       "enum": null,
