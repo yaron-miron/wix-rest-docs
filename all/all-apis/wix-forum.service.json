@@ -6517,5 +6517,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.npm.communities"}
 }
