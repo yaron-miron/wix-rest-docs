@@ -4963,11 +4963,6 @@
           "name": "fallbackDefinitionMandatory",
           "type": "boolean",
           "doc": " Require site owner to define fallback rate. Turn it on if you do not provide rate as part of the integration\n"
-        },
-                {
-          "name": "thumbnailUrl",
-          "type": "string",
-          "doc": " Thumbnail image for Carrier\n"
         }
       ],
       "enum": null,
