@@ -77,6 +77,7 @@
         "paymentSourceSelector.selection",
         "paymentSourceSelector.selection.paymentSourceDetails.billingContact.fullName.firstName",
         "paymentSourceSelector.selection.paymentSourceDetails.billingContact.fullName.lastName",
+        "paymentSourceSelector.selection.paymentSourceDetails.billingContact.country",
         "paymentSourceSelector.selection.paymentSourceDetails.paymentMethodSelector.creditCardDetails.billingToken",
         "paymentSourceSelector.selection.paymentSourceDetails.paymentMethodSelector.creditCardDetails.cardBrand",
         "paymentSourceSelector.selection.paymentSourceDetails.paymentMethodSelector.creditCardDetails.expiration",
