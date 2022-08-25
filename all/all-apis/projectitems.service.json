@@ -1207,7 +1207,7 @@
                 {
           "name": "sortOrder",
           "type": "number",
-          "doc": "\nItem sort order.\nDetermines which position a media item is displayed in the gallery. \n\nDefault: `[Epoch](https://www.epoch101.com/) timestamp in desc order` (end of the gallery items list)\n"
+          "doc": "\nItem sort order.\nDetermines which position a media item is displayed in the gallery. \n\nMin: `1` <br />\nDefault: `[Epoch](https://www.epoch101.com/) timestamp in descending order` (end of the gallery items list)\n"
         },
                 {
           "name": "title",
