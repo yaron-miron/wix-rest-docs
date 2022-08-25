@@ -418,8 +418,8 @@
   "callbacks": [],
   "messages":   [
         {
-      "name": "_wix_events_PolicyUpdatedDomainEvent",
-      "displayName": "Policy Updated Domain Event Object",
+      "name": "_wix_events_PolicyCreatedDomainEvent",
+      "displayName": "Policy Created Domain Event Object",
       "locations": [],
       "docs":       {
         "summary": "",
@@ -440,11 +440,11 @@
                 {
           "name": "slug",
           "type": "string",
-          "doc": "Expected `updated`.\nEvent name."
+          "doc": "Expected `created`.\nEvent name."
         },
                 {
-          "name": "updatedEvent",
-          "type": "All APIs.Events - Policies._wix_events_PolicyEntityUpdatedEvent",
+          "name": "createdEvent",
+          "type": "All APIs.Events - Policies._wix_events_PolicyEntityCreatedEvent",
           "doc": "Event Info"
         },
                 {
@@ -473,8 +473,8 @@
       "labels": []
     },
         {
-      "name": "_wix_events_PolicyEntityUpdatedEvent",
-      "displayName": "Policy Entity Updated Event Object",
+      "name": "_wix_events_PolicyEntityCreatedEvent",
+      "displayName": "Policy Entity Created Event Object",
       "locations": [],
       "docs":       {
         "summary": "",
@@ -482,7 +482,7 @@
         "examples": []
       },
       "members": [      {
-        "name": "currentEntity",
+        "name": "entity",
         "type": "All APIs.Events - Policies._wix_events_Policy",
         "doc": "Event body"
       }],
@@ -560,8 +560,8 @@
       "labels": []
     },
         {
-      "name": "_wix_events_PolicyCreatedDomainEvent",
-      "displayName": "Policy Created Domain Event Object",
+      "name": "_wix_events_PolicyUpdatedDomainEvent",
+      "displayName": "Policy Updated Domain Event Object",
       "locations": [],
       "docs":       {
         "summary": "",
@@ -582,11 +582,11 @@
                 {
           "name": "slug",
           "type": "string",
-          "doc": "Expected `created`.\nEvent name."
+          "doc": "Expected `updated`.\nEvent name."
         },
                 {
-          "name": "createdEvent",
-          "type": "All APIs.Events - Policies._wix_events_PolicyEntityCreatedEvent",
+          "name": "updatedEvent",
+          "type": "All APIs.Events - Policies._wix_events_PolicyEntityUpdatedEvent",
           "doc": "Event Info"
         },
                 {
@@ -615,8 +615,8 @@
       "labels": []
     },
         {
-      "name": "_wix_events_PolicyEntityCreatedEvent",
-      "displayName": "Policy Entity Created Event Object",
+      "name": "_wix_events_PolicyEntityUpdatedEvent",
+      "displayName": "Policy Entity Updated Event Object",
       "locations": [],
       "docs":       {
         "summary": "",
@@ -624,7 +624,7 @@
         "examples": []
       },
       "members": [      {
-        "name": "entity",
+        "name": "currentEntity",
         "type": "All APIs.Events - Policies._wix_events_Policy",
         "doc": "Event body"
       }],
