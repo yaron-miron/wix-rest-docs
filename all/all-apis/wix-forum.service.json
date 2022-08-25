@@ -2932,7 +2932,7 @@
                 {
           "name": "commentInteraction",
           "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Comment_Interaction",
-          "doc": " Defines what interactions may be applied on the comment under the posts created in this category, vote, like or multiple reactions.\n",
+          "doc": " Defines what interactions may be applied on the comment under the posts created in this category, vote or like.\n",
           "readOnly": true
         }
       ],
@@ -3066,7 +3066,7 @@
                 {
           "name": "commentInteraction",
           "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Comment_Interaction",
-          "doc": " Defines what interactions may be applied on the comment under the post, vote, like or emotion.\n",
+          "doc": " Defines what interactions may be applied on the comment under the post, vote or like.\n",
           "readOnly": true
         }
       ],
@@ -3226,8 +3226,8 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_npm_communities_forum_api_ReactionIcon",
-      "displayName": "Reaction Icon Object",
+      "name": "_com_wixpress_npm_communities_forum_api_Reaction",
+      "displayName": "Reaction Object",
       "locations": [],
       "docs":       {
         "summary": "",
@@ -3236,14 +3236,15 @@
       },
       "members":       [
                 {
-          "name": "icons",
-          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_ReactionIcon_icons",
+          "name": "reaction",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Reaction_reaction",
           "doc": ""
         },
                 {
           "name": "code",
           "type": "string",
-          "doc": ""
+          "doc": "",
+          "readOnly": true
         }
       ],
       "enum": null,
@@ -3251,8 +3252,8 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_npm_communities_forum_api_ReactionIcon_icons",
-      "displayName": "icons Object",
+      "name": "_com_wixpress_npm_communities_forum_api_Reaction_reaction",
+      "displayName": "reaction Object",
       "locations": [],
       "docs":       {
         "summary": "",
@@ -3261,7 +3262,7 @@
       },
       "members": [      {
         "name": "type",
-        "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_IconType_Type",
+        "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Reaction_Type",
         "doc": ""
       }],
       "enum": null,
@@ -5476,8 +5477,8 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_npm_communities_forumapi_ReactionIcon",
-      "displayName": "Reaction Icon Object",
+      "name": "_com_wixpress_npm_communities_forumapi_Reaction",
+      "displayName": "Reaction Object",
       "locations": [],
       "docs":       {
         "summary": "",
@@ -5486,14 +5487,15 @@
       },
       "members":       [
                 {
-          "name": "icons",
-          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_ReactionIcon_icons",
+          "name": "reaction",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_Reaction_reaction",
           "doc": ""
         },
                 {
           "name": "code",
           "type": "string",
-          "doc": ""
+          "doc": "",
+          "readOnly": true
         }
       ],
       "enum": null,
@@ -5501,8 +5503,8 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_npm_communities_forumapi_ReactionIcon_icons",
-      "displayName": "icons Object",
+      "name": "_com_wixpress_npm_communities_forumapi_Reaction_reaction",
+      "displayName": "reaction Object",
       "locations": [],
       "docs":       {
         "summary": "",
@@ -5511,7 +5513,7 @@
       },
       "members": [      {
         "name": "type",
-        "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_IconType_Type",
+        "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_Reaction_Type",
         "doc": ""
       }],
       "enum": null,
@@ -5689,28 +5691,28 @@
           "doc": ""
         },
                 {
-          "name": "mainPostReactionIcon",
-          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_ReactionIcon",
+          "name": "mainPostReaction",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_Reaction",
           "doc": ""
         },
                 {
           "name": "additionalPostReactions",
           "type":           {
             "name": "array",
-            "typeParams": ["All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_ReactionIcon"]
+            "typeParams": ["All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_Reaction"]
           },
           "doc": ""
         },
                 {
-          "name": "mainCommentReactionIcon",
-          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_ReactionIcon",
+          "name": "mainCommentReaction",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_Reaction",
           "doc": ""
         },
                 {
           "name": "additionalCommentReactions",
           "type":           {
             "name": "array",
-            "typeParams": ["All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_ReactionIcon"]
+            "typeParams": ["All APIs.Wix Forum._com_wixpress_npm_communities_forumapi_Reaction"]
           },
           "doc": ""
         }
@@ -6121,7 +6123,7 @@
       "displayName": "Interaction Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> MULTIPLE_REACTIONS <\/code><\/li><li><code> NONE <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> NONE <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -6129,7 +6131,6 @@
       "enum":       [
         "UNKNOWN",
         "REACTION",
-        "MULTIPLE_REACTIONS",
         "NONE"
       ],
       "extra": {},
@@ -6140,7 +6141,7 @@
       "displayName": "Interaction Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> VOTE <\/code><\/li><li><code> MULTIPLE_REACTIONS <\/code><\/li><li><code> NONE <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> VOTE <\/code><\/li><li><code> NONE <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -6149,7 +6150,6 @@
         "UNKNOWN",
         "REACTION",
         "VOTE",
-        "MULTIPLE_REACTIONS",
         "NONE"
       ],
       "extra": {},
@@ -6175,26 +6175,27 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_npm_communities_forum_api_IconType_Type",
+      "name": "_com_wixpress_npm_communities_forum_api_Reaction_Type",
       "displayName": "Type Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> LOVE <\/code><\/li><li><code> THUMBS_UP <\/code><\/li><li><code> CLAP <\/code><\/li><li><code> HAHA <\/code><\/li><li><code> SMILE <\/code><\/li><li><code> WOW <\/code><\/li><li><code> THINKING <\/code><\/li><li><code> SAD <\/code><\/li><li><code> THUMBS_DOWN <\/code><\/li><li><code> ANGRY <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> LIKE <\/code><\/li><li><code> ANGRY <\/code><\/li><li><code> CLAP <\/code><\/li><li><code> HEART <\/code><\/li><li><code> LOL <\/code><\/li><li><code> SAD <\/code><\/li><li><code> SMILEY <\/code><\/li><li><code> SURPRISED <\/code><\/li><li><code> THINKING <\/code><\/li><li><code> THUMBS_UP <\/code><\/li><li><code> THUMBS_DOWN <\/code><\/li>",
         "links": [],
         "examples": []
       },
       "members": [],
       "enum":       [
-        "LOVE",
-        "THUMBS_UP",
+        "LIKE",
+        "ANGRY",
         "CLAP",
-        "HAHA",
-        "SMILE",
-        "WOW",
-        "THINKING",
+        "HEART",
+        "LOL",
         "SAD",
-        "THUMBS_DOWN",
-        "ANGRY"
+        "SMILEY",
+        "SURPRISED",
+        "THINKING",
+        "THUMBS_UP",
+        "THUMBS_DOWN"
       ],
       "extra": {},
       "labels": []
@@ -6395,7 +6396,7 @@
       "displayName": "Post Interaction Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> MULTIPLE_REACTIONS <\/code><\/li><li><code> NONE <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> NONE <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -6403,7 +6404,6 @@
       "enum":       [
         "UNKNOWN",
         "REACTION",
-        "MULTIPLE_REACTIONS",
         "NONE"
       ],
       "extra": {},
@@ -6414,7 +6414,7 @@
       "displayName": "Commenting Type Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> VOTE <\/code><\/li><li><code> MULTIPLE_REACTIONS <\/code><\/li><li><code> NONE <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> REACTION <\/code><\/li><li><code> VOTE <\/code><\/li><li><code> NONE <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -6423,33 +6423,33 @@
         "UNKNOWN",
         "REACTION",
         "VOTE",
-        "MULTIPLE_REACTIONS",
         "NONE"
       ],
       "extra": {},
       "labels": []
     },
         {
-      "name": "_com_wixpress_npm_communities_forumapi_IconType_Type",
+      "name": "_com_wixpress_npm_communities_forumapi_Reaction_Type",
       "displayName": "Type Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> LOVE <\/code><\/li><li><code> THUMBS_UP <\/code><\/li><li><code> CLAP <\/code><\/li><li><code> HAHA <\/code><\/li><li><code> SMILE <\/code><\/li><li><code> WOW <\/code><\/li><li><code> THINKING <\/code><\/li><li><code> SAD <\/code><\/li><li><code> THUMBS_DOWN <\/code><\/li><li><code> ANGRY <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> LIKE <\/code><\/li><li><code> ANGRY <\/code><\/li><li><code> CLAP <\/code><\/li><li><code> HEART <\/code><\/li><li><code> LOL <\/code><\/li><li><code> SAD <\/code><\/li><li><code> SMILEY <\/code><\/li><li><code> SURPRISED <\/code><\/li><li><code> THINKING <\/code><\/li><li><code> THUMBS_UP <\/code><\/li><li><code> THUMBS_DOWN <\/code><\/li>",
         "links": [],
         "examples": []
       },
       "members": [],
       "enum":       [
-        "LOVE",
-        "THUMBS_UP",
+        "LIKE",
+        "ANGRY",
         "CLAP",
-        "HAHA",
-        "SMILE",
-        "WOW",
-        "THINKING",
+        "HEART",
+        "LOL",
         "SAD",
-        "THUMBS_DOWN",
-        "ANGRY"
+        "SMILEY",
+        "SURPRISED",
+        "THINKING",
+        "THUMBS_UP",
+        "THUMBS_DOWN"
       ],
       "extra": {},
       "labels": []
