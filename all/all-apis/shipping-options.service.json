@@ -812,22 +812,22 @@
                 {
           "name": "price",
           "type": "string",
-          "doc": " Price of a single product\n"
+          "doc": " final price after all discounts (catalog discount + merchant discount + coupon discounts) what the user actually will pay\n"
         },
                 {
-          "name": "priceAfterDiscounts",
+          "name": "totalPriceBeforeDiscount",
           "type": "string",
-          "doc": " Price of a single product after all discounts\n"
+          "doc": "price for all the quantity in the line item before coupons and before auto discounts.\n"
         },
                 {
-          "name": "couponsDiscount",
+          "name": "priceBeforeDiscount",
           "type": "string",
-          "doc": " coupons discount on a single product\n"
+          "doc": "price for a single item before platform discounts (as above)\n"
         },
                 {
-          "name": "additionalDiscounts",
+          "name": "totalPrice",
           "type": "string",
-          "doc": " non coupon discounts (like merchant auto discounts) on a single product\n"
+          "doc": "final price after discounts for the whole quantity of the line item\n"
         }
       ],
       "enum": null,
