@@ -89,7 +89,7 @@
       },
       "locations": [],
       "docs":       {
-        "summary": " Create card for bank account. Creates and ships a physical debit card to a business/individual card holder. Depending on banking customer type\n Retries card creation for failed card when card id specified\n \n",
+        "summary": " Create card for bank account. Without sending data to provider\n \n",
         "description": [],
         "request": "POST",
         "url": "https://www.wixapis.com/banking/v1/cards",
@@ -670,7 +670,7 @@
           "readOnly": true
         },
                 {
-          "name": "status",
+          "name": "providerStatus",
           "type": "All APIs.Wix Banking Cards._wix_banking_cards_v1_CardStatusEnum_CardStatus",
           "doc": " Current status of card\n",
           "readOnly": true
@@ -707,12 +707,6 @@
           "name": "isPinSet",
           "type": "boolean",
           "doc": " Indicates if PIN was set\n",
-          "readOnly": true
-        },
-                {
-          "name": "isProviderChangeInProgress",
-          "type": "boolean",
-          "doc": " Indicator that current card change was not yet applied on Provider side\n",
           "readOnly": true
         },
                 {
