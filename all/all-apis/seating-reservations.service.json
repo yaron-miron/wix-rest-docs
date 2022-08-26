@@ -1046,5 +1046,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.seating.seating-reservations"}
 }
