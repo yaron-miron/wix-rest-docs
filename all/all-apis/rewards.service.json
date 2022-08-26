@@ -995,6 +995,11 @@
                 {
           "name": "coupon",
           "type": "All APIs.Rewards._com_wixpress_loyalty_reward_Coupon",
+          "doc": ""
+        },
+                {
+          "name": "couponSpec",
+          "type": "All APIs.Rewards._com_wixpress_loyalty_reward_CouponSpec",
           "doc": "        DiscountPercentage discount_percentage = 8;\n"
         }
       ],
@@ -1059,6 +1064,201 @@
             "typeParams": ["All APIs.Rewards._com_wixpress_loyalty_reward_CouponConfig"]
           },
           "doc": "TODO add [(wix.api.minSize) = 1, (wix.api.maxSize) = 20];\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_reward_CouponSpec",
+      "displayName": "Coupon Spec Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "name",
+          "type": "string",
+          "doc": " Coupon name.\n"
+        },
+                {
+          "name": "specification",
+          "type": "All APIs.Rewards._com_wixpress_loyalty_reward_CouponSpec_specification",
+          "doc": ""
+        },
+                {
+          "name": "scopeOrMinSubtotal",
+          "type": "All APIs.Rewards._com_wixpress_loyalty_reward_CouponSpec_ScopeOrMinSubtotal",
+          "doc": ""
+        },
+                {
+          "name": "limitedToOneItem",
+          "type": "boolean",
+          "doc": " Limit the coupon to only apply to one item in cart.\n"
+        },
+                {
+          "name": "appliesToSubscriptions",
+          "type": "boolean",
+          "doc": " If true, coupon also applies to subscriptions.\n"
+        },
+                {
+          "name": "discountedCycleCount",
+          "type": "integer",
+          "doc": " Specifies the amount of discounted cycles for subscription item. See Stores Coupons documentation for more info.\n"
+        },
+                {
+          "name": "configs",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Rewards._com_wixpress_loyalty_reward_CouponConfig"]
+          },
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_reward_CouponSpec_specification",
+      "displayName": "specification Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "moneyOffAmount",
+          "type": "number",
+          "doc": " Discount as a fixed amount.\n"
+        },
+                {
+          "name": "percentOffRate",
+          "type": "number",
+          "doc": " Discount as a percentage.\n"
+        },
+                {
+          "name": "freeShipping",
+          "type": "boolean",
+          "doc": " Free shipping.\n"
+        },
+                {
+          "name": "fixedPriceAmount",
+          "type": "number",
+          "doc": " Fixed sale price.\n"
+        },
+                {
+          "name": "buyXGetY",
+          "type": "All APIs.Rewards._com_wixpress_loyalty_reward_BuyXGetY",
+          "doc": " For example: buy 3, get 1.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_loyalty_reward_CouponSpec_ScopeOrMinSubtotal",
+      "displayName": "Scope Or Min Subtotal Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "minimumSubtotal",
+          "type": "number",
+          "doc": " Limit the coupon to carts with a subtotal above this number.\n"
+        },
+                {
+          "name": "scope",
+          "type": "All APIs.Rewards._com_wixpress_loyalty_reward_CouponScope",
+          "doc": " Specifies the type of line items this coupon will apply to.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_loyalty_reward_BuyXGetY",
+      "displayName": "Buy X Get Y Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "x",
+          "type": "integer",
+          "doc": ""
+        },
+                {
+          "name": "y",
+          "type": "integer",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_reward_CouponScope",
+      "displayName": "Coupon Scope Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "namespace",
+          "type": "string",
+          "doc": ""
+        },
+                {
+          "name": "group",
+          "type": "All APIs.Rewards._com_wixpress_loyalty_reward_Group",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_reward_Group",
+      "displayName": "Group Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "name",
+          "type": "string",
+          "doc": ""
+        },
+                {
+          "name": "entityId",
+          "type": "string",
+          "doc": ""
         }
       ],
       "enum": null,
@@ -1464,7 +1664,7 @@
       "displayName": "Reward Type Object",
       "locations": [],
       "docs":       {
-        "summary": " Available reward types.\n \n Possible values are: <li><code> UNDEFINED <\/code><\/li><li><code> DISCOUNT_AMOUNT <\/code><\/li><li><code> COUPON -         DISCOUNT_PERCENTAGE = 2;\n <\/code><\/li>",
+        "summary": " Available reward types.\n \n Possible values are: <li><code> UNDEFINED <\/code><\/li><li><code> DISCOUNT_AMOUNT <\/code><\/li><li><code> COUPON <\/code><\/li><li><code> COUPON_SPEC -         DISCOUNT_PERCENTAGE = 2;\n <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -1472,7 +1672,8 @@
       "enum":       [
         "UNDEFINED",
         "DISCOUNT_AMOUNT",
-        "COUPON"
+        "COUPON",
+        "COUPON_SPEC"
       ],
       "extra": {},
       "labels": []
