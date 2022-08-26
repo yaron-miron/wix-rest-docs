@@ -2647,5 +2647,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.restaurants.restaurants-orders-webapp"}
 }
