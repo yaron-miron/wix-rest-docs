@@ -1356,5 +1356,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.loyalty.loyalty-programs"}
 }
