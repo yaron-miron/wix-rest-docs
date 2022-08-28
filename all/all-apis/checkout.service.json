@@ -2220,12 +2220,14 @@
                 {
           "name": "totalPriceAfterTax",
           "type": "All APIs.Checkout._com_wix_ecommerce_platform_common_api_MultiCurrencyPrice",
-          "doc": " Total shipping price, after discount and after tax.\n"
+          "doc": " Total shipping price, after discount and after tax.\n",
+          "deprecated": true
         },
                 {
           "name": "totalPriceBeforeTax",
           "type": "All APIs.Checkout._com_wix_ecommerce_platform_common_api_MultiCurrencyPrice",
-          "doc": " Totals shipping price after discount and before tax.\n"
+          "doc": " Totals shipping price after discount and before tax.\n",
+          "deprecated": true
         },
                 {
           "name": "taxDetails",
