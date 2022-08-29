@@ -5876,9 +5876,9 @@
           "doc": " Is this Automation hidden on a site?\n"
         },
                 {
-          "name": "dismissible",
+          "name": "alwaysActive",
           "type": "boolean",
-          "doc": " Can this Automation be dismissed (inactivated) on a site?\n"
+          "doc": " Can this Automation be deactivated on a site?\n"
         },
                 {
           "name": "schedulingModificationDisabled",
