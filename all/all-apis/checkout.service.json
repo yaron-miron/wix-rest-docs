@@ -1923,13 +1923,12 @@
           "name": "totalPriceAfterTax",
           "type": "All APIs.Checkout._com_wix_ecommerce_platform_common_api_MultiCurrencyPrice",
           "doc": " Total price after all discounts and tax.\n",
-          "readOnly": true,
-          "deprecated": true
+          "readOnly": true
         },
                 {
           "name": "totalPriceBeforeTax",
           "type": "All APIs.Checkout._com_wix_ecommerce_platform_common_api_MultiCurrencyPrice",
-          "doc": " Total price after all discounts, before tax.\n",
+          "doc": " Deprecated - please use `total_price_after_tax` minus `tax_details.total_tax` instead.\n",
           "readOnly": true,
           "deprecated": true
         },
@@ -2220,13 +2219,12 @@
                 {
           "name": "totalPriceAfterTax",
           "type": "All APIs.Checkout._com_wix_ecommerce_platform_common_api_MultiCurrencyPrice",
-          "doc": " Total shipping price, after discount and after tax.\n",
-          "deprecated": true
+          "doc": " Total shipping price, after discount and after tax.\n"
         },
                 {
           "name": "totalPriceBeforeTax",
           "type": "All APIs.Checkout._com_wix_ecommerce_platform_common_api_MultiCurrencyPrice",
-          "doc": " Totals shipping price after discount and before tax.\n",
+          "doc": " Deprecated - please use `total_price_after_tax` minus `tax_details.total_tax` instead.\n",
           "deprecated": true
         },
                 {
