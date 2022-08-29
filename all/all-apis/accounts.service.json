@@ -1874,6 +1874,50 @@
       "labels": []
     },
         {
+      "name": "accountAvailabilitiesMapEntry",
+      "displayName": "account Availabilities Map Entry Object",
+      "locations": [],
+      "docs":       {
+        "summary": "Set of key-value pairs.Loyalty Account ID -> Reward Available map\n",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "key:value",
+        "type": "boolean",
+        "doc": "`key` of type string, `value` of type boolean"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_account_RewardAvailabilitiesChanged",
+      "displayName": "Reward Availabilities Changed Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "changeReason",
+          "type": "All APIs.Accounts._com_wixpress_loyalty_account_RewardAvailabilityChangeReason",
+          "doc": ""
+        },
+                {
+          "name": "accountAvailabilities",
+          "type": "All APIs.Accounts.accountAvailabilitiesMapEntry",
+          "doc": "Set of key-value pairs.Loyalty Account ID -> Reward Available map\n",
+          "readOnly": true
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_loyalty_account_CreateAccountRequest",
       "displayName": "Create Account Request Object",
       "locations": [],
@@ -2534,7 +2578,26 @@
       ],
       "extra": {},
       "labels": []
+    },
+        {
+      "name": "_com_wixpress_loyalty_account_RewardAvailabilityChangeReason",
+      "displayName": "Reward Availability Change Reason Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> UNDEFINED <\/code><\/li><li><code> REWARD_UPDATED <\/code><\/li><li><code> BALANCE_UPDATED <\/code><\/li><li><code> TIERS_RECALCULATED <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "UNDEFINED",
+        "REWARD_UPDATED",
+        "BALANCE_UPDATED",
+        "TIERS_RECALCULATED"
+      ],
+      "extra": {},
+      "labels": []
     }
   ],
-  "extra": {"artifactId": "com.wixpress.loyalty.loyalty-accounts"}
+  "extra": {}
 }
