@@ -1592,7 +1592,7 @@
                 {
           "name": "id",
           "type": "string",
-          "doc": "",
+          "doc": "If None, Account belongs to base Tier\n",
           "readOnly": true
         },
                 {
@@ -1600,6 +1600,11 @@
           "type": "string",
           "doc": "Date when the last time Tier was recalculated\n",
           "readOnly": true
+        },
+                {
+          "name": "points",
+          "type": "integer",
+          "doc": "Points for Tier period (eg. Rolling period for x months). This is equal to the sum of earned and adjusted points for the last x months.\n"
         }
       ],
       "enum": null,
