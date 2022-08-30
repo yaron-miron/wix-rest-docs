@@ -1278,12 +1278,12 @@
                 {
           "name": "original",
           "type": "string",
-          "doc": " **Required** - Original product name (in site's default language).\n"
+          "doc": " **Required** - Original item name (in site's default language).\n"
         },
                 {
           "name": "translated",
           "type": "string",
-          "doc": " Optional - Translated product name according to buyer language. Defaults to `original` when not provided.\n"
+          "doc": " Optional - Translated item name according to buyer language. Defaults to `original` when not provided.\n"
         }
       ],
       "enum": null,
