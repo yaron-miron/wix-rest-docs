@@ -7104,5 +7104,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.groups.social-groups-web"}
 }
