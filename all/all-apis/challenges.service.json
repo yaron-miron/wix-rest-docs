@@ -2180,93 +2180,6 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_members_common_Image",
-      "displayName": "Image Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "id",
-          "type": "string",
-          "doc": " Wix Media image ID,\n set when the member selects an image from Wix Media.\n"
-        },
-                {
-          "name": "url",
-          "type": "string",
-          "doc": " Image URL.\n"
-        },
-                {
-          "name": "height",
-          "type": "integer",
-          "doc": " Original image width.\n"
-        },
-                {
-          "name": "width",
-          "type": "integer",
-          "doc": " Original image height.\n"
-        },
-                {
-          "name": "offsetX",
-          "type": "integer",
-          "doc": " X-axis offset.\n\n Defaults to `0`.\n"
-        },
-                {
-          "name": "offsetY",
-          "type": "integer",
-          "doc": " Y-axis offset.\n\n Defaults to `0`.\n"
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_wix_achievements_instructors_v2_Instructor",
-      "displayName": "Instructor Object",
-      "locations": [],
-      "docs":       {
-        "summary": "*\nInstructor entity\n",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "id",
-          "type": "string",
-          "doc": " ID of the instructor that equals to memberId\n",
-          "readOnly": true
-        },
-                {
-          "name": "name",
-          "type": "string",
-          "doc": " The name of the instructor\n"
-        },
-                {
-          "name": "description",
-          "type": "string",
-          "doc": " A description of the instructor\n"
-        },
-                {
-          "name": "photo",
-          "type": "All APIs.Challenges._com_wixpress_members_common_Image",
-          "doc": " URL of profile photo\n"
-        },
-                {
-          "name": "slug",
-          "type": "string",
-          "doc": " Slug that determines the instructor's profile page URL.\n",
-          "readOnly": true
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
       "name": "_wix_common_PageUrl",
       "displayName": "Page Url Object",
       "locations": [],
@@ -2876,15 +2789,6 @@
             "typeParams": ["string"]
           },
           "doc": ""
-        },
-                {
-          "name": "instructors",
-          "type":           {
-            "name": "array",
-            "typeParams": ["All APIs.Challenges._wix_achievements_instructors_v2_Instructor"]
-          },
-          "doc": "instructors assigned to the challenge\n",
-          "readOnly": true
         }
       ],
       "enum": null,
