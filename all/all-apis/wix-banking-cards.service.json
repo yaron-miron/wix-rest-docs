@@ -72,13 +72,22 @@
       "labels": [],
       "nameParams": [],
       "requiredFields": ["card"],
-      "params": [      {
-        "in": "BODY",
-        "name": "card",
-        "type": "All APIs.Wix Banking Cards._wix_banking_cards_v1_Card",
-        "doc": " Card\n",
-        "required": true
-      }],
+      "params":       [
+                {
+          "in": "BODY",
+          "name": "card",
+          "type": "All APIs.Wix Banking Cards._wix_banking_cards_v1_Card",
+          "doc": " Card\n",
+          "required": true
+        },
+                {
+          "in": "BODY",
+          "name": "idempotencyKey",
+          "type": "string",
+          "doc": " Idempotency Key (can be specified not to create card in subsequent calls with same Idempotency key)\n if card data differs between subsequent call with same idempotency key data will not be updated\n",
+          "required": false
+        }
+      ],
       "ret":       {
         "type":         {
           "name": "CreateCard",
@@ -964,11 +973,18 @@
         "links": [],
         "examples": []
       },
-      "members": [      {
-        "name": "card",
-        "type": "All APIs.Wix Banking Cards._wix_banking_cards_v1_Card",
-        "doc": " Card\n"
-      }],
+      "members":       [
+                {
+          "name": "card",
+          "type": "All APIs.Wix Banking Cards._wix_banking_cards_v1_Card",
+          "doc": " Card\n"
+        },
+                {
+          "name": "idempotencyKey",
+          "type": "string",
+          "doc": " Idempotency Key (can be specified not to create card in subsequent calls with same Idempotency key)\n if card data differs between subsequent call with same idempotency key data will not be updated\n"
+        }
+      ],
       "enum": null,
       "extra": {},
       "labels": []
@@ -982,11 +998,18 @@
         "links": [],
         "examples": []
       },
-      "members": [      {
-        "name": "card",
-        "type": "All APIs.Wix Banking Cards._wix_banking_cards_v1_Card",
-        "doc": " Card\n"
-      }],
+      "members":       [
+                {
+          "name": "card",
+          "type": "All APIs.Wix Banking Cards._wix_banking_cards_v1_Card",
+          "doc": " Card\n"
+        },
+                {
+          "name": "idempotencyKey",
+          "type": "string",
+          "doc": " Idempotency Key\n"
+        }
+      ],
       "enum": null,
       "extra": {},
       "labels": []
