@@ -646,42 +646,6 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_appservice_api_BackOfficeExtensionContainer",
-      "displayName": "Back Office Extension Container Object",
-      "locations": [],
-      "docs":       {
-        "summary": " A container for a set of extensions\n",
-        "links": [],
-        "examples": []
-      },
-      "members": [      {
-        "name": "extendable",
-        "type": "All APIs.App Installation._com_wixpress_appservice_api_Extendable",
-        "doc": " Extendable properties of the container\n"
-      }],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
-      "name": "_com_wixpress_appservice_api_Extendable",
-      "displayName": "Extendable Object",
-      "locations": [],
-      "docs":       {
-        "summary": " A generic message for composability\n",
-        "links": [],
-        "examples": []
-      },
-      "members": [      {
-        "name": "extendedBy",
-        "type": "All APIs.App Installation._com_wixpress_appservice_api_Extendable_ExtendingComponentType",
-        "doc": " Component type allowed in this extendable (enum)\n"
-      }],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
       "name": "_com_wixpress_appservice_api_DisplayProperties",
       "displayName": "Display Properties Object",
       "locations": [],
@@ -1002,6 +966,42 @@
         "name": "url",
         "type": "string",
         "doc": " An error reporting URL to be used by our infra (Example: A sentry DSN url)\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_appservice_api_BackOfficeExtensionContainer",
+      "displayName": "Back Office Extension Container Object",
+      "locations": [],
+      "docs":       {
+        "summary": " A container for a set of extensions\n",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "extendable",
+        "type": "All APIs.App Installation._com_wixpress_appservice_api_Extendable",
+        "doc": " Extendable properties of the container\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_appservice_api_Extendable",
+      "displayName": "Extendable Object",
+      "locations": [],
+      "docs":       {
+        "summary": " A generic message for composability\n",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "extendedBy",
+        "type": "All APIs.App Installation._com_wixpress_appservice_api_Extendable_ExtendingComponentType",
+        "doc": " Component type allowed in this extendable (enum)\n"
       }],
       "enum": null,
       "extra": {},
@@ -8878,24 +8878,6 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_appservice_api_Extendable_ExtendingComponentType",
-      "displayName": "Extending Component Type Object",
-      "locations": [],
-      "docs":       {
-        "summary": " Component types that can be extensions\n \n Possible values are: <li><code> INVALID <\/code><\/li><li><code> BACK_OFFICE_WIDGET <\/code><\/li><li><code> BACK_OFFICE_MENU_ITEM <\/code><\/li>",
-        "links": [],
-        "examples": []
-      },
-      "members": [],
-      "enum":       [
-        "INVALID",
-        "BACK_OFFICE_WIDGET",
-        "BACK_OFFICE_MENU_ITEM"
-      ],
-      "extra": {},
-      "labels": []
-    },
-        {
       "name": "_com_wixpress_appservice_api_UnitType",
       "displayName": "Unit Type Object",
       "locations": [],
@@ -8959,7 +8941,7 @@
       "displayName": "Back Office Hosting Platforms Object",
       "locations": [],
       "docs":       {
-        "summary": " List of back-office hosting platforms\n \n Possible values are: <li><code> NO_HOSTING_PLATFORM <\/code><\/li><li><code> BUSINESS_MANAGER -  User Site level\n <\/code><\/li><li><code> ACCOUNT_MANAGER -  User Account level\n <\/code><\/li><li><code> DEV_CENTER -  Internal: Dev center\n <\/code><\/li>",
+        "summary": " List of back-office hosting platforms\n \n Possible values are: <li><code> NO_HOSTING_PLATFORM <\/code><\/li><li><code> BUSINESS_MANAGER -  User Site level\n <\/code><\/li><li><code> ACCOUNT_MANAGER -  User Account level\n <\/code><\/li><li><code> DEV_CENTER -  Internal: Dev center\n <\/code><\/li><li><code> ENTERPRISE -  Account level, Enterprise dashboard\n <\/code><\/li>",
         "links": [],
         "examples": []
       },
@@ -8968,7 +8950,26 @@
         "NO_HOSTING_PLATFORM",
         "BUSINESS_MANAGER",
         "ACCOUNT_MANAGER",
-        "DEV_CENTER"
+        "DEV_CENTER",
+        "ENTERPRISE"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_appservice_api_Extendable_ExtendingComponentType",
+      "displayName": "Extending Component Type Object",
+      "locations": [],
+      "docs":       {
+        "summary": " Component types that can be extensions\n \n Possible values are: <li><code> INVALID <\/code><\/li><li><code> BACK_OFFICE_WIDGET <\/code><\/li><li><code> BACK_OFFICE_MENU_ITEM <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "INVALID",
+        "BACK_OFFICE_WIDGET",
+        "BACK_OFFICE_MENU_ITEM"
       ],
       "extra": {},
       "labels": []
