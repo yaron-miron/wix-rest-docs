@@ -314,6 +314,79 @@
       "customLabels": [{"id": "maturity-beta"}]
     },
         {
+      "name": "Bulk Adjust Product Property (Additional Binding 1)",
+      "methodName": "BulkAdjustProductProperties",
+      "serviceName": "CatalogWriteApi",
+      "tag": "Products",
+      "permissions": [      {
+        "name": "Manage Products",
+        "description": "Request permission to read, create and modify the site's Wix Stores products and inventory."
+      }],
+      "events": [],
+      "labels": [],
+      "nameParams": [],
+      "requiredFields": ["ids"],
+      "params":       [
+                {
+          "in": "BODY",
+          "name": "ids",
+          "type":           {
+            "name": "array",
+            "typeParams": ["string"]
+          },
+          "doc": " Product IDs.\n",
+          "required": true
+        },
+                {
+          "in": "BODY",
+          "name": "adjust",
+          "type": "All APIs.Stores Catalog._wix_catalog_api_v1_AdjustValue",
+          "doc": " Numerical property to adjust.\n",
+          "required": false
+        }
+      ],
+      "ret":       {
+        "type":         {
+          "name": "BulkAdjustProductProperties",
+          "statusCode": "200",
+          "typeParams": ["All APIs.Stores Catalog._wix_catalog_api_v1_BulkAdjustProductPropertiesResponse"]
+        },
+        "doc": ""
+      },
+      "locations": [],
+      "docs":       {
+        "summary": " Adjusts a specified numerical property for up to 100 products at a time.\n The property can be increased or decreased either by percentage or amount.\n \n",
+        "description": [],
+        "request": "POST",
+        "url": "https://www.wixapis.com/stores/v1/bulk/products/adjust",
+        "links": [],
+        "examples":         [
+                    {
+            "title": "Adjust the price of 3 products by amount",
+            "body": ["curl -X POST \\\n  https://www.wixapis.com/stores/v1/bulk/products/adjust-properties \\\n  -H 'Authorization: <AUTH>'\n  -H 'Content-Type: application/json' \\\n  --data-binary '{\n    \"ids\": [\n      \"80a584c3-78c1-4e2f-84f8-b8d0bf65b518\",\n      \"e5419878-8284-4f02-98bb-087e1d8dc781\",\n      \"cc30ba06-2b9a-4962-8b34-7a265d495d7e\"\n    ],\n    \"adjust\": {\n      \"price\": {\n        \"amount\": 30\n      }\n    }\n  }'"],
+            "response": ["{\n  \"results\":   [\n    {\"itemMetadata\":     {\n      \"id\": \"80a584c3-78c1-4e2f-84f8-b8d0bf65b518\",\n      \"originalIndex\": 0,\n      \"success\": true\n    }},\n    {\"itemMetadata\":     {\n      \"id\": \"e5419878-8284-4f02-98bb-087e1d8dc781\",\n      \"originalIndex\": 1,\n      \"success\": true\n    }},\n    {\"itemMetadata\":     {\n      \"id\": \"cc30ba06-2b9a-4962-8b34-7a265d495d7e\",\n      \"originalIndex\": 2,\n      \"success\": true\n    }}\n  ],\n  \"bulkActionMetadata\":   {\n    \"totalSuccesses\": 3,\n    \"totalFailures\": 0,\n    \"undetailedFailures\": 0\n  }\n} "],
+            "type": "curl",
+            "extra": {}
+          },
+                    {
+            "title": "Adjust the price of 2 products by percentage",
+            "body": ["curl -X POST \\\n  https://www.wixapis.com/stores/v1/bulk/products/adjust-properties \\\n  -H 'Authorization: <AUTH>'\n  -H 'Content-Type: application/json' \\\n  --data-binary '{\n    \"ids\": [\n      \"bfcafbe6-b671-4ebe-8e3d-49f242cef188\",\n      \"e5419878-8284-4f02-98bb-087e1d8dc781\"\n    ],\n    \"adjust\": {\n      \"price\": {\n        \"percentage\": {\n          \"roundToInt\": false,\n          \"rate\": 200\n        }\n      }\n    }\n  }'"],
+            "response": ["{\n  \"results\":   [\n    {\"itemMetadata\":     {\n      \"id\": \"bfcafbe6-b671-4ebe-8e3d-49f242cef188\",\n      \"originalIndex\": 0,\n      \"success\": true\n    }},\n    {\"itemMetadata\":     {\n      \"id\": \"e5419878-8284-4f02-98bb-087e1d8dc781\",\n      \"originalIndex\": 1,\n      \"success\": true\n    }}\n  ],\n  \"bulkActionMetadata\":   {\n    \"totalSuccesses\": 2,\n    \"totalFailures\": 0,\n    \"undetailedFailures\": 0\n  }\n} "],
+            "type": "curl",
+            "extra": {}
+          }
+        ],
+        "extra": {}
+      },
+      "extra":       {
+        "hasRest": true,
+        "rpcRequestName": "BulkAdjustProductPropertiesRequest",
+        "rpcResponseName": "BulkAdjustProductPropertiesResponse",
+        "artifactId": "com.wixpress.ecommerce.wix-ecommerce-catalog-web"
+      },
+      "customLabels": [{"id": "maturity-beta"}]
+    },
+        {
       "name": "Bulk Update Product Property",
       "methodName": "BulkUpdateProducts",
       "serviceName": "CatalogWriteApi",
@@ -708,6 +781,13 @@
           "type": "boolean",
           "doc": " Whether to return the `collection.numberOfProducts` field in the response.\n Defaults to false, in which case the value of `collection.numberOfProducts` will be 0.\n",
           "required": false
+        },
+                {
+          "in": "QUERY",
+          "name": "includeDescription",
+          "type": "boolean",
+          "doc": " Include description in response. When False, description will be null\n",
+          "required": false
         }
       ],
       "ret":       {
@@ -774,6 +854,13 @@
           "name": "includeNumberOfProducts",
           "type": "boolean",
           "doc": " Whether to return the `collection.numberOfProducts` field in the response.\n Defaults to false, in which case the value of `collection.numberOfProducts` will be 0.\n",
+          "required": false
+        },
+                {
+          "in": "QUERY",
+          "name": "includeDescription",
+          "type": "boolean",
+          "doc": " Include description in response. When False, description will be null\n",
           "required": false
         }
       ],
@@ -1167,6 +1254,13 @@
           "type": "boolean",
           "doc": " Whether number of products should be included in the response.\n",
           "required": false
+        },
+                {
+          "in": "BODY",
+          "name": "includeDescription",
+          "type": "boolean",
+          "doc": " Include description in response. When False, description will be null\n",
+          "required": false
         }
       ],
       "ret":       {
@@ -1241,6 +1335,13 @@
           "name": "includeNumberOfProducts",
           "type": "boolean",
           "doc": " Whether number of products should be included in the response.\n",
+          "required": false
+        },
+                {
+          "in": "BODY",
+          "name": "includeDescription",
+          "type": "boolean",
+          "doc": " Include description in response. When False, description will be null\n",
           "required": false
         }
       ],
@@ -2032,8 +2133,7 @@
       "nameParams": [],
       "requiredFields":       [
         "collection",
-        "collection.id",
-        "collection.name"
+        "collection.id"
       ],
       "params":       [
                 {
@@ -3095,12 +3195,12 @@
                 {
           "name": "altText",
           "type": "string",
-          "doc": " Image alt text. Optional.\n"
+          "doc": " Image alt text.\n"
         },
                 {
           "name": "filename",
           "type": "string",
-          "doc": " Image filename. Optional.\n",
+          "doc": " Image filename.\n",
           "readOnly": true
         }
       ],
@@ -3135,7 +3235,7 @@
                 {
           "name": "filename",
           "type": "string",
-          "doc": " Video filename. Optional.\n",
+          "doc": " Video filename.\n",
           "readOnly": true
         }
       ],
@@ -3221,6 +3321,36 @@
       "extra": {},
       "labels": [],
       "oneOf": true
+    },
+        {
+      "name": "_wix_inventory_api_v1_PreorderInfo",
+      "displayName": "Preorder Info Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "enabled",
+          "type": "boolean",
+          "doc": " Whether the item is set to allow preordering.\n"
+        },
+                {
+          "name": "message",
+          "type": "string",
+          "doc": " A message that buyer will see when the item is out of stock and preorder enabled\n"
+        },
+                {
+          "name": "limit",
+          "type": "integer",
+          "doc": " Number of products that can be preordered after stock reaches zero.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
     },
         {
       "name": "_wix_catalog_api_v1_VariantData",
@@ -3761,8 +3891,7 @@
                 {
           "name": "slug",
           "type": "string",
-          "doc": " A permanent, friendly URL name (generated automatically by the catalog).\n",
-          "readOnly": true
+          "doc": " A friendly URL name (generated automatically by the catalog when a product is created), can be updated.\n"
         },
                 {
           "name": "visible",
@@ -4272,6 +4401,21 @@
           "type": "integer",
           "doc": " Number of products in the collection. Read only.\n",
           "readOnly": true
+        },
+                {
+          "name": "description",
+          "type": "string",
+          "doc": " Collection description\n"
+        },
+                {
+          "name": "slug",
+          "type": "string",
+          "doc": " Collection slug\n"
+        },
+                {
+          "name": "visible",
+          "type": "boolean",
+          "doc": " Collection visibility. Only impacts dynamic pages, no impact on static pages\n"
         }
       ],
       "enum": null,
@@ -4567,6 +4711,41 @@
       "labels": []
     },
         {
+      "name": "_wix_catalog_api_v1_QueryProductsPlatformizedRequest",
+      "displayName": "Query Products Platformized Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "query",
+          "type": "All APIs.Stores Catalog._com_wix_ecommerce_commons_api_PlatformQuery",
+          "doc": ""
+        },
+                {
+          "name": "includeVariants",
+          "type": "boolean",
+          "doc": " Whether variants should be included in the response.\n"
+        },
+                {
+          "name": "includeHiddenProducts",
+          "type": "boolean",
+          "doc": " Whether hidden products should be included in the response. Requires permissions to manage products.\n"
+        },
+                {
+          "name": "includeMerchantSpecificData",
+          "type": "boolean",
+          "doc": " Whether merchant specific data should be included in the response. Requires permissions to manage products.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_wix_catalog_api_v1_QueryProductsWithBigPageLimitRequest",
       "displayName": "Query Products With Big Page Limit Request Object",
       "locations": [],
@@ -4627,6 +4806,34 @@
                 {
           "name": "totalResults",
           "type": "integer",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_catalog_api_v1_QueryProductsPlatformizedResponse",
+      "displayName": "Query Products Platformized Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "products",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Stores Catalog._wix_catalog_api_v1_Product"]
+          },
+          "doc": ""
+        },
+                {
+          "name": "metadata",
+          "type": "All APIs.Stores Catalog._com_wix_ecommerce_commons_api_PlatformPagingMetadata",
           "doc": ""
         }
       ],
@@ -4738,6 +4945,11 @@
           "name": "includeNumberOfProducts",
           "type": "boolean",
           "doc": " Whether number of products should be included in the response.\n"
+        },
+                {
+          "name": "includeDescription",
+          "type": "boolean",
+          "doc": " Include description in response. When False, description will be null\n"
         }
       ],
       "enum": null,
@@ -4778,6 +4990,64 @@
       "labels": []
     },
         {
+      "name": "_wix_catalog_api_v1_QueryCollectionsPlatformizedRequest",
+      "displayName": "Query Collections Platformized Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "query",
+          "type": "All APIs.Stores Catalog._com_wix_ecommerce_commons_api_PlatformQuery",
+          "doc": ""
+        },
+                {
+          "name": "includeNumberOfProducts",
+          "type": "boolean",
+          "doc": " Whether number of products should be included in the response.\n"
+        },
+                {
+          "name": "includeDescription",
+          "type": "boolean",
+          "doc": " Include description in response. When False, description will be null\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_catalog_api_v1_QueryCollectionsPlatformizedResponse",
+      "displayName": "Query Collections Platformized Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "collections",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Stores Catalog._wix_catalog_api_v1_Collection"]
+          },
+          "doc": ""
+        },
+                {
+          "name": "metadata",
+          "type": "All APIs.Stores Catalog._com_wix_ecommerce_commons_api_PlatformPagingMetadata",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_wix_catalog_api_v1_GetCollectionRequest",
       "displayName": "Get Collection Request Object",
       "locations": [],
@@ -4796,6 +5066,11 @@
           "name": "includeNumberOfProducts",
           "type": "boolean",
           "doc": " Whether to return the `collection.numberOfProducts` field in the response.\n Defaults to false, in which case the value of `collection.numberOfProducts` will be 0.\n"
+        },
+                {
+          "name": "includeDescription",
+          "type": "boolean",
+          "doc": " Include description in response. When False, description will be null\n"
         }
       ],
       "enum": null,
