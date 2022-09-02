@@ -2932,8 +2932,7 @@
                 {
           "name": "commentInteraction",
           "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Comment_Interaction",
-          "doc": " Defines what interactions may be applied on the comment under the posts created in this category, vote or like.\n",
-          "readOnly": true
+          "doc": " Defines what interactions may be applied on the comment under the posts created in this category, vote or like.\n"
         }
       ],
       "enum": null,
@@ -3027,8 +3026,9 @@
                 {
           "name": "bestAnswerCommentId",
           "type": "string",
-          "doc": " ID of the best answer comment for this post (selected by forum admin or post owner).\n",
-          "readOnly": true
+          "doc": " ID of the best answer comment for this post (selected by forum admin or post owner).\n Deprecated on '2022-08-24' use markedComments instead.\n",
+          "readOnly": true,
+          "deprecated": true
         },
                 {
           "name": "images",
@@ -3066,7 +3066,21 @@
                 {
           "name": "commentInteraction",
           "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Comment_Interaction",
-          "doc": " Defines what interactions may be applied on the comment under the post, vote or like.\n",
+          "doc": " Defines what interactions may be applied on the comment under the post, vote or like.\n"
+        },
+                {
+          "name": "markedComments",
+          "type":           {
+            "name": "array",
+            "typeParams": ["string"]
+          },
+          "doc": " IDs of the marked comment for this post (selected by forum admin or post owner).\n",
+          "readOnly": true
+        },
+                {
+          "name": "recentActivity",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_RecentActivity",
+          "doc": " Recent activity of post (e.g., activity of the latest comment was added to post).\n",
           "readOnly": true
         }
       ],
@@ -3304,6 +3318,65 @@
         "name": "type",
         "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Reaction_Type",
         "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": [],
+      "oneOf": true
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forum_api_RecentActivity",
+      "displayName": "Recent Activity Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "entityId",
+          "type": "string",
+          "doc": " ID of recent activity entity.\n"
+        },
+                {
+          "name": "type",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_RecentActivity_EntityType",
+          "doc": " Type of entity.\n"
+        },
+                {
+          "name": "initiatorId",
+          "type": "string",
+          "doc": " ID of the initiator.\n"
+        },
+                {
+          "name": "activityDate",
+          "type": "string",
+          "doc": " Date activity was created.\n"
+        },
+                {
+          "name": "initiator",
+          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_RecentActivity_initiator",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forum_api_RecentActivity_initiator",
+      "displayName": "initiator Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "memberId",
+        "type": "string",
+        "doc": " Site member ID.\n"
       }],
       "enum": null,
       "extra": {},
@@ -6236,6 +6309,24 @@
         "THINKING",
         "THUMBS_UP",
         "THUMBS_DOWN"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_npm_communities_forum_api_RecentActivity_EntityType",
+      "displayName": "Entity Type Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> COMMENT <\/code><\/li><li><code> REPLY <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "UNKNOWN",
+        "COMMENT",
+        "REPLY"
       ],
       "extra": {},
       "labels": []
