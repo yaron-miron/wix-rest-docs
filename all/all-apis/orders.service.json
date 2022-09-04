@@ -1823,7 +1823,7 @@
                 {
           "name": "totalPrice",
           "type": "All APIs.Orders._com_wix_ecommerce_platform_common_api_Price",
-          "doc": " **Deprecated** - use `total` instead.\n",
+          "doc": " Deprecated - use `total` instead.\n",
           "deprecated": true
         },
                 {
