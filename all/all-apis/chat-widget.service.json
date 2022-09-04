@@ -20,7 +20,10 @@
     "methodName": "OpenWidget",
     "serviceName": "ChatWidgetService",
     "tag": "Chat Widget",
-    "permissions": [],
+    "permissions": [    {
+      "name": "Manage Chats",
+      "description": "Request permission to read and send chat messages."
+    }],
     "events": [],
     "labels": [],
     "nameParams": [],
@@ -59,7 +62,10 @@
     },
     "topic": "domain_events_wix.chat.v1.widget",
     "tag": "Chat Widget",
-    "permissions": [],
+    "permissions": [    {
+      "name": "Manage Chats",
+      "description": "Request permission to read and send chat messages."
+    }],
     "customLabels": [{"id": "maturity-alpha"}],
     "eventType": "wix.chat.v1.widget_open_widget",
     "extra": {"isDomainEvent": true}
