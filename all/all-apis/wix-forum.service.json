@@ -3345,11 +3345,6 @@
           "doc": " Type of entity.\n"
         },
                 {
-          "name": "initiatorId",
-          "type": "string",
-          "doc": " ID of the initiator.\n"
-        },
-                {
           "name": "activityDate",
           "type": "string",
           "doc": " Date activity was created.\n"
