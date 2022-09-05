@@ -12,11 +12,11 @@ SortOrder: 3
 
 ## Supported Payment Providers
 
-`WixPay`, `AuthorizeNet`, `BitPay`, `Braintree`, `DLocal`, `Epsilon`,
+`WixPay`, `AuthorizeNet`, `BitPay`, `Braintree`, `Epsilon`,
 `Eway`, `Fake`, `FatZebra`, `Interkassa`, `Isracard`, `MercadoPago`,
 `Offline`, `PagSeguro`, `PagueloFacil`, `PaymentExpress`, `PayPal`,
 `PayUCitrus`, `PayUTurkey`, `Skrill`, `Square`, `Stripe`, `SumUp`,
-`TwoCheckout`, `UniPay`, `WixPayUS`, `WorldPay`, `ZoozShva`
+`TwoCheckout`, `UniPay`, `WixPayUS`, `WorldPay`
 
 ## Supported Currencies
 
