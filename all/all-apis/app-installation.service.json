@@ -9220,14 +9220,18 @@
       "displayName": "Plugin Interface Object",
       "locations": [],
       "docs":       {
-        "summary": " The types of public APIs exposed by the Plugin\n \n Possible values are: <li><code> NONE -  No public APIs exposed\n <\/code><\/li><li><code> DEFAULT -  The Plugin exposes the `set()` method for getting properties from the host\n <\/code><\/li>",
+        "summary": " The types of public APIs exposed by the Plugin\n \n Possible values are: <li><code> NONE -  No public APIs exposed\n <\/code><\/li><li><code> DEFAULT -  The Plugin requires DEFAULT interface to be implemented by the host\n <\/code><\/li><li><code> RESOURCE -  The Plugin requires RESOURCE interface to be implemented by the host\n <\/code><\/li><li><code> REVIEWS -  The Plugin requires REVIEWS interface to be implemented by the host\n <\/code><\/li><li><code> RATINGS_SUMMARY -  The Plugin requires RATINGS_SUMMARY interface to be implemented by the host\n <\/code><\/li><li><code> ENV -  The Plugin requires ENV interface to be implemented by the host\n <\/code><\/li>",
         "links": [],
         "examples": []
       },
       "members": [],
       "enum":       [
         "NONE",
-        "DEFAULT"
+        "DEFAULT",
+        "RESOURCE",
+        "REVIEWS",
+        "RATINGS_SUMMARY",
+        "ENV"
       ],
       "extra": {},
       "labels": []
