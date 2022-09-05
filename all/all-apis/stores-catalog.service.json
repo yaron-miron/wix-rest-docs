@@ -4405,7 +4405,7 @@
                 {
           "name": "description",
           "type": "string",
-          "doc": " Collection description\n"
+          "doc": " Collection description. The description length without HTML must not exceed 2000 characters (10K includes HTML)\n"
         },
                 {
           "name": "slug",
