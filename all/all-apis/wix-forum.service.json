@@ -3089,31 +3089,6 @@
       "labels": []
     },
         {
-      "name": "_com_wixpress_npm_communities_forum_api_Comment_CommentReactionCount",
-      "displayName": "Comment Reaction Count Object",
-      "locations": [],
-      "docs":       {
-        "summary": "",
-        "links": [],
-        "examples": []
-      },
-      "members":       [
-                {
-          "name": "reaction",
-          "type": "All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Reaction",
-          "doc": " Reaction.\n"
-        },
-                {
-          "name": "count",
-          "type": "integer",
-          "doc": " Total number of reaction.\n"
-        }
-      ],
-      "enum": null,
-      "extra": {},
-      "labels": []
-    },
-        {
       "name": "_com_wixpress_npm_communities_forum_api_Comment",
       "displayName": "Comment Object",
       "locations": [],
@@ -3232,21 +3207,6 @@
             "typeParams": ["All APIs.Wix Forum._wix_common_Image"]
           },
           "doc": " Images from comment content.\n",
-          "readOnly": true
-        },
-                {
-          "name": "totalReactionCount",
-          "type": "integer",
-          "doc": " Total number of comment reactions.\n",
-          "readOnly": true
-        },
-                {
-          "name": "reactionCounts",
-          "type":           {
-            "name": "array",
-            "typeParams": ["All APIs.Wix Forum._com_wixpress_npm_communities_forum_api_Comment_CommentReactionCount"]
-          },
-          "doc": " List of different reactions counts.\n",
           "readOnly": true
         }
       ],
