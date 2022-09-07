@@ -81,7 +81,10 @@
       "methodName": "QuerySites",
       "serviceName": "SiteListServiceV2",
       "tag": "Site",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Site Data",
+        "description": "Request permission to read the account's basic site info."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
