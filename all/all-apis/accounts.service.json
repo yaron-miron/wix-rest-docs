@@ -1647,6 +1647,32 @@
       "labels": []
     },
         {
+      "name": "_com_wixpress_loyalty_account_TierTotal",
+      "displayName": "Tier Total Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": "If None, Account belongs to base Tier\n",
+          "readOnly": true
+        },
+                {
+          "name": "numberOfAccounts",
+          "type": "integer",
+          "doc": "Total number of loyalty accounts, that belongs to particular Tier\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_loyalty_account_LatestTransaction",
       "displayName": "Latest Transaction Object",
       "locations": [],
