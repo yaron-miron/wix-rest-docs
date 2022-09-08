@@ -133,7 +133,10 @@
       "methodName": "Create",
       "serviceName": "CouponsV2",
       "tag": "Coupon",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Coupons",
+        "description": "Request permission to read, create and modify the site's Wix coupons."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -312,7 +315,10 @@
       "methodName": "Get",
       "serviceName": "CouponsV2",
       "tag": "Coupon",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Coupons",
+        "description": "Request permission to read, create and modify the site's Wix coupons."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -411,7 +417,10 @@
       "methodName": "Query",
       "serviceName": "CouponsV2",
       "tag": "Coupon",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Coupons",
+        "description": "Request permission to read, create and modify the site's Wix coupons."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
