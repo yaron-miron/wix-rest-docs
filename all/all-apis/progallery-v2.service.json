@@ -212,7 +212,10 @@
       "methodName": "DeleteGalleryItem",
       "serviceName": "ProGallery",
       "tag": "GalleryV2",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Galleries",
+        "description": "Request permission to manage the site's Pro Galleries."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -272,7 +275,10 @@
       "methodName": "GetGallery",
       "serviceName": "ProGallery",
       "tag": "GalleryV2",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Galleries",
+        "description": "Request permission to read the site's Pro Galleries."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -336,10 +342,7 @@
       "methodName": "GetGalleryItem",
       "serviceName": "ProGallery",
       "tag": "GalleryV2",
-      "permissions": [      {
-        "name": "Read Galleries",
-        "description": "Request permission to read the site's Pro Galleries."
-      }],
+      "permissions": [],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -399,7 +402,10 @@
       "methodName": "ListGalleries",
       "serviceName": "ProGallery",
       "tag": "GalleryV2",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Galleries",
+        "description": "Request permission to read the site's Pro Galleries."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -719,7 +725,10 @@
       },
       "topic": "domain_events_wix.pro_gallery.v2.gallery",
       "tag": "GalleryV2",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Galleries",
+        "description": "Request permission to read the site's Pro Galleries."
+      }],
       "customLabels": [{"id": "maturity-beta"}],
       "eventType": "wix.pro_gallery.v2.gallery_deleted",
       "extra": {"isDomainEvent": true}
