@@ -327,10 +327,7 @@
       "methodName": "UpdateProject",
       "serviceName": "ProjectsService",
       "tag": "Projects",
-      "permissions": [      {
-        "name": "Manage Portfolio Projects",
-        "description": "Request permission to manage a site's portfolio projects collection."
-      }],
+      "permissions": [],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -392,10 +389,7 @@
       "methodName": "UpdateProjectOrderInCollection",
       "serviceName": "ProjectsService",
       "tag": "Projects",
-      "permissions": [      {
-        "name": "Manage Portfolio Projects",
-        "description": "Request permission to manage a site's portfolio projects collection."
-      }],
+      "permissions": [],
       "events": [],
       "labels": [],
       "nameParams": [],
