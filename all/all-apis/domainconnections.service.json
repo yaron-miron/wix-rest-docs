@@ -16,6 +16,10 @@
   }],
   "relatedGuides":   [
         {
+      "path": "../guides/domainconnections/docs/Errors.md",
+      "name": "Error Messages"
+    },
+        {
       "path": "../guides/domainconnections/docs/README.md",
       "name": "READ ME"
     },
