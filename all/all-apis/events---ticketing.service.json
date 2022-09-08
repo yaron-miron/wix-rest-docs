@@ -60,7 +60,10 @@
       "methodName": "BulkUpdateOrders",
       "serviceName": "OrderManagement",
       "tag": "Order",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Orders",
+        "description": "Request permission to read, create and change orders."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -847,7 +850,10 @@
       "methodName": "GetCheckoutOptions",
       "serviceName": "CheckoutService",
       "tag": "Checkout",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Orders",
+        "description": "Request permission to read, create and change orders."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -971,7 +977,10 @@
       "methodName": "GetOrder",
       "serviceName": "OrderManagement",
       "tag": "Order",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Basic Events Order Info",
+        "description": "Request permission to read basic order info."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -1164,7 +1173,16 @@
       "methodName": "GetTicketDefinition",
       "serviceName": "TicketDefinitionManagement",
       "tag": "Ticket Definitions",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Orders",
+          "description": "Request permission to read, create and change orders."
+        },
+                {
+          "name": "Manage Ticket Definitions",
+          "description": "Request permission to read, create and change event ticket definitions."
+        }
+      ],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -1224,7 +1242,10 @@
       "methodName": "ListAvailableTickets",
       "serviceName": "CheckoutService",
       "tag": "Checkout",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Orders",
+        "description": "Request permission to read, create and change orders."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -1753,7 +1774,10 @@
       "methodName": "ListTickets",
       "serviceName": "TicketManagement",
       "tag": "Tickets",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Event Tickets and Guest List",
+        "description": "Request permission to read event tickets and guest lists."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -2290,7 +2314,10 @@
       "methodName": "UpdateTicket",
       "serviceName": "TicketManagement",
       "tag": "Tickets",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Guest List",
+        "description": "Request permission to read, create and change event tickets, guest lists and RSVPs."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -2497,7 +2524,10 @@
       },
       "topic": "wix-events.ticketing",
       "tag": "Checkout",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Basic Events Order Info",
+        "description": "Request permission to read basic order info."
+      }],
       "customLabels": []
     },
         {
@@ -2566,7 +2596,10 @@
       },
       "topic": "wix-events.ticketing",
       "tag": "Order",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Basic Events Order Info",
+        "description": "Request permission to read basic order info."
+      }],
       "customLabels": []
     },
         {
@@ -2593,7 +2626,16 @@
       },
       "topic": "wix-events.ticketing",
       "tag": "Ticket Definitions",
-      "permissions": [],
+      "permissions":       [
+                {
+          "name": "Manage Orders",
+          "description": "Request permission to read, create and change orders."
+        },
+                {
+          "name": "Manage Ticket Definitions",
+          "description": "Request permission to read, create and change event ticket definitions."
+        }
+      ],
       "customLabels": []
     },
         {
