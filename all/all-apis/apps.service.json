@@ -153,10 +153,7 @@
       "methodName": "GetEmbeddedScript",
       "serviceName": "EmbeddedScriptsService",
       "tag": "Embedded Scripts",
-      "permissions": [      {
-        "name": "Manage Embedded Scripts",
-        "description": "Request permission to read, create and modify embedded scripts on the site."
-      }],
+      "permissions": [],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -241,10 +238,7 @@
       "methodName": "GetSitePaymentMethodsStatus",
       "serviceName": "Checkout",
       "tag": "Billing",
-      "permissions": [      {
-        "name": "Manage Your App",
-        "description": "Request permission to manage basic app activity."
-      }],
+      "permissions": [],
       "events": [],
       "labels": [],
       "nameParams": [],
