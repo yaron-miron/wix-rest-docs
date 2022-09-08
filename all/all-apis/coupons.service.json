@@ -699,7 +699,10 @@
       },
       "topic": "domain_events_wix.ecommerce.coupons.v2.coupon",
       "tag": "Coupon",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Coupons",
+        "description": "Request permission to read, create and modify the site's Wix coupons."
+      }],
       "customLabels": [{"id": "maturity-beta"}],
       "eventType": "wix.ecommerce.coupons.v2.coupon_applied",
       "extra": {"isDomainEvent": true}
