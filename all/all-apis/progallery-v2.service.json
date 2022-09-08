@@ -342,7 +342,10 @@
       "methodName": "GetGalleryItem",
       "serviceName": "ProGallery",
       "tag": "GalleryV2",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Galleries",
+        "description": "Request permission to read the site's Pro Galleries."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
