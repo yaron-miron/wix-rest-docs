@@ -690,6 +690,27 @@
   "callbacks": [],
   "messages":   [
         {
+      "name": "_google_protobuf_FieldMask",
+      "displayName": "Field Mask Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "paths",
+        "type":         {
+          "name": "array",
+          "typeParams": ["string"]
+        },
+        "doc": " The set of field mask paths.\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_wix_inventory_api_v1_PreorderInfo",
       "displayName": "Preorder Info Object",
       "locations": [],
@@ -707,7 +728,7 @@
                 {
           "name": "message",
           "type": "string",
-          "doc": " A message that buyer will see when the item is out of stock and PreOrder enabled\n"
+          "doc": " A message that buyer will see when the item is out of stock and preorder enabled\n"
         },
                 {
           "name": "limit",
@@ -960,6 +981,16 @@
           "name": "trackInventory",
           "type": "boolean",
           "doc": " Whether inventory is being tracked.\n"
+        },
+                {
+          "name": "preorderInfo",
+          "type": "All APIs.Stores Inventory._wix_inventory_api_v1_PreorderInfo",
+          "doc": " preorder information.\n"
+        },
+                {
+          "name": "fieldMask",
+          "type": "All APIs.Stores Inventory._google_protobuf_FieldMask",
+          "doc": " Field mask of updated fields (required - passing an empty `fieldMask` will return an error).\n"
         }
       ],
       "enum": null,
@@ -1059,6 +1090,11 @@
           "name": "inStock",
           "type": "boolean",
           "doc": " Whether the product variant is in stock.\n"
+        },
+                {
+          "name": "availableForPreorder",
+          "type": "boolean",
+          "doc": "Indicates whether the variant is available for preorder, true when the variant is out of stock and pre order enabled on product level.\n"
         }
       ],
       "enum": null,
