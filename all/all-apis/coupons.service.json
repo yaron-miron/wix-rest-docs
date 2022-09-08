@@ -133,10 +133,7 @@
       "methodName": "Create",
       "serviceName": "CouponsV2",
       "tag": "Coupon",
-      "permissions": [      {
-        "name": "Manage Coupons",
-        "description": "Request permission to read, create and modify the site's Wix coupons."
-      }],
+      "permissions": [],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -315,10 +312,7 @@
       "methodName": "Get",
       "serviceName": "CouponsV2",
       "tag": "Coupon",
-      "permissions": [      {
-        "name": "Manage Coupons",
-        "description": "Request permission to read, create and modify the site's Wix coupons."
-      }],
+      "permissions": [],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -417,10 +411,7 @@
       "methodName": "Query",
       "serviceName": "CouponsV2",
       "tag": "Coupon",
-      "permissions": [      {
-        "name": "Manage Coupons",
-        "description": "Request permission to read, create and modify the site's Wix coupons."
-      }],
+      "permissions": [],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -708,10 +699,7 @@
       },
       "topic": "domain_events_wix.ecommerce.coupons.v2.coupon",
       "tag": "Coupon",
-      "permissions": [      {
-        "name": "Manage Coupons",
-        "description": "Request permission to read, create and modify the site's Wix coupons."
-      }],
+      "permissions": [],
       "customLabels": [{"id": "maturity-beta"}],
       "eventType": "wix.ecommerce.coupons.v2.coupon_applied",
       "extra": {"isDomainEvent": true}
@@ -768,6 +756,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -837,6 +830,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -910,6 +908,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -926,9 +929,9 @@
         "examples": []
       },
       "members": [      {
-        "name": "entity",
+        "name": "entityAsJson",
         "type": "All APIs.Coupons._wix_coupons_api_v2_Coupon",
-        "doc": "Event body"
+        "doc": "Event body as a stringified JSON"
       }],
       "enum": null,
       "extra": {},
@@ -983,6 +986,11 @@
           "name": "triggeredByAnonymizeRequest",
           "type": "boolean",
           "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
         }
       ],
       "enum": null,
@@ -1494,6 +1502,11 @@
           "doc": " Whether the coupon applies to subscription products.\n"
         },
                 {
+          "name": "discountedCycleCount",
+          "type": "integer",
+          "doc": " Specifies the amount of discounted cycles for subscription item.\n Can only be set when applies_to_subscriptions is true and scope namespace is 'pricingPlans'\n Valid range is from 1 to 999, inclusive. Empty field specifies that the coupon applies to all available cycles.\n"
+        },
+                {
           "name": "active",
           "type": "boolean",
           "doc": " Whether the coupon is currently active (if not passed - the default is active).\n"
@@ -1745,6 +1758,101 @@
           "name": "message",
           "type": "string",
           "doc": " descriptive error message\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_api_ApplicationError",
+      "displayName": "Application Error Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "code",
+          "type": "string",
+          "doc": ""
+        },
+                {
+          "name": "description",
+          "type": "string",
+          "doc": ""
+        },
+                {
+          "name": "data",
+          "type": "struct",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_BulkActionMetadata",
+      "displayName": "Bulk Action Metadata Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "totalSuccesses",
+          "type": "integer",
+          "doc": " Number of items that were successfully processed.\n"
+        },
+                {
+          "name": "totalFailures",
+          "type": "integer",
+          "doc": " Number of items that couldn't be processed.\n"
+        },
+                {
+          "name": "undetailedFailures",
+          "type": "integer",
+          "doc": " Number of failures without details because detailed failure threshold was exceeded.\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_common_ItemMetadata",
+      "displayName": "Item Metadata Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": " Item ID. Should always be available, unless it's impossible (for example, when failing to create an item).\n"
+        },
+                {
+          "name": "originalIndex",
+          "type": "integer",
+          "doc": " Index of the item within the request array. Allows for correlation between request and response items.\n"
+        },
+                {
+          "name": "success",
+          "type": "boolean",
+          "doc": " Whether the requested action was successful for this item. When `false`, the `error` field is populated.\n"
+        },
+                {
+          "name": "error",
+          "type": "All APIs.Coupons._wix_api_ApplicationError",
+          "doc": " Details about the error in case of failure.\n"
         }
       ],
       "enum": null,
@@ -2055,6 +2163,11 @@
           "name": "discountValue",
           "type": "string",
           "doc": " Discount value (e.g., $10, 10%).\n"
+        },
+                {
+          "name": "discountedCycleCount",
+          "type": "integer",
+          "doc": " Amount of discounted cycles for subscription item. None specifies for all cycles.\n"
         }
       ],
       "enum": null,
@@ -2183,6 +2296,136 @@
       "labels": []
     },
         {
+      "name": "_wix_coupons_api_v2_BulkDeleteCouponsRequest",
+      "displayName": "Bulk Delete Coupons Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "ids",
+        "type":         {
+          "name": "array",
+          "typeParams": ["string"]
+        },
+        "doc": " List of Coupon Ids\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_coupons_api_v2_BulkDeleteCouponsResponse",
+      "displayName": "Bulk Delete Coupons Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "results",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Coupons._wix_common_ItemMetadata"]
+          },
+          "doc": " Item Metadata\n"
+        },
+                {
+          "name": "deleteMetadata",
+          "type": "All APIs.Coupons._wix_common_BulkActionMetadata",
+          "doc": " Bulk Action Metadata\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_coupons_api_v2_BulkCreateCouponsRequest",
+      "displayName": "Bulk Create Coupons Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "specifications",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Coupons._wix_coupons_api_v2_Specification"]
+          },
+          "doc": " List of Coupon specifications\n"
+        },
+                {
+          "name": "returnFullEntity",
+          "type": "boolean",
+          "doc": " set to true to return full coupon entity in response\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_coupons_api_v2_BulkCreateCouponsResponse",
+      "displayName": "Bulk Create Coupons Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "results",
+          "type":           {
+            "name": "array",
+            "typeParams": ["All APIs.Coupons._wix_coupons_api_v2_BulkCreateCouponResult"]
+          },
+          "doc": " Create Coupon Results\n"
+        },
+                {
+          "name": "bulkActionMetadata",
+          "type": "All APIs.Coupons._wix_common_BulkActionMetadata",
+          "doc": " Bulk Action Metadata\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_coupons_api_v2_BulkCreateCouponResult",
+      "displayName": "Bulk Create Coupon Result Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "itemMetadata",
+          "type": "All APIs.Coupons._wix_common_ItemMetadata",
+          "doc": " Item metadata\n"
+        },
+                {
+          "name": "coupon",
+          "type": "All APIs.Coupons._wix_coupons_api_v2_Coupon",
+          "doc": " Coupon\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_wix_coupons_api_v2_Query",
       "displayName": "Query Object",
       "locations": [],
@@ -2195,7 +2438,7 @@
                 {
           "name": "paging",
           "type": "All APIs.Coupons._wix_coupons_api_v2_Paging",
-          "doc": "\n"
+          "doc": " Optional pagination parameters\n"
         },
                 {
           "name": "filter",
