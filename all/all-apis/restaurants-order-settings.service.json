@@ -515,6 +515,11 @@
             "typeParams": ["All APIs.Restaurants Order Settings._com_wixpress_restaurants_ordersettings_v3_Tips_TippingRate"]
           },
           "doc": " Set different tipping rate options with percentage values, for your customers to choose from\n"
+        },
+                {
+          "name": "enabled",
+          "type": "boolean",
+          "doc": " Is the Tips feature enabled, default value false\n"
         }
       ],
       "enum": null,
