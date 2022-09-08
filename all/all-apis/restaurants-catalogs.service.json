@@ -1528,16 +1528,6 @@
           },
           "doc": " IDs of the locations for which the catalog will be returned. See the [Locations API](https://dev.wix.com/api/rest/business-info/locations/introduction) for more details.\n",
           "required": false
-        },
-                {
-          "in": "QUERY",
-          "name": "restaurantLocationIds",
-          "type":           {
-            "name": "array",
-            "typeParams": ["string"]
-          },
-          "doc": " IDs of the restaurant-locations for which the catalog will be returned.\n",
-          "required": false
         }
       ],
       "ret":       {
@@ -5082,14 +5072,6 @@
             "typeParams": ["string"]
           },
           "doc": " IDs of the locations for which the catalog will be returned. See the [Locations API](https://dev.wix.com/api/rest/business-info/locations/introduction) for more details.\n"
-        },
-                {
-          "name": "restaurantLocationIds",
-          "type":           {
-            "name": "array",
-            "typeParams": ["string"]
-          },
-          "doc": " IDs of the restaurant-locations for which the catalog will be returned.\n"
         }
       ],
       "enum": null,
