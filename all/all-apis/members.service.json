@@ -153,7 +153,10 @@
       "methodName": "DeleteMemberAddresses",
       "serviceName": "Members",
       "tag": "Members",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Manage Members",
+        "description": "Request permission to read, create and change member data."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -303,7 +306,10 @@
       "methodName": "GetMember",
       "serviceName": "Members",
       "tag": "Members",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Members",
+        "description": "Request permission to read member data."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
@@ -665,7 +671,10 @@
       },
       "topic": "domain_events_wix.members.v1.member",
       "tag": "Members",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Members",
+        "description": "Request permission to read member data."
+      }],
       "customLabels": [{"id": "maturity-beta"}],
       "eventType": "wix.members.v1.member_updated",
       "extra": {"isDomainEvent": true}
