@@ -5207,12 +5207,13 @@
       "displayName": "Capture Method Object",
       "locations": [],
       "docs":       {
-        "summary": " \n Possible values are: <li><code> AUTOMATIC <\/code><\/li><li><code> FORCE_MANUAL <\/code><\/li><li><code> PREFER_MANUAL <\/code><\/li>",
+        "summary": " \n Possible values are: <li><code> UNKNOWN_CAPTURE_METHOD <\/code><\/li><li><code> AUTOMATIC <\/code><\/li><li><code> FORCE_MANUAL <\/code><\/li><li><code> PREFER_MANUAL <\/code><\/li>",
         "links": [],
         "examples": []
       },
       "members": [],
       "enum":       [
+        "UNKNOWN_CAPTURE_METHOD",
         "AUTOMATIC",
         "FORCE_MANUAL",
         "PREFER_MANUAL"
