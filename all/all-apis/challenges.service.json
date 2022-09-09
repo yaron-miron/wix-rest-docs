@@ -2617,7 +2617,7 @@
                 {
           "name": "shareActivity",
           "type": "boolean",
-          "doc": ""
+          "doc": "allow program participants to share their progress in group\n"
         }
       ],
       "enum": null,
