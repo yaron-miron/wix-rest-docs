@@ -431,7 +431,10 @@
       "methodName": "GetRsvp",
       "serviceName": "RsvpManagement",
       "tag": "RSVP",
-      "permissions": [],
+      "permissions": [      {
+        "name": "Read Event Tickets and Guest List",
+        "description": "Request permission to read event tickets and guest lists."
+      }],
       "events": [],
       "labels": [],
       "nameParams": [],
