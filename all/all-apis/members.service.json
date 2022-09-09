@@ -3112,7 +3112,12 @@
         "links": [],
         "examples": []
       },
-      "members": [],
+      "members": [      {
+        "name": "memberId",
+        "type": "string",
+        "doc": " Member id who joined the community\n",
+        "readOnly": true
+      }],
       "enum": null,
       "extra": {},
       "labels": []
@@ -3158,7 +3163,12 @@
         "links": [],
         "examples": []
       },
-      "members": [],
+      "members": [      {
+        "name": "memberId",
+        "type": "string",
+        "doc": " Member id who left the community\n",
+        "readOnly": true
+      }],
       "enum": null,
       "extra": {},
       "labels": []
@@ -3439,7 +3449,12 @@
         "links": [],
         "examples": []
       },
-      "members": [],
+      "members": [      {
+        "name": "memberId",
+        "type": "string",
+        "doc": " Member id who got muted\n",
+        "readOnly": true
+      }],
       "enum": null,
       "extra": {},
       "labels": []
@@ -3489,7 +3504,12 @@
         "links": [],
         "examples": []
       },
-      "members": [],
+      "members": [      {
+        "name": "memberId",
+        "type": "string",
+        "doc": " Member id who got unmuted\n",
+        "readOnly": true
+      }],
       "enum": null,
       "extra": {},
       "labels": []
@@ -3539,7 +3559,12 @@
         "links": [],
         "examples": []
       },
-      "members": [],
+      "members": [      {
+        "name": "memberId",
+        "type": "string",
+        "doc": " Member id who got approved\n",
+        "readOnly": true
+      }],
       "enum": null,
       "extra": {},
       "labels": []
@@ -3589,7 +3614,12 @@
         "links": [],
         "examples": []
       },
-      "members": [],
+      "members": [      {
+        "name": "memberId",
+        "type": "string",
+        "doc": " Member id who got blocked\n",
+        "readOnly": true
+      }],
       "enum": null,
       "extra": {},
       "labels": []
