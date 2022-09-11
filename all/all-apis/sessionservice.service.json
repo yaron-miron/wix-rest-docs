@@ -23,10 +23,7 @@
     "methodName": "RevokeSession",
     "serviceName": "SessionService",
     "tag": "SessionService",
-    "permissions": [    {
-      "name": "Revoke User Sessions",
-      "description": "Revoke User Sessions"
-    }],
+    "permissions": [],
     "events": [],
     "labels": [],
     "nameParams": [],
