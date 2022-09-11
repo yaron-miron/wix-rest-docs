@@ -14,12 +14,12 @@
         {
       "name": "Files",
       "entity": "_com_wix_media_site_media_v1_FileDescriptor",
-      "src": "https://github.com/wix-private/media-manager-node-services/tree/master/wix-privatemedia-proxy-server/com/wix/media/site_media/v1/file_descriptor.proto"
+      "src": "https://github.com/wix-private/media-manager-node-services/tree/master/packages/wix-privatemedia-proxy-api/com/wix/media/site_media/v1/file_descriptor.proto"
     },
         {
       "name": "Folders",
       "entity": "_com_wix_media_site_media_v1_Folder",
-      "src": "https://github.com/wix-private/media-manager-node-services/tree/master/wix-privatemedia-proxy-server/com/wix/media/site_media/v1/folder.proto"
+      "src": "https://github.com/wix-private/media-manager-node-services/tree/master/packages/wix-privatemedia-proxy-api/com/wix/media/site_media/v1/folder.proto"
     }
   ],
   "relatedGuides":   [
@@ -1460,7 +1460,7 @@
       "name": "File Descriptor Created Webhook",
       "docs":       {
         "summary": " Triggered when a file is created, the triggered_by_undelete flag indicates if the create was caused by a restore from trash operation\n",
-        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/wix-privatemedia-proxy-server/src/main/proto/com/wix/media/site_media/v1/files_service.proto"
+        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/packages/wix-privatemedia-proxy-api/src/main/proto/com/wix/media/site_media/v1/files_service.proto"
       },
       "topic": "domain_events_wix.media.site_media.v1.file_descriptor",
       "tag": "Files",
@@ -1474,7 +1474,7 @@
       "name": "File Descriptor Updated Webhook",
       "docs":       {
         "summary": " Triggered when a file is updated (name change or move).\n",
-        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/wix-privatemedia-proxy-server/src/main/proto/com/wix/media/site_media/v1/files_service.proto"
+        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/packages/wix-privatemedia-proxy-api/src/main/proto/com/wix/media/site_media/v1/files_service.proto"
       },
       "topic": "domain_events_wix.media.site_media.v1.file_descriptor",
       "tag": "Files",
@@ -1488,7 +1488,7 @@
       "name": "File Descriptor Deleted Webhook",
       "docs":       {
         "summary": " Triggered when a file is deleted, the move_to_trash flag indicates if the delete was permanent or a move to trash operation\n",
-        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/wix-privatemedia-proxy-server/src/main/proto/com/wix/media/site_media/v1/files_service.proto"
+        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/packages/wix-privatemedia-proxy-api/src/main/proto/com/wix/media/site_media/v1/files_service.proto"
       },
       "topic": "domain_events_wix.media.site_media.v1.file_descriptor",
       "tag": "Files",
@@ -1502,7 +1502,7 @@
       "name": "Folder Created Webhook",
       "docs":       {
         "summary": " Triggered when a folder is created. the triggered_by_undelete flag indicates if the create was caused by a restore from trash operation\n",
-        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/wix-privatemedia-proxy-server/src/main/proto/com/wix/media/site_media/v1/folders_service.proto"
+        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/packages/wix-privatemedia-proxy-api/src/main/proto/com/wix/media/site_media/v1/folders_service.proto"
       },
       "topic": "domain_events_wix.media.site_media.v1.folder",
       "tag": "Folders",
@@ -1516,7 +1516,7 @@
       "name": "Folder Updated Webhook",
       "docs":       {
         "summary": " Triggered when a folder is updated (name change or move).\n",
-        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/wix-privatemedia-proxy-server/src/main/proto/com/wix/media/site_media/v1/folders_service.proto"
+        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/packages/wix-privatemedia-proxy-api/src/main/proto/com/wix/media/site_media/v1/folders_service.proto"
       },
       "topic": "domain_events_wix.media.site_media.v1.folder",
       "tag": "Folders",
@@ -1530,7 +1530,7 @@
       "name": "Folder Deleted Webhook",
       "docs":       {
         "summary": " Triggered when a folder is deleted, the move_to_trash flag indicates if the delete was permanent or a move to trash operation\n",
-        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/wix-privatemedia-proxy-server/src/main/proto/com/wix/media/site_media/v1/folders_service.proto"
+        "src": "https://github.com/wix-private/media-manager-node-services/tree/master/packages/wix-privatemedia-proxy-api/src/main/proto/com/wix/media/site_media/v1/folders_service.proto"
       },
       "topic": "domain_events_wix.media.site_media.v1.folder",
       "tag": "Folders",
