@@ -1,0 +1,867 @@
+{
+  "name": "GdprAutomations",
+  "client_id": "https://github.com/wix-private/velocity-infra/tree/master/core-services/gdpr-automations#public",
+  "memberOf": "All APIs",
+  "category": "core",
+  "mixes": [],
+  "labels": [],
+  "docs":   {
+    "summary": "Short description of GdprAutomations",
+    "description": []
+  },
+  "properties": [],
+  "tags": [  {
+    "name": "GdprAutomations",
+    "entity": null
+  }],
+  "relatedGuides": [  {
+    "path": "../guides/gdprautomations/docs/README.md",
+    "name": "Introduction"
+  }],
+  "operations": [  {
+    "name": "Create Submission",
+    "methodName": "CreateSubmission",
+    "serviceName": "GdprAutomations",
+    "tag": "GdprAutomations",
+    "permissions": [],
+    "events": [],
+    "labels": [],
+    "nameParams": [],
+    "requiredFields":     [
+      "submission",
+      "submission.userGuid",
+      "submission.submissionInformation",
+      "submission.submissionInformation.firstName",
+      "submission.submissionInformation.lastName",
+      "submission.submissionInformation.phoneAreaCode",
+      "submission.submissionInformation.phoneNumber"
+    ],
+    "params": [    {
+      "in": "BODY",
+      "name": "submission",
+      "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmission",
+      "doc": "",
+      "required": true
+    }],
+    "ret":     {
+      "type":       {
+        "name": "CreateSubmission",
+        "statusCode": "200",
+        "typeParams": ["All APIs.GdprAutomations._wix_buildup_gdpr_v1_CreateSubmissionResponse"]
+      },
+      "doc": ""
+    },
+    "locations": [],
+    "docs":     {
+      "summary": " todo: add permissions\n \n",
+      "description": [],
+      "request": "POST",
+      "url": "https://www.wixapis.com/gdpr-automations/v1/deleteAccountSubmissions",
+      "links": [],
+      "examples": [],
+      "extra": {}
+    },
+    "extra":     {
+      "hasRest": true,
+      "rpcRequestName": "CreateSubmissionRequest",
+      "rpcResponseName": "CreateSubmissionResponse"
+    },
+    "customLabels": [{"id": "maturity-alpha"}]
+  }],
+  "events": [  {
+    "type": "_wix_buildup_gdpr_v1_DeleteAccountSubmissionCreatedDomainEvent",
+    "name": "Delete Account Submission Created Webhook",
+    "docs": {"summary": ""},
+    "topic": "domain_events_wix.buildup.gdpr.v1.delete_account_submission",
+    "tag": "GdprAutomations",
+    "permissions": [],
+    "customLabels": [{"id": "maturity-alpha"}],
+    "eventType": "wix.buildup.gdpr.v1.delete_account_submission_created",
+    "extra": {"isDomainEvent": true}
+  }],
+  "callbacks": [],
+  "messages":   [
+        {
+      "name": "_wix_buildup_gdpr_v1_DeleteAccountSubmissionCreatedDomainEvent",
+      "displayName": "Delete Account Submission Created Domain Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": "Unique event ID."
+        },
+                {
+          "name": "entityFqdn",
+          "type": "string",
+          "doc": "Expected `wix.buildup.gdpr.v1.delete_account_submission`.\nFully Qualified Domain Name."
+        },
+                {
+          "name": "slug",
+          "type": "string",
+          "doc": "Expected `created`.\nEvent name."
+        },
+                {
+          "name": "createdEvent",
+          "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmissionEntityCreatedEvent",
+          "doc": "Event Info"
+        },
+                {
+          "name": "entityId",
+          "type": "string",
+          "doc": "DeleteAccountSubmission ID associated with this event."
+        },
+                {
+          "name": "eventTime",
+          "type": "string",
+          "doc": "Event timestamp."
+        },
+                {
+          "name": "triggeredByAnonymizeRequest",
+          "type": "boolean",
+          "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeleteAccountSubmissionEntityCreatedEvent",
+      "displayName": "Delete Account Submission Entity Created Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "entity",
+        "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmission",
+        "doc": "Event body"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeleteAccountSubmissionUpdatedDomainEvent",
+      "displayName": "Delete Account Submission Updated Domain Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": "Unique event ID."
+        },
+                {
+          "name": "entityFqdn",
+          "type": "string",
+          "doc": "Expected `wix.buildup.gdpr.v1.delete_account_submission`.\nFully Qualified Domain Name."
+        },
+                {
+          "name": "slug",
+          "type": "string",
+          "doc": "Expected `updated`.\nEvent name."
+        },
+                {
+          "name": "updatedEvent",
+          "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmissionEntityUpdatedEvent",
+          "doc": "Event Info"
+        },
+                {
+          "name": "entityId",
+          "type": "string",
+          "doc": "DeleteAccountSubmission ID associated with this event."
+        },
+                {
+          "name": "eventTime",
+          "type": "string",
+          "doc": "Event timestamp."
+        },
+                {
+          "name": "triggeredByAnonymizeRequest",
+          "type": "boolean",
+          "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeleteAccountSubmissionEntityUpdatedEvent",
+      "displayName": "Delete Account Submission Entity Updated Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "currentEntityAsJson",
+        "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmission",
+        "doc": "Event body as a stringified JSON"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeleteAccountSubmissionDeletedDomainEvent",
+      "displayName": "Delete Account Submission Deleted Domain Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": "Unique event ID."
+        },
+                {
+          "name": "entityFqdn",
+          "type": "string",
+          "doc": "Expected `wix.buildup.gdpr.v1.delete_account_submission`.\nFully Qualified Domain Name."
+        },
+                {
+          "name": "slug",
+          "type": "string",
+          "doc": "Expected `deleted`.\nEvent name."
+        },
+                {
+          "name": "deletedEvent",
+          "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmissionEntityDeletedEvent",
+          "doc": "Event Info"
+        },
+                {
+          "name": "entityId",
+          "type": "string",
+          "doc": "DeleteAccountSubmission ID associated with this event."
+        },
+                {
+          "name": "eventTime",
+          "type": "string",
+          "doc": "Event timestamp."
+        },
+                {
+          "name": "triggeredByAnonymizeRequest",
+          "type": "boolean",
+          "doc": "Whether this event was triggered as a result of a privacy regulation application (e.g., GDPR)."
+        },
+                {
+          "name": "originatedFrom",
+          "type": "string",
+          "doc": "If present, indicates the action that triggered the event."
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeleteAccountSubmissionEntityDeletedEvent",
+      "displayName": "Delete Account Submission Entity Deleted Event Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeleteAccountSubmission",
+      "displayName": "Delete Account Submission Object",
+      "locations": [],
+      "docs":       {
+        "summary": "*\nAccountDeletionRequest is the main entity of GdprAutomations that can be used for submitting account deletion requests\n",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "id",
+          "type": "string",
+          "doc": " AccountDeletionRequest ID\n",
+          "readOnly": true
+        },
+                {
+          "name": "userGuid",
+          "type": "string",
+          "doc": " Represents the id of the user to be deleted\n"
+        },
+                {
+          "name": "answersTicketId",
+          "type": "string",
+          "doc": " Represents the id of the corresponding wix answers ticket used to track and manage the request\n"
+        },
+                {
+          "name": "createdDate",
+          "type": "string",
+          "doc": " Represents the time this AccountDeletionRequest was created\n",
+          "readOnly": true
+        },
+                {
+          "name": "status",
+          "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeletionRequestStatus",
+          "doc": " Represents the submission status of the request\n"
+        },
+                {
+          "name": "requestError",
+          "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeletionRequestError",
+          "doc": " Represents the error state of the request, that should be resolved prior to submission\n"
+        },
+                {
+          "name": "emergencyOptOut",
+          "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_EmergencyOptOut",
+          "doc": " Represents an explicit admin request to block the request from being submitted for deletion\n"
+        },
+                {
+          "name": "harvesterRequestId",
+          "type": "string",
+          "doc": " Represents the id of the corresponding deletion request created by the harvester once this request was submitted to the harvester\n"
+        },
+                {
+          "name": "revision",
+          "type": "string",
+          "doc": " Represents the current state of an item. Each time the item is modified, its `revision` changes. for an update operation to succeed, you MUST pass the latest revision\n"
+        },
+                {
+          "name": "updatedDate",
+          "type": "string",
+          "doc": " Represents the time this AccountDeletionRequest was last updated\n",
+          "readOnly": true
+        },
+                {
+          "name": "submissionInformation",
+          "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_SubmissionInformation",
+          "doc": " Represents the submission request information used to create the corresponding wix answers ticket\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_SubmissionInformation",
+      "displayName": "Submission Information Object",
+      "locations": [],
+      "docs":       {
+        "summary": "*\nSubmissionInformation is being used to provide support agents clear visibility about the request via the wix answers ticket\nThis entity contains PII data which is only being used when opening the wix answers ticket upon an incoming request\nThis entity is not being saved in the db, nor being returned by the api\n",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "firstName",
+          "type": "string",
+          "doc": " users given name\n"
+        },
+                {
+          "name": "lastName",
+          "type": "string",
+          "doc": " users surname\n"
+        },
+                {
+          "name": "phoneAreaCode",
+          "type": "integer",
+          "doc": " users phone area code\n"
+        },
+                {
+          "name": "phoneNumber",
+          "type": "integer",
+          "doc": " users phone number\n"
+        },
+                {
+          "name": "estimatedAccountCreationDate",
+          "type": "string",
+          "doc": " estimated account creation date\n"
+        },
+                {
+          "name": "estimatedLastSiteEditedDate",
+          "type": "string",
+          "doc": " estimated date of last edit of users site\n"
+        },
+                {
+          "name": "account",
+          "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_Account",
+          "doc": " Represents the account of the user, currently gdpr automations service support only free users account type\n"
+        },
+                {
+          "name": "userDomain",
+          "type": "string",
+          "doc": " The users site domain if exists\n"
+        },
+                {
+          "name": "contactFormEmail",
+          "type": "string",
+          "doc": " The email attached to users contact form if exists\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_Account",
+      "displayName": "Account Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "type",
+        "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_Account_AccountType",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_EmergencyOptOut",
+      "displayName": "Emergency Opt Out Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "isOptOut",
+          "type": "boolean",
+          "doc": ""
+        },
+                {
+          "name": "description",
+          "type": "string",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeletionRequestError",
+      "displayName": "Deletion Request Error Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "type",
+          "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeletionRequestErrorType",
+          "doc": ""
+        },
+                {
+          "name": "description",
+          "type": "string",
+          "doc": ""
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_google_protobuf_FieldMask",
+      "displayName": "Field Mask Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "paths",
+        "type":         {
+          "name": "array",
+          "typeParams": ["string"]
+        },
+        "doc": " The set of field mask paths.\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_CreateSubmissionRequest",
+      "displayName": "Create Submission Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "submission",
+        "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmission",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_CreateSubmissionResponse",
+      "displayName": "Create Submission Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "submission",
+        "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmission",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_EmergencyOptOutRequest",
+      "displayName": "Emergency Opt Out Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "submissionId",
+        "type": "string",
+        "doc": " The id of the opted out DeleteAccountSubmission\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_EmergencyOptOutResponse",
+      "displayName": "Emergency Opt Out Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "submission",
+        "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmission",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_CancelSubmissionRequest",
+      "displayName": "Cancel Submission Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "submissionId",
+        "type": "string",
+        "doc": " The id of the opted out DeleteAccountSubmission\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_CancelSubmissionResponse",
+      "displayName": "Cancel Submission Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "submission",
+        "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmission",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_GetSubmissionRequest",
+      "displayName": "Get Submission Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "submissionId",
+        "type": "string",
+        "doc": " Id of the DeleteAccountSubmission to retrieve\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_GetSubmissionResponse",
+      "displayName": "Get Submission Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "submission",
+        "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmission",
+        "doc": " The retrieved DeleteAccountSubmission\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_UpdateSubmissionRequest",
+      "displayName": "Update Submission Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "submission",
+          "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmission",
+          "doc": " DeleteAccountSubmission to be updated, may be partial\n"
+        },
+                {
+          "name": "mask",
+          "type": "All APIs.GdprAutomations._google_protobuf_FieldMask",
+          "doc": " Explicit list of fields to update\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_UpdateSubmissionResponse",
+      "displayName": "Update Submission Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "submission",
+        "type": "All APIs.GdprAutomations._wix_buildup_gdpr_v1_DeleteAccountSubmission",
+        "doc": " The updated DeleteAccountSubmission\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeleteSubmissionRequest",
+      "displayName": "Delete Submission Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "submissionId",
+          "type": "string",
+          "doc": " Id of the DeleteAccountSubmission to delete\n"
+        },
+                {
+          "name": "revision",
+          "type": "string",
+          "doc": " Revision of the DeleteAccountSubmission to delete\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeleteSubmissionResponse",
+      "displayName": "Delete Submission Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_SubmitEligibleRequestsForDeletionRequest",
+      "displayName": "Submit Eligible Requests For Deletion Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_SubmitEligibleRequestsForDeletionResponse",
+      "displayName": "Submit Eligible Requests For Deletion Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_MaybeResolveFailedRequestsRequest",
+      "displayName": "Maybe Resolve Failed Requests Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_MaybeResolveFailedRequestsResponse",
+      "displayName": "Maybe Resolve Failed Requests Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeletionRequestErrorType",
+      "displayName": "Deletion Request Error Type Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> TICKET_CREATED <\/code><\/li><li><code> NOTIFY_USER_REQUEST_CREATED -  Represents a failure to notify the user that his deletion request has been created\n <\/code><\/li><li><code> BLOCK_ACCOUNT -  Represents a failure to block the users account\n <\/code><\/li><li><code> NOTIFY_USER_ACCOUNT_BLOCKED -  Represents a failure to notify the user that his account has been blocked\n <\/code><\/li><li><code> ADD_NOTE_TO_ACCOUNT -  Represents a failure to add a note to users account in the user manager\n <\/code><\/li><li><code> UNBLOCK_ACCOUNT -  Represents a failure to unblock the users account\n <\/code><\/li><li><code> NOTIFY_USER_ACCOUNT_UNBLOCKED -  Represents a failure to notify the user that his account has been unblocked\n <\/code><\/li><li><code> INTERNALLY_NOTIFY_EMERGENCY_OPT_OUT -  Represents a failure to internally notify the support agents via wix answers that the account has been successfully opted out\n <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "TICKET_CREATED",
+        "NOTIFY_USER_REQUEST_CREATED",
+        "BLOCK_ACCOUNT",
+        "NOTIFY_USER_ACCOUNT_BLOCKED",
+        "ADD_NOTE_TO_ACCOUNT",
+        "UNBLOCK_ACCOUNT",
+        "NOTIFY_USER_ACCOUNT_UNBLOCKED",
+        "INTERNALLY_NOTIFY_EMERGENCY_OPT_OUT"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_DeletionRequestStatus",
+      "displayName": "Deletion Request Status Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> PENDING_CONFIRMATION -  Represents a deletion request which has not been confirmed by the user\n <\/code><\/li><li><code> CONFIRMED -  Represents a deletion request which has been confirmed by the user\n <\/code><\/li><li><code> CANCELED -  Represents a deletion request which was canceled on behalf of the user\n <\/code><\/li><li><code> SUBMITTED -  Represents a deletion request which was submitted to the gdpr harvester\n <\/code><\/li><li><code> DONE -  Represents a deletion request which was deleted successfully by the gdpr harvester\n <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "PENDING_CONFIRMATION",
+        "CONFIRMED",
+        "CANCELED",
+        "SUBMITTED",
+        "DONE"
+      ],
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_wix_buildup_gdpr_v1_Account_AccountType",
+      "displayName": "Account Type Object",
+      "locations": [],
+      "docs":       {
+        "summary": " \n Possible values are: <li><code> UNKNOWN <\/code><\/li><li><code> FREE -  Represents a free users account\n <\/code><\/li><li><code> PREMIUM -  Represents a premium users account - currently not supported by automations service\n <\/code><\/li><li><code> NO_WEBSITE -  Represents a no website users account - currently not supported by automations service\n <\/code><\/li>",
+        "links": [],
+        "examples": []
+      },
+      "members": [],
+      "enum":       [
+        "UNKNOWN",
+        "FREE",
+        "PREMIUM",
+        "NO_WEBSITE"
+      ],
+      "extra": {},
+      "labels": []
+    }
+  ],
+  "extra": {}
+}
