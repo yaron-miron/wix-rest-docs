@@ -1139,6 +1139,31 @@
       "labels": []
     },
         {
+      "name": "_com_wixpress_exposure_brandmaker_brand_BrandContent",
+      "displayName": "Brand Content Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members":       [
+                {
+          "name": "businessName",
+          "type": "string",
+          "doc": " brand company name\n"
+        },
+                {
+          "name": "tagLine",
+          "type": "string",
+          "doc": " brand tag line\n"
+        }
+      ],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_exposure_brandmaker_brand_BrandDefinitions",
       "displayName": "Brand Definitions Object",
       "locations": [],
@@ -1161,7 +1186,12 @@
                 {
           "name": "industry",
           "type": "All APIs.Logo Builder._com_wixpress_exposure_brandmaker_brand_BrandIndustry",
-          "doc": " BrandTags tags = 4;\n BrandContent content = 5;\n"
+          "doc": ""
+        },
+                {
+          "name": "content",
+          "type": "All APIs.Logo Builder._com_wixpress_exposure_brandmaker_brand_BrandContent",
+          "doc": " BrandTags tags = 4;\n"
         }
       ],
       "enum": null,
