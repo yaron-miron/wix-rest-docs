@@ -2901,6 +2901,42 @@
       "labels": []
     },
         {
+      "name": "_com_wixpress_metasite_api_v1_DuplicateMetaSiteRequest",
+      "displayName": "Duplicate Meta Site Request Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "siteName",
+        "type": "string",
+        "doc": "\nA template for a site name. If site name exists, a new site name will be generated.\nIf field is empty, a default site name will be used.\nRegex format: `[a-z0-9_\\\\-]{4,20}`\n"
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
+      "name": "_com_wixpress_metasite_api_v1_DuplicateMetaSiteResponse",
+      "displayName": "Duplicate Meta Site Response Object",
+      "locations": [],
+      "docs":       {
+        "summary": "",
+        "links": [],
+        "examples": []
+      },
+      "members": [      {
+        "name": "metaSite",
+        "type": "All APIs.Meta Site - Meta Site Manager._com_wixpress_metasite_api_v1_MetaSite",
+        "doc": ""
+      }],
+      "enum": null,
+      "extra": {},
+      "labels": []
+    },
+        {
       "name": "_com_wixpress_metasite_event_api_State",
       "displayName": "State Object",
       "locations": [],
