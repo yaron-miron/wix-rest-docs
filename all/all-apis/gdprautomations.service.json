@@ -863,5 +863,5 @@
       "labels": []
     }
   ],
-  "extra": {}
+  "extra": {"artifactId": "com.wixpress.buildup.gdpr-automations"}
 }
